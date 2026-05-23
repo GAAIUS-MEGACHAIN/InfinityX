@@ -3,6 +3,7 @@ node_modules/
 secrets/
 release/
 dist/
+www/
 build/
 .expo/
 .turbo/

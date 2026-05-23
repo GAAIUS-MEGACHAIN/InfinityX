@@ -1,7 +1,7 @@
 {
   "appId": "com.infinityx.wallet",
   "appName": "InfinityX Wallet",
-  "webDir": "dist",
+  "webDir": "www",
   "server": {
     "androidScheme": "https"
   }

@@ -1,0 +1,15 @@
+[
+  { "id": "main", "name": "Main", "type": "InfinityX virtual routing layer", "native": "IFX", "connectedChains": ["solana", "ethereum", "polygon", "bnb", "base", "arbitrum", "optimism", "avalanche", "fantom", "bitcoin", "cardano", "xrp"] },
+  { "id": "solana", "name": "Solana", "type": "SVM", "native": "SOL", "rpc": "https://api.mainnet-beta.solana.com", "explorer": "https://solscan.io" },
+  { "id": "ethereum", "name": "Ethereum", "type": "EVM", "native": "ETH", "rpc": "https://ethereum-rpc.publicnode.com", "explorer": "https://etherscan.io" },
+  { "id": "polygon", "name": "Polygon", "type": "EVM", "native": "POL", "rpc": "https://polygon-bor-rpc.publicnode.com", "explorer": "https://polygonscan.com" },
+  { "id": "bnb", "name": "BNB Chain", "type": "EVM", "native": "BNB", "rpc": "https://bsc-rpc.publicnode.com", "explorer": "https://bscscan.com" },
+  { "id": "base", "name": "Base", "type": "EVM", "native": "ETH", "rpc": "https://base-rpc.publicnode.com", "explorer": "https://basescan.org" },
+  { "id": "arbitrum", "name": "Arbitrum", "type": "EVM", "native": "ETH", "rpc": "https://arbitrum-one-rpc.publicnode.com", "explorer": "https://arbiscan.io" },
+  { "id": "optimism", "name": "Optimism", "type": "EVM", "native": "ETH", "rpc": "https://optimism-rpc.publicnode.com", "explorer": "https://optimistic.etherscan.io" },
+  { "id": "avalanche", "name": "Avalanche", "type": "EVM", "native": "AVAX", "rpc": "https://avalanche-c-chain-rpc.publicnode.com", "explorer": "https://snowtrace.io" },
+  { "id": "fantom", "name": "Fantom", "type": "EVM", "native": "FTM", "rpc": "https://fantom-rpc.publicnode.com", "explorer": "https://ftmscan.com" },
+  { "id": "bitcoin", "name": "Bitcoin", "type": "UTXO", "native": "BTC", "rpc": "indexer-required", "explorer": "https://mempool.space" },
+  { "id": "cardano", "name": "Cardano", "type": "UTXO", "native": "ADA", "rpc": "indexer-required", "explorer": "https://cardanoscan.io" },
+  { "id": "xrp", "name": "XRP Ledger", "type": "Account", "native": "XRP", "rpc": "wss://xrplcluster.com", "explorer": "https://xrpscan.com" }
+]

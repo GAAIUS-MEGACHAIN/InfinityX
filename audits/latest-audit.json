@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-05-23T11:02:41.294Z",
+  "scope": "static source integrity, policy checks, forbidden secret path checks",
+  "checks": {
+    "nonCustodialBackend": true,
+    "ifxMintAuthorityRevoked": true,
+    "freezeAuthorityRevoked": true,
+    "privateKeysInRepo": true,
+    "revenueDestination": "NHMs85t1zJDKU8ThrxEz6xC4S1R2XANadmk7K55tG3Q"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "4acf5df1cfe2d31882144b63fcd08aed41a06fc164a13b354425932792712ec4"
+    },
+    {
+      "path": "assets/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "assets/icon.png",
+      "sha256": "f9383f49d65df743aa37ef9fbef415ed328f0a3e747d65ebc43473d508926a4c"
+    },
+    {
+      "path": "backend/data/chains.json",
+      "sha256": "31ac7979d420dc0c11da5ad749c2838b8c464866cf4a001afbbc295f75f393c1"
+    },
+    {
+      "path": "backend/data/custody.json",
+      "sha256": "20014d1dd0e3cf6d8008898319aaf577adabc37339216673d72f997e97b13412"
+    },
+    {
+      "path": "backend/data/fees.json",
+      "sha256": "85454377820112194c922e0af98f524b01af474a04e4f35e50be11f60a24f38a"
+    },
+    {
+      "path": "backend/data/notifications.json",
+      "sha256": "396e71351b8910c7198dc692bfe3fcc04a763b0c35249a4a610897a746bfb8e0"
+    },
+    {
+      "path": "backend/data/tokens.top.json",
+      "sha256": "e2fd34e2de46fb2de8d173483f4dc32e2fc3f92ddadda27b1a9c8284f6178c60"
+    },
+    {
+      "path": "backend/infinityx_backend.py",
+      "sha256": "edd9101d974fc51a5555a7d103c84d1b31281ed5d5d4e3521af715b437730338"
+    },
+    {
+      "path": "capacitor.config.json",
+      "sha256": "c191d133199e41b6ff415c3c7c67c6357c8239cc017aa205de2f6122be61107d"
+    },
+    {
+      "path": "docs/AUDIT_PIPELINE.md",
+      "sha256": "8d9fc8dfabeeae76397f90336304aee2f3a33243f4db71a9bf71769cac9c5289"
+    },
+    {
+      "path": "docs/PHASES.md",
+      "sha256": "806c548c8a547ab84ba00f654bb58c0175ad5a078b962d6de95ee43242ce8352"
+    },
+    {
+      "path": "docs/SECURE_CUSTODY_DESIGN.md",
+      "sha256": "40ce368df60fac95ddc7eaefb8430028ba5828d9ad643599f3dfdfa2b35500ec"
+    },
+    {
+      "path": "index.html",
+      "sha256": "017f45319027684eaaf75f718a7401fa08e0f0c706966a492df2f7e7cef68df1"
+    },
+    {
+      "path": "launch-output/mainnet-beta-ifx-classic-spl-token.json",
+      "sha256": "893e3e93e76582cc95eae70dc3182f763ea6cef8a1ae6bf0cbdfbbd597770a63"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "1f06d25d70cf40cf6f22db99f94dd4924b366711c2b340abc408aec495d4a923"
+    },
+    {
+      "path": "package.json",
+      "sha256": "0a6d124d62c7ceab1a0c2d192371fe593ea361866a76a89f784e07e4cd6376c6"
+    },
+    {
+      "path": "public/token/ifx.json",
+      "sha256": "f23ab82b6656471085b8b92d12d59e14f60072525614f46f9f5bc298764d862b"
+    },
+    {
+      "path": "public/token/logo.png",
+      "sha256": "5f2cc2d45f9d106f5289c5848a071b043604bab106ca86c20c7acc275e11a1a7"
+    },
+    {
+      "path": "public/token/metadata.json",
+      "sha256": "959878f1c587140b3965b65bcf7dc9f7161278601e3eeb9d89c331fa3fa2843f"
+    },
+    {
+      "path": "README.md",
+      "sha256": "8f453546dba1c4ebc35e6179f84194d67bbd36144ffb5f978251f46558b01836"
+    },
+    {
+      "path": "scripts/airdrop-devnet-sol.js",
+      "sha256": "aafeca4fe1d78a4a5e1485f2848d423e150e66456127b752d0a34b7e11f8df00"
+    },
+    {
+      "path": "scripts/audit-pack.mjs",
+      "sha256": "a972bdcac5c3067b2dc244eb335fedc7f7c38b456979ccd5549b5a83fcb95316"
+    },
+    {
+      "path": "scripts/check-solana-wallet.js",
+      "sha256": "71c5085e0d0dd859b4b5993d08a819aa7d51a6a5618776a24bea0ac7186b8e2d"
+    },
+    {
+      "path": "scripts/create-infinityx-classic-spl-token.js",
+      "sha256": "34ee8a6235038fa1aa944631051571373880d71e249818bda434fbe298f7fd35"
+    },
+    {
+      "path": "scripts/create-infinityx-token.js",
+      "sha256": "4a9304821eae50e1937ec7a80740e9eda61926ff01ed44783745117d26192418"
+    },
+    {
+      "path": "scripts/generate-solana-wallet.js",
+      "sha256": "ed9f20809b7a72f0dfefa6e04bdf1913cfa0b5858589115dc5317c3c50bb73e0"
+    },
+    {
+      "path": "scripts/swap-usdc-to-sol.js",
+      "sha256": "d3e2c166d4813a74c894d918b97c5b2b8b41a988667b40f0e5a1c478e33b2990"
+    },
+    {
+      "path": "src/main.jsx",
+      "sha256": "69407b37e39f602926c3e28cf4fc1c3ff7eead384e0d8ac589a84a9f0d414db8"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "1c36891ab9938a81279667a6081d9560ddcf4947ceacab9f0d890c954fdd6d68"
+    },
+    {
+      "path": "token.config.json",
+      "sha256": "23399ea44884ff4f6d27c659f476e834202ca63c2e9fe800cc21ba6092efcd51"
+    },
+    {
+      "path": "vite.config.js",
+      "sha256": "696a8c27ca5fe1fa60dce43dd03465372c6af17a4fbb029c112059e8a2707fe7"
+    }
+  ]
+}
