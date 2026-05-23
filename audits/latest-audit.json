@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T11:37:55.705Z",
+  "generatedAt": "2026-05-23T11:47:41.536Z",
   "scope": "static source integrity, policy checks, forbidden secret path checks",
   "checks": {
     "nonCustodialBackend": true,
@@ -23,15 +23,15 @@
     },
     {
       "path": "audits/latest-audit.json",
-      "sha256": "914599b5a282eb3d4492f94d4648406f8006bda6ee86c135dd847e8b3d397b3a"
+      "sha256": "7508a41b247f60d7906c5ecea174bb32cb3f4667becb302fd13fcf699b263e10"
     },
     {
       "path": "audits/latest-audit.json.gz",
-      "sha256": "a6ecc9ea013d1f349cc3ce2652e477dadbfba722b5b7c062d63bf937b47c8a6e"
+      "sha256": "93634f6ab7066c3cfd602ae6587a75750f4e4133701a9eb28c03e51aeb6db65b"
     },
     {
       "path": "backend/data/chains.json",
-      "sha256": "31ac7979d420dc0c11da5ad749c2838b8c464866cf4a001afbbc295f75f393c1"
+      "sha256": "eb0d527b287f8129d5674282a124113c7bc1efa409db11cffe9f2242bbb1a1e2"
     },
     {
       "path": "backend/data/custody.json",
@@ -91,7 +91,11 @@
     },
     {
       "path": "package.json",
-      "sha256": "67225173768f971f75091eac81f23928aee27ed049cc628e4163f2d9c05d4196"
+      "sha256": "25129d1fdd52f78e88619bf752cb209a05d5a6cfee9da67a9c1aa4532f912383"
+    },
+    {
+      "path": "public/registry/chains.json",
+      "sha256": "326aa9f69a74dbf49ee0571edb7b2c0180b4ce4fbcb458aa47812438fb835eb4"
     },
     {
       "path": "public/registry/markets.json",
@@ -150,16 +154,28 @@
       "sha256": "d3e2c166d4813a74c894d918b97c5b2b8b41a988667b40f0e5a1c478e33b2990"
     },
     {
+      "path": "scripts/sync-chain-registry.mjs",
+      "sha256": "c1162c9127693d0bda3d8b3a81de5a893ed0d18d6cc77fc0ac28b0be534a999b"
+    },
+    {
+      "path": "src/data/extraChains.js",
+      "sha256": "e989f73f2f5d66172e1a79d571b25b7dc7667ca5aee4dd1d37a2ee1a21f9c049"
+    },
+    {
+      "path": "src/lib/googleAuth.js",
+      "sha256": "2525eea17a548114ce565d906654eb43db8f92917f6eeb1f49db716722dab50a"
+    },
+    {
       "path": "src/lib/vault.js",
       "sha256": "3748a5fc39903736be9e074917bf5535c037870692b53ede5506eb481304224e"
     },
     {
       "path": "src/main.jsx",
-      "sha256": "1e18bdda894d174a41c9735683f28ff405ca1f54313db9eaa5354afbbe6870a5"
+      "sha256": "f52462288ab1b508447cd645eb8ced61b1a3b1f2bfe63902fc93533a11b9271d"
     },
     {
       "path": "src/styles.css",
-      "sha256": "dd0f8366eb8bd95452d81507926a49a9900ad764ef25be8a92c2935d0d8d316a"
+      "sha256": "fbd0c93ec3f0560faed16bb992a649ea11304cf076c6340982923678188291e6"
     },
     {
       "path": "token.config.json",
@@ -174,6 +190,10 @@
       "sha256": "934abdc8a7991d0f425f55446a9fa5c103cd0cad81899233c3c79d0e40f23ed7"
     },
     {
+      "path": "www/assets/index-BKg4xlPH.js",
+      "sha256": "babca57519ec10b6e6420241bf03b59787bb74d7c5b4d03c396c95c6ecc17b54"
+    },
+    {
       "path": "www/assets/index-Cgb3_zQ2.js",
       "sha256": "6ad94269b5a75d45f5f51cdd7ffc79cd69c04403a5600cf66923e6923a1771b0"
     },
@@ -186,8 +206,20 @@
       "sha256": "2ff157451d0c2d3842d514a257f3147189bb3a53a275aebc047b06cb2f4afe8e"
     },
     {
+      "path": "www/assets/index-Vc1Xjpuj.css",
+      "sha256": "b61f4d99f633b794b7177bc47cc114bb4f9a0dc5db2526e6e00570bdb598daae"
+    },
+    {
       "path": "www/index.html",
-      "sha256": "0567d1f268349e74ea6bbcc0a145e48d2e063428938bdc65defc2dd78d26b217"
+      "sha256": "889e2c7e111a8218047ad01594395043b8a51d46747d59c3f2da05566125da43"
+    },
+    {
+      "path": "www/registry/markets.json",
+      "sha256": "78e469853d2909ca7b6869ed4e7a1370d669890eb8bbda4cefd6cf89d10d8609"
+    },
+    {
+      "path": "www/registry/top-3000-tokens.json",
+      "sha256": "45601838e7f834b862f8a1ca82c9dc681316261187edf0a07a91b0c140cbd585"
     },
     {
       "path": "www/token/ifx.json",
