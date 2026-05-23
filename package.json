@@ -17,6 +17,7 @@
     "token:create:mainnet": "node scripts/create-infinityx-token.js --network mainnet-beta",
     "token:create:spl:devnet": "node scripts/create-infinityx-classic-spl-token.js --network devnet",
     "token:create:spl:mainnet": "node scripts/create-infinityx-classic-spl-token.js --network mainnet-beta",
+    "token:swap-usdc-sol": "node scripts/swap-usdc-to-sol.js",
     "token:balance:devnet": "node scripts/check-solana-wallet.js --network devnet",
     "token:balance:mainnet": "node scripts/check-solana-wallet.js --network mainnet-beta"
   },
