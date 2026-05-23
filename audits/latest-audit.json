@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T11:02:41.294Z",
+  "generatedAt": "2026-05-23T11:16:43.371Z",
   "scope": "static source integrity, policy checks, forbidden secret path checks",
   "checks": {
     "nonCustodialBackend": true,
@@ -11,7 +11,7 @@
   "files": [
     {
       "path": ".gitignore",
-      "sha256": "4acf5df1cfe2d31882144b63fcd08aed41a06fc164a13b354425932792712ec4"
+      "sha256": "cb9f63843d758c814ec9fda3b31fedefe9db5656b193b51e8407de2d63371109"
     },
     {
       "path": "assets/.gitkeep",
@@ -20,6 +20,14 @@
     {
       "path": "assets/icon.png",
       "sha256": "f9383f49d65df743aa37ef9fbef415ed328f0a3e747d65ebc43473d508926a4c"
+    },
+    {
+      "path": "audits/latest-audit.json",
+      "sha256": "1c3c1f08651385e0c2951a445b0bbe1709579a3df725519b5432b89409254125"
+    },
+    {
+      "path": "audits/latest-audit.json.gz",
+      "sha256": "0e66c934a96473b22207865dd6818ecad3e9dea5474ce76c4e89f33c66ce71b0"
     },
     {
       "path": "backend/data/chains.json",
@@ -47,7 +55,7 @@
     },
     {
       "path": "capacitor.config.json",
-      "sha256": "c191d133199e41b6ff415c3c7c67c6357c8239cc017aa205de2f6122be61107d"
+      "sha256": "bd6b1522f1a10322b540d6d5996d31d3d16b95d0c3a73f7427767b03818b2761"
     },
     {
       "path": "docs/AUDIT_PIPELINE.md",
@@ -71,11 +79,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "1f06d25d70cf40cf6f22db99f94dd4924b366711c2b340abc408aec495d4a923"
+      "sha256": "3ea7b66d87b672145a36ea86bf57703fd1e25a3462408253b2692fa19e9629fa"
     },
     {
       "path": "package.json",
-      "sha256": "0a6d124d62c7ceab1a0c2d192371fe593ea361866a76a89f784e07e4cd6376c6"
+      "sha256": "9c328a0a425c399eab4b4c95b1de72e5974b87b8f340c52c60653faa9c5815f7"
     },
     {
       "path": "public/token/ifx.json",
@@ -122,12 +130,16 @@
       "sha256": "d3e2c166d4813a74c894d918b97c5b2b8b41a988667b40f0e5a1c478e33b2990"
     },
     {
+      "path": "src/lib/vault.js",
+      "sha256": "4e141af10908c99cb0d9ca08c9fba5cf8f795b20d67e54f946b449504129ea8d"
+    },
+    {
       "path": "src/main.jsx",
-      "sha256": "69407b37e39f602926c3e28cf4fc1c3ff7eead384e0d8ac589a84a9f0d414db8"
+      "sha256": "dad66433985bb6206db12133df394e95db0746e07a8e188fe9f9d82f487e0910"
     },
     {
       "path": "src/styles.css",
-      "sha256": "1c36891ab9938a81279667a6081d9560ddcf4947ceacab9f0d890c954fdd6d68"
+      "sha256": "91fce7d6918a4157412ba97518c724cce0d26d2eca2194457685b58b6eadde79"
     },
     {
       "path": "token.config.json",
@@ -135,7 +147,31 @@
     },
     {
       "path": "vite.config.js",
-      "sha256": "696a8c27ca5fe1fa60dce43dd03465372c6af17a4fbb029c112059e8a2707fe7"
+      "sha256": "bd1bbfc6a9ac8c75065594dcc28c2c8a6ecffd526065d578963d85d0251bf9f4"
+    },
+    {
+      "path": "www/assets/index-Cgb3_zQ2.js",
+      "sha256": "6ad94269b5a75d45f5f51cdd7ffc79cd69c04403a5600cf66923e6923a1771b0"
+    },
+    {
+      "path": "www/assets/index-DmWLyQQi.css",
+      "sha256": "21c29ab8b3f9a90f87773ebdfcd4eeedefa1b460d4b1d9b5a4e32b1d432f6ee4"
+    },
+    {
+      "path": "www/index.html",
+      "sha256": "d13a669226f4a9281fa0cb9227b2d02534a40134dab799b22de4f78aef03781b"
+    },
+    {
+      "path": "www/token/ifx.json",
+      "sha256": "f23ab82b6656471085b8b92d12d59e14f60072525614f46f9f5bc298764d862b"
+    },
+    {
+      "path": "www/token/logo.png",
+      "sha256": "5f2cc2d45f9d106f5289c5848a071b043604bab106ca86c20c7acc275e11a1a7"
+    },
+    {
+      "path": "www/token/metadata.json",
+      "sha256": "959878f1c587140b3965b65bcf7dc9f7161278601e3eeb9d89c331fa3fa2843f"
     }
   ]
 }
