@@ -86,6 +86,12 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(load_json(DATA / "fees.json"))
         if url.path == "/markets":
             return self.reply(load_json(DATA / "markets.json"))
+        if url.path == "/dapps":
+            return self.reply(load_json(DATA / "dapps.json"))
+        if url.path == "/nfts":
+            return self.reply(load_json(DATA / "nfts.json"))
+        if url.path == "/metaverse":
+            return self.reply(load_json(DATA / "metaverse.json"))
         if url.path == "/policy/custody":
             return self.reply(load_json(DATA / "custody.json"))
         if url.path == "/notifications":

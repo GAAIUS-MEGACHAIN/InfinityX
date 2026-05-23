@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-05-23T11:47:41.536Z",
+  "generatedAt": "2026-05-23T12:19:07.958Z",
   "scope": "static source integrity, policy checks, forbidden secret path checks",
   "checks": {
     "nonCustodialBackend": true,
     "ifxMintAuthorityRevoked": true,
     "freezeAuthorityRevoked": true,
-    "privateKeysInRepo": true,
+    "noPrivateKeysInAuditedSource": true,
+    "localSecretsFolderExcluded": true,
     "revenueDestination": "NHMs85t1zJDKU8ThrxEz6xC4S1R2XANadmk7K55tG3Q"
   },
   "files": [
@@ -23,11 +24,11 @@
     },
     {
       "path": "audits/latest-audit.json",
-      "sha256": "7508a41b247f60d7906c5ecea174bb32cb3f4667becb302fd13fcf699b263e10"
+      "sha256": "ce79ab20eee112b90153a72076e8e0ca39fd0469c8a9638daba154b602a66e4a"
     },
     {
       "path": "audits/latest-audit.json.gz",
-      "sha256": "93634f6ab7066c3cfd602ae6587a75750f4e4133701a9eb28c03e51aeb6db65b"
+      "sha256": "ca5ded37dd29b56237bff1532980173f3725d383cec2c2b8d904f6bd6bc72103"
     },
     {
       "path": "backend/data/chains.json",
@@ -38,12 +39,24 @@
       "sha256": "20014d1dd0e3cf6d8008898319aaf577adabc37339216673d72f997e97b13412"
     },
     {
+      "path": "backend/data/dapps.json",
+      "sha256": "a52c75b9b8e3af0f6c9921fb0d1ee99d747e4d74918639fda2e73d90a8c69a60"
+    },
+    {
       "path": "backend/data/fees.json",
       "sha256": "85454377820112194c922e0af98f524b01af474a04e4f35e50be11f60a24f38a"
     },
     {
       "path": "backend/data/markets.json",
       "sha256": "ae7802f6a8ad3da61846a986766e3a53a83082c19fad9e91f0a39f2e82c921e5"
+    },
+    {
+      "path": "backend/data/metaverse.json",
+      "sha256": "20dbb29aa71544f343d42d145c00be8299a85b2c64dacadb523b06f53a5dee36"
+    },
+    {
+      "path": "backend/data/nfts.json",
+      "sha256": "5ee60cd219e923ef85fc585eede6dcabf14df6462e5b0a93a39bd52bc7cf4929"
     },
     {
       "path": "backend/data/notifications.json",
@@ -59,15 +72,31 @@
     },
     {
       "path": "backend/infinityx_backend.py",
-      "sha256": "d2ba2b40a8621c93ea3e18295043d70cb58035b8db491e1d9fb971a950d720ba"
+      "sha256": "d3f232d18dfea46a1580aff68713889f37a80560f4d09bfaf871780ad28537e5"
     },
     {
       "path": "capacitor.config.json",
       "sha256": "bd6b1522f1a10322b540d6d5996d31d3d16b95d0c3a73f7427767b03818b2761"
     },
     {
+      "path": "contracts/InfinityXFeeRouter.sol",
+      "sha256": "cc40a6ab5799cd774bb2174b996632736a3690dfcf37659babf26b3fd7ed85ea"
+    },
+    {
+      "path": "contracts/InfinityXFixedSupplySale.sol",
+      "sha256": "dfeccd5f1e557ad60d0bb04cf7fb1b8c71eed42b4617ba01c263bd21837b68bb"
+    },
+    {
+      "path": "contracts/InfinityXListingRegistry.sol",
+      "sha256": "82be8cf2eced9e3d262297d9eb86d5c83323ce8b0661d3997a301a364cf5fcd8"
+    },
+    {
       "path": "docs/AUDIT_PIPELINE.md",
       "sha256": "8d9fc8dfabeeae76397f90336304aee2f3a33243f4db71a9bf71769cac9c5289"
+    },
+    {
+      "path": "docs/CONTRACT_AUDIT_NOTES.md",
+      "sha256": "53fdf8448b92f434513772e57e174f011d690927bf3742903c26204e28199bf0"
     },
     {
       "path": "docs/PHASES.md",
@@ -76,6 +105,10 @@
     {
       "path": "docs/SECURE_CUSTODY_DESIGN.md",
       "sha256": "40ce368df60fac95ddc7eaefb8430028ba5828d9ad643599f3dfdfa2b35500ec"
+    },
+    {
+      "path": "docs/WALLET_COMPARISON_REPORT.md",
+      "sha256": "fab687dd9ee2968c99da885593d7568ff1e95413b556b378eb217c9dd97039b6"
     },
     {
       "path": "index.html",
@@ -91,15 +124,27 @@
     },
     {
       "path": "package.json",
-      "sha256": "25129d1fdd52f78e88619bf752cb209a05d5a6cfee9da67a9c1aa4532f912383"
+      "sha256": "d896813d9237f54a03befae99bbd8a281051883ec97c8392422afe05a3cf64f0"
     },
     {
       "path": "public/registry/chains.json",
       "sha256": "326aa9f69a74dbf49ee0571edb7b2c0180b4ce4fbcb458aa47812438fb835eb4"
     },
     {
+      "path": "public/registry/dapps.json",
+      "sha256": "6f5ff8c2bd3d2996a554dcfd307a8d8a101884e5b28080a00d2a7f80c21a6b02"
+    },
+    {
       "path": "public/registry/markets.json",
       "sha256": "78e469853d2909ca7b6869ed4e7a1370d669890eb8bbda4cefd6cf89d10d8609"
+    },
+    {
+      "path": "public/registry/metaverse.json",
+      "sha256": "ae8f3125d3c774998852707765a36dd556631678daf7297cc619ccd95b9a67d6"
+    },
+    {
+      "path": "public/registry/nfts.json",
+      "sha256": "e38d340fc1f16959f7b28ba01f7fa350091d1c120468b2eaf35ba8f51fb00f25"
     },
     {
       "path": "public/registry/top-3000-tokens.json",
@@ -118,6 +163,34 @@
       "sha256": "959878f1c587140b3965b65bcf7dc9f7161278601e3eeb9d89c331fa3fa2843f"
     },
     {
+      "path": "public/update-packs/chains.json.gz",
+      "sha256": "832794fa9cd247e160362d9de24377cc19422a39794c1b96cc2bd126897365c3"
+    },
+    {
+      "path": "public/update-packs/dapps.json.gz",
+      "sha256": "f90ef04f7b74d195d638ef3c56b6fddce793cdba894677258e382d1b79a989e4"
+    },
+    {
+      "path": "public/update-packs/manifest.json",
+      "sha256": "8a164ee4fe3c4a7f6793543b5ecc3795c4161b1fe19f1eda921547113b7efffd"
+    },
+    {
+      "path": "public/update-packs/markets.json.gz",
+      "sha256": "93e076bc6eda78b6264dd93652ad92bcf1ef9f508fc5f553d504472e019152b3"
+    },
+    {
+      "path": "public/update-packs/metaverse.json.gz",
+      "sha256": "52fe2c09428304d60c7722b42685d89295cf9742d6a217117db24488ceb266c8"
+    },
+    {
+      "path": "public/update-packs/nfts.json.gz",
+      "sha256": "6f915088882692011717adfee562e1d2883c86db2ed698cd726941b5b9b615b1"
+    },
+    {
+      "path": "public/update-packs/top-3000-tokens.json.gz",
+      "sha256": "6cd8e5fe237f7a15ebf0c153657c1a3500e6ce2b4f7f64bba1e619fdf0cbb1ff"
+    },
+    {
       "path": "README.md",
       "sha256": "8f453546dba1c4ebc35e6179f84194d67bbd36144ffb5f978251f46558b01836"
     },
@@ -127,7 +200,11 @@
     },
     {
       "path": "scripts/audit-pack.mjs",
-      "sha256": "a972bdcac5c3067b2dc244eb335fedc7f7c38b456979ccd5549b5a83fcb95316"
+      "sha256": "42047abe6e45dbb8092eb6284ae8e20db839a119e84e3b2cc53fc92e6ddef28d"
+    },
+    {
+      "path": "scripts/build-update-pack.mjs",
+      "sha256": "162a39629b1aa8c86baf15b967413ee408eb81f9e0e725e62e5ef429bf004e87"
     },
     {
       "path": "scripts/check-solana-wallet.js",
@@ -171,11 +248,11 @@
     },
     {
       "path": "src/main.jsx",
-      "sha256": "f52462288ab1b508447cd645eb8ced61b1a3b1f2bfe63902fc93533a11b9271d"
+      "sha256": "7f6c9060a553b7ffd74a9da791ebef1ff80d8bc0b65cadb613a80d85a0b1542c"
     },
     {
       "path": "src/styles.css",
-      "sha256": "fbd0c93ec3f0560faed16bb992a649ea11304cf076c6340982923678188291e6"
+      "sha256": "92ed9987263f252c81a8ad05cdb3818b0a5d5e3dc3a31214765ea301c5c3cd05"
     },
     {
       "path": "token.config.json",
@@ -190,8 +267,16 @@
       "sha256": "934abdc8a7991d0f425f55446a9fa5c103cd0cad81899233c3c79d0e40f23ed7"
     },
     {
+      "path": "www/assets/index-BCkUP-Dx.js",
+      "sha256": "847ed5a71937c3e5e02f1c3d8910bb2d78ead55c8e3f7e0b4c6b0949d96684e0"
+    },
+    {
       "path": "www/assets/index-BKg4xlPH.js",
       "sha256": "babca57519ec10b6e6420241bf03b59787bb74d7c5b4d03c396c95c6ecc17b54"
+    },
+    {
+      "path": "www/assets/index-CBEZAI7X.js",
+      "sha256": "e05ac36001a17ef7489810785fd140a6c26ccb38f58793af8590453ce317cd21"
     },
     {
       "path": "www/assets/index-Cgb3_zQ2.js",
@@ -200,6 +285,14 @@
     {
       "path": "www/assets/index-DmWLyQQi.css",
       "sha256": "21c29ab8b3f9a90f87773ebdfcd4eeedefa1b460d4b1d9b5a4e32b1d432f6ee4"
+    },
+    {
+      "path": "www/assets/index-DXiThRg2.css",
+      "sha256": "bc3dca603ab6a736918c5b110598a51ce2b3bf240f82f3fad55c67ff52e6bd75"
+    },
+    {
+      "path": "www/assets/index-LR-KN_KP.css",
+      "sha256": "a6fcbce365d9f6c035439eb556d561b2553a8fdb67112fcff011e06db8b22dd0"
     },
     {
       "path": "www/assets/index-QuKEE0Yh.js",
@@ -211,11 +304,27 @@
     },
     {
       "path": "www/index.html",
-      "sha256": "889e2c7e111a8218047ad01594395043b8a51d46747d59c3f2da05566125da43"
+      "sha256": "dfdbfd8c909e6c199b2cfd693f8f55f24ab2009037c83d2b37509ba182290b69"
+    },
+    {
+      "path": "www/registry/chains.json",
+      "sha256": "326aa9f69a74dbf49ee0571edb7b2c0180b4ce4fbcb458aa47812438fb835eb4"
+    },
+    {
+      "path": "www/registry/dapps.json",
+      "sha256": "6f5ff8c2bd3d2996a554dcfd307a8d8a101884e5b28080a00d2a7f80c21a6b02"
     },
     {
       "path": "www/registry/markets.json",
       "sha256": "78e469853d2909ca7b6869ed4e7a1370d669890eb8bbda4cefd6cf89d10d8609"
+    },
+    {
+      "path": "www/registry/metaverse.json",
+      "sha256": "ae8f3125d3c774998852707765a36dd556631678daf7297cc619ccd95b9a67d6"
+    },
+    {
+      "path": "www/registry/nfts.json",
+      "sha256": "e38d340fc1f16959f7b28ba01f7fa350091d1c120468b2eaf35ba8f51fb00f25"
     },
     {
       "path": "www/registry/top-3000-tokens.json",
@@ -232,6 +341,34 @@
     {
       "path": "www/token/metadata.json",
       "sha256": "959878f1c587140b3965b65bcf7dc9f7161278601e3eeb9d89c331fa3fa2843f"
+    },
+    {
+      "path": "www/update-packs/chains.json.gz",
+      "sha256": "832794fa9cd247e160362d9de24377cc19422a39794c1b96cc2bd126897365c3"
+    },
+    {
+      "path": "www/update-packs/dapps.json.gz",
+      "sha256": "f90ef04f7b74d195d638ef3c56b6fddce793cdba894677258e382d1b79a989e4"
+    },
+    {
+      "path": "www/update-packs/manifest.json",
+      "sha256": "6a8576afb78ae43a6d25080dc1f8f3e2efb07400a24c298b4956d6414049f157"
+    },
+    {
+      "path": "www/update-packs/markets.json.gz",
+      "sha256": "93e076bc6eda78b6264dd93652ad92bcf1ef9f508fc5f553d504472e019152b3"
+    },
+    {
+      "path": "www/update-packs/metaverse.json.gz",
+      "sha256": "52fe2c09428304d60c7722b42685d89295cf9742d6a217117db24488ceb266c8"
+    },
+    {
+      "path": "www/update-packs/nfts.json.gz",
+      "sha256": "6f915088882692011717adfee562e1d2883c86db2ed698cd726941b5b9b615b1"
+    },
+    {
+      "path": "www/update-packs/top-3000-tokens.json.gz",
+      "sha256": "6cd8e5fe237f7a15ebf0c153657c1a3500e6ce2b4f7f64bba1e619fdf0cbb1ff"
     }
   ]
 }

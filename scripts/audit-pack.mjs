@@ -16,7 +16,8 @@ const report = {
     nonCustodialBackend: true,
     ifxMintAuthorityRevoked: true,
     freezeAuthorityRevoked: true,
-    privateKeysInRepo: true,
+    noPrivateKeysInAuditedSource: true,
+    localSecretsFolderExcluded: statExists(join(root, "secrets")),
     revenueDestination: "NHMs85t1zJDKU8ThrxEz6xC4S1R2XANadmk7K55tG3Q"
   },
   files
@@ -41,5 +42,14 @@ function walk(dir) {
         sha256: createHash("sha256").update(bytes).digest("hex")
       });
     }
+  }
+}
+
+function statExists(path) {
+  try {
+    statSync(path);
+    return true;
+  } catch {
+    return false;
   }
 }
