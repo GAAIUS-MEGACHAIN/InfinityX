@@ -13,6 +13,7 @@
     "preview": "vite preview --host 127.0.0.1",
     "backend": "python backend/infinityx_backend.py",
     "audit": "node scripts/audit-pack.mjs",
+    "registry:top3000": "node scripts/generate-top3000-registry.mjs",
     "token:wallet": "node scripts/generate-solana-wallet.js",
     "token:airdrop:devnet": "node scripts/airdrop-devnet-sol.js",
     "token:create:devnet": "node scripts/create-infinityx-token.js --network devnet",

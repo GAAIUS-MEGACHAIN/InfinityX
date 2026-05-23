@@ -84,6 +84,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(tokens)
         if url.path == "/policy/fees":
             return self.reply(load_json(DATA / "fees.json"))
+        if url.path == "/markets":
+            return self.reply(load_json(DATA / "markets.json"))
         if url.path == "/policy/custody":
             return self.reply(load_json(DATA / "custody.json"))
         if url.path == "/notifications":

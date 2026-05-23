@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T11:16:43.371Z",
+  "generatedAt": "2026-05-23T11:37:55.705Z",
   "scope": "static source integrity, policy checks, forbidden secret path checks",
   "checks": {
     "nonCustodialBackend": true,
@@ -23,11 +23,11 @@
     },
     {
       "path": "audits/latest-audit.json",
-      "sha256": "1c3c1f08651385e0c2951a445b0bbe1709579a3df725519b5432b89409254125"
+      "sha256": "914599b5a282eb3d4492f94d4648406f8006bda6ee86c135dd847e8b3d397b3a"
     },
     {
       "path": "audits/latest-audit.json.gz",
-      "sha256": "0e66c934a96473b22207865dd6818ecad3e9dea5474ce76c4e89f33c66ce71b0"
+      "sha256": "a6ecc9ea013d1f349cc3ce2652e477dadbfba722b5b7c062d63bf937b47c8a6e"
     },
     {
       "path": "backend/data/chains.json",
@@ -42,6 +42,10 @@
       "sha256": "85454377820112194c922e0af98f524b01af474a04e4f35e50be11f60a24f38a"
     },
     {
+      "path": "backend/data/markets.json",
+      "sha256": "ae7802f6a8ad3da61846a986766e3a53a83082c19fad9e91f0a39f2e82c921e5"
+    },
+    {
       "path": "backend/data/notifications.json",
       "sha256": "396e71351b8910c7198dc692bfe3fcc04a763b0c35249a4a610897a746bfb8e0"
     },
@@ -50,8 +54,12 @@
       "sha256": "e2fd34e2de46fb2de8d173483f4dc32e2fc3f92ddadda27b1a9c8284f6178c60"
     },
     {
+      "path": "backend/data/tokens.top3000.json",
+      "sha256": "f48091b08d479a4586bf3ca3d062e702121ab697aad47af7fbf33977e3c28514"
+    },
+    {
       "path": "backend/infinityx_backend.py",
-      "sha256": "edd9101d974fc51a5555a7d103c84d1b31281ed5d5d4e3521af715b437730338"
+      "sha256": "d2ba2b40a8621c93ea3e18295043d70cb58035b8db491e1d9fb971a950d720ba"
     },
     {
       "path": "capacitor.config.json",
@@ -83,7 +91,15 @@
     },
     {
       "path": "package.json",
-      "sha256": "9c328a0a425c399eab4b4c95b1de72e5974b87b8f340c52c60653faa9c5815f7"
+      "sha256": "67225173768f971f75091eac81f23928aee27ed049cc628e4163f2d9c05d4196"
+    },
+    {
+      "path": "public/registry/markets.json",
+      "sha256": "78e469853d2909ca7b6869ed4e7a1370d669890eb8bbda4cefd6cf89d10d8609"
+    },
+    {
+      "path": "public/registry/top-3000-tokens.json",
+      "sha256": "45601838e7f834b862f8a1ca82c9dc681316261187edf0a07a91b0c140cbd585"
     },
     {
       "path": "public/token/ifx.json",
@@ -126,20 +142,24 @@
       "sha256": "ed9f20809b7a72f0dfefa6e04bdf1913cfa0b5858589115dc5317c3c50bb73e0"
     },
     {
+      "path": "scripts/generate-top3000-registry.mjs",
+      "sha256": "f997a7174cf060e6b25028150deed7c3f3e38823a032779b3cd5a1c7e59a5bcd"
+    },
+    {
       "path": "scripts/swap-usdc-to-sol.js",
       "sha256": "d3e2c166d4813a74c894d918b97c5b2b8b41a988667b40f0e5a1c478e33b2990"
     },
     {
       "path": "src/lib/vault.js",
-      "sha256": "4e141af10908c99cb0d9ca08c9fba5cf8f795b20d67e54f946b449504129ea8d"
+      "sha256": "3748a5fc39903736be9e074917bf5535c037870692b53ede5506eb481304224e"
     },
     {
       "path": "src/main.jsx",
-      "sha256": "dad66433985bb6206db12133df394e95db0746e07a8e188fe9f9d82f487e0910"
+      "sha256": "1e18bdda894d174a41c9735683f28ff405ca1f54313db9eaa5354afbbe6870a5"
     },
     {
       "path": "src/styles.css",
-      "sha256": "91fce7d6918a4157412ba97518c724cce0d26d2eca2194457685b58b6eadde79"
+      "sha256": "dd0f8366eb8bd95452d81507926a49a9900ad764ef25be8a92c2935d0d8d316a"
     },
     {
       "path": "token.config.json",
@@ -150,6 +170,10 @@
       "sha256": "bd1bbfc6a9ac8c75065594dcc28c2c8a6ecffd526065d578963d85d0251bf9f4"
     },
     {
+      "path": "www/assets/index-9bP9rppZ.css",
+      "sha256": "934abdc8a7991d0f425f55446a9fa5c103cd0cad81899233c3c79d0e40f23ed7"
+    },
+    {
       "path": "www/assets/index-Cgb3_zQ2.js",
       "sha256": "6ad94269b5a75d45f5f51cdd7ffc79cd69c04403a5600cf66923e6923a1771b0"
     },
@@ -158,8 +182,12 @@
       "sha256": "21c29ab8b3f9a90f87773ebdfcd4eeedefa1b460d4b1d9b5a4e32b1d432f6ee4"
     },
     {
+      "path": "www/assets/index-QuKEE0Yh.js",
+      "sha256": "2ff157451d0c2d3842d514a257f3147189bb3a53a275aebc047b06cb2f4afe8e"
+    },
+    {
       "path": "www/index.html",
-      "sha256": "d13a669226f4a9281fa0cb9227b2d02534a40134dab799b22de4f78aef03781b"
+      "sha256": "0567d1f268349e74ea6bbcc0a145e48d2e063428938bdc65defc2dd78d26b217"
     },
     {
       "path": "www/token/ifx.json",
