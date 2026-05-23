@@ -16,3 +16,5 @@ Contracts in `contracts/` are starter templates, not audited production deployme
 - `InfinityXFeeRouter.sol`: service fee quote and native fee forwarding.
 - `InfinityXListingRegistry.sol`: token/dApp application registry.
 - `InfinityXFixedSupplySale.sol`: pre-funded fixed-supply sale adapter. It never mints IFX.
+- `InfinityXTokenFactory.sol`: EVM token creation factory with treasury fee forwarding.
+- `InfinityXGuardianRecovery.sol`: guardian recovery proposal/approval/delay template.

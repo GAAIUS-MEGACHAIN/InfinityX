@@ -24,6 +24,9 @@ Generated May 23, 2026.
 | DEX execution | Jupiter quote and signed swap adapter | Moves beyond quote-only DEX UI on Solana |
 | Bridge execution | LI.FI bridge quotes and EVM transaction-request signing | Adds a real cross-chain route path for supported EVM networks |
 | WalletConnect | WalletKit initializer and pairing field | Ready for project ID plus request approval screens |
+| Native signing gate | Android BiometricPrompt and Android Keystore gate | Live transactions require OS-level user approval on Android |
+| Token creation | Solana SPL token creation flow plus EVM factory contract | Adds creator tooling inside the wallet |
+| Staking | Solana native staking transaction builder | Gives supported staking assets their own page |
 | Desktop and APK | Both generated from shared UI | Multi-platform from the start |
 
 ## Where Competitors Are Ahead
@@ -35,7 +38,7 @@ Generated May 23, 2026.
 | NFT support | ERC-721/ERC-1155 ecosystem | Strong Solana/NFT UX | Broad NFT storage | NFT gallery/transfers | Enables dApp connection | Needs real NFT indexers |
 | Swaps/bridges | Portfolio buy/swap/bridge/stake | Cross-chain swap UX | Swaps/staking/buy | dApp/wallet integrations | Connection layer | Solana Jupiter execution and LI.FI EVM bridge execution exist; more providers and guardrails needed |
 | Security maturity | Established | Scam detection/transaction previews | Established | Transaction previews | Session security | Basic risk checks/simulation exist; needs phishing feeds, contract decoding, and audit |
-| App store readiness | Production | Production | Production | Production | SDK/protocol | Needs signed release builds and policies |
+| App store readiness | Production | Production | Production | Production | SDK/protocol | Signed Android release APK/AAB now builds; store listing/policies still required |
 
 ## Source Notes
 
@@ -48,17 +51,17 @@ Generated May 23, 2026.
 ## What InfinityX Needs Before Real Users With Funds
 
 1. Professional external audit of vault, signing, swap, and contract code.
-2. Android biometric/passkey native gate before every live signing action.
-3. WalletConnect session proposal and request approval screens.
+2. Hardware-device testing of the Android biometric/passkey native gate.
+3. WalletConnect signing payload decode/approval adapters.
 4. NFT indexer integrations or self-hosted indexers.
 5. More bridge provider adapters plus slippage/route risk scoring.
-6. Production Play Store signing key and release pipeline.
+6. Play Store listing, privacy/data safety forms, and closed testing track.
 7. Treasury multisig and deployed fee/liquidity contracts.
-8. Legal review for swap fees, sales, and token listings.
+8. Clear fee disclosures, terms, and region controls for swap, bridge, token creation, and listing services.
 
 ## Enhancement Roadmap
 
-- Complete WalletConnect request approvals.
+- Complete WalletConnect signing payload decode and approval execution.
 - Add NFT gallery with spam filtering.
 - Add dApp browser/session permissions.
 - Add additional bridge providers beyond LI.FI.

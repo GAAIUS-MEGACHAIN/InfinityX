@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T12:48:56.941Z",
+  "generatedAt": "2026-05-23T13:44:21.764Z",
   "scope": "static source integrity, policy checks, forbidden secret path checks",
   "checks": {
     "nonCustodialBackend": true,
@@ -10,6 +10,10 @@
     "revenueDestination": "NHMs85t1zJDKU8ThrxEz6xC4S1R2XANadmk7K55tG3Q"
   },
   "files": [
+    {
+      "path": ".github/workflows/security-audit.yml",
+      "sha256": "0df752f3639704f387443fa7410decebdbfa9f34f5b87c436ff35504cba8e3c5"
+    },
     {
       "path": ".gitignore",
       "sha256": "cb9f63843d758c814ec9fda3b31fedefe9db5656b193b51e8407de2d63371109"
@@ -24,11 +28,11 @@
     },
     {
       "path": "audits/latest-audit.json",
-      "sha256": "79d9acbcbaf1224304bd073a9487ff9de4399b9b3e18d874ca006462d99ae38f"
+      "sha256": "68faad5778bdd69dd941c6aae8fdcc9fa18306a4130ac32f661cd8513de039f9"
     },
     {
       "path": "audits/latest-audit.json.gz",
-      "sha256": "4cb95053566cb51e076a33cf4c694f6ee03eae280deefb548466de7672aadd53"
+      "sha256": "06c864c1e7832e038625f5ad29b32278599a9d8c3e53793f91556ed07c531594"
     },
     {
       "path": "backend/data/chains.json",
@@ -44,7 +48,7 @@
     },
     {
       "path": "backend/data/fees.json",
-      "sha256": "85454377820112194c922e0af98f524b01af474a04e4f35e50be11f60a24f38a"
+      "sha256": "903ef627d599abe07f13c11262f9bd1f1bfb93dd4abf490f93deba07544ea299"
     },
     {
       "path": "backend/data/markets.json",
@@ -63,6 +67,10 @@
       "sha256": "396e71351b8910c7198dc692bfe3fcc04a763b0c35249a4a610897a746bfb8e0"
     },
     {
+      "path": "backend/data/recovery.json",
+      "sha256": "00556e34e88e1652683d2af50c15c50478184965d35a610b9d3b27057148d9b7"
+    },
+    {
       "path": "backend/data/tokens.top.json",
       "sha256": "e2fd34e2de46fb2de8d173483f4dc32e2fc3f92ddadda27b1a9c8284f6178c60"
     },
@@ -71,8 +79,12 @@
       "sha256": "f48091b08d479a4586bf3ca3d062e702121ab697aad47af7fbf33977e3c28514"
     },
     {
+      "path": "backend/data/treasury.json",
+      "sha256": "1007425b9dff78aa20df63e956d7901cd71f0695a6aa848a9a65258732df8be1"
+    },
+    {
       "path": "backend/infinityx_backend.py",
-      "sha256": "d3f232d18dfea46a1580aff68713889f37a80560f4d09bfaf871780ad28537e5"
+      "sha256": "0f31294ab56bcf1280634580212b0e00920452e36d45eb01715f9c1053e3d85d"
     },
     {
       "path": "capacitor.config.json",
@@ -87,28 +99,44 @@
       "sha256": "dfeccd5f1e557ad60d0bb04cf7fb1b8c71eed42b4617ba01c263bd21837b68bb"
     },
     {
+      "path": "contracts/InfinityXGuardianRecovery.sol",
+      "sha256": "c3af637030bc3403d1e3a6a0d96dcf650f382d6793deaa9d0a0100e7354d2106"
+    },
+    {
       "path": "contracts/InfinityXListingRegistry.sol",
       "sha256": "82be8cf2eced9e3d262297d9eb86d5c83323ce8b0661d3997a301a364cf5fcd8"
     },
     {
+      "path": "contracts/InfinityXTokenFactory.sol",
+      "sha256": "f8e8ec153c456ba64d129857813fcc00dd763cfed69bf62ad16f9ae72639c711"
+    },
+    {
       "path": "docs/AUDIT_PIPELINE.md",
-      "sha256": "8d9fc8dfabeeae76397f90336304aee2f3a33243f4db71a9bf71769cac9c5289"
+      "sha256": "dcf6e0a2c690eebcc28aa670ec0a51c9bccc675dc09e756c35f26d4d86ea3442"
     },
     {
       "path": "docs/CONTRACT_AUDIT_NOTES.md",
-      "sha256": "53fdf8448b92f434513772e57e174f011d690927bf3742903c26204e28199bf0"
+      "sha256": "247d5d31d5aa720c69f4133d8cc48808ce211ac22d9278cd83dc2c8f12f99863"
     },
     {
       "path": "docs/PHASES.md",
-      "sha256": "111be2cf23dde8497c96d2ca62d7bcd388fc070301bab13091c7ffce70b02ce1"
+      "sha256": "546aa3a941d04ab1540be3580d6ba20dbff6619ed09e1e4174a90012a2aea0bd"
+    },
+    {
+      "path": "docs/PLAY_STORE_SIGNING.md",
+      "sha256": "6b7442f65c702e245efd5459d4efa243783360ef0bc7c184e445a1e1ab666c7c"
     },
     {
       "path": "docs/SECURE_CUSTODY_DESIGN.md",
-      "sha256": "e091bd7c16f9cabfcb2d26cd9a11d7995094cfa60194911f6984151032ea96a4"
+      "sha256": "d0655e5693245e140f5e077e54c031cd0dbd19611a928e9d0089e0575d4b3644"
+    },
+    {
+      "path": "docs/TREASURY_LIQUIDITY_DEPLOYMENT.md",
+      "sha256": "952ed8a7761cecea4bde6228d2b2156f7d0e73122270f299bfd226a7d110b4f6"
     },
     {
       "path": "docs/WALLET_COMPARISON_REPORT.md",
-      "sha256": "6ba3e142942a510a59297a38753db28c9499dc46e0b6979ddefcd95c287e7bbd"
+      "sha256": "98947b1f583c78ed8a7d5ba50b68bdea462722dfd7aee9c14670f15a52369eba"
     },
     {
       "path": "index.html",
@@ -247,6 +275,10 @@
       "sha256": "b42c503925e38a41db01a4162967b92e69dcdcb5b942ae8f065ebda700e71770"
     },
     {
+      "path": "src/lib/externalWallets.js",
+      "sha256": "852234be906922315f211b7075bbb5e64204901567009e8daf9d211b6b8d0836"
+    },
+    {
       "path": "src/lib/googleAuth.js",
       "sha256": "2525eea17a548114ce565d906654eb43db8f92917f6eeb1f49db716722dab50a"
     },
@@ -255,12 +287,16 @@
       "sha256": "48cd5a1403b6ba3c5fc512ffcd7abe3594d7342e87743c5db0751acf0d236c4b"
     },
     {
+      "path": "src/lib/nativeSecurity.js",
+      "sha256": "fa76b4e651bb7421635cda24811bfbbb9e73dc123a1fbe4812f1062e0eaac8c8"
+    },
+    {
       "path": "src/lib/security.js",
       "sha256": "d37d0a7bed4617a2d5c813008e7fce729c2b6f1eaa7bcce0ab8a0fcdea44e741"
     },
     {
       "path": "src/lib/solanaWallet.js",
-      "sha256": "9c9af9ad359f618abcfb4e148835aa39a9f630ced20b61647da85583ed4a66a6"
+      "sha256": "46166c62d2a2276cc682460a450a9f44ee35f779dcb076921ffe9c8041c8995e"
     },
     {
       "path": "src/lib/vault.js",
@@ -268,11 +304,11 @@
     },
     {
       "path": "src/lib/walletConnect.js",
-      "sha256": "d0c4fec0b703b68fcbdf358fe64d047d31b077de506bc13fe1702b9df61bd2c4"
+      "sha256": "ab1c22b5c5e9e3cf8f30462f0637f948794f91019b5b73f1a12c15621cd7888a"
     },
     {
       "path": "src/main.jsx",
-      "sha256": "450bb0d2872e641363e704cbc938d2368ee640665f8a0e90e4f0c33946e4bb94"
+      "sha256": "8262735f9f4721dfb7cc464deeca431f4c21aa9092ce47de66a5104f03ada6c7"
     },
     {
       "path": "src/polyfills.js",
@@ -280,7 +316,7 @@
     },
     {
       "path": "src/styles.css",
-      "sha256": "73b35eab9bf6312e2cd86e368bd62813b44b043daca8e1ca5fe871eb2a7df42f"
+      "sha256": "4c304ae51862b64a47a77e663bdf22a6ddbca9c2d157b65c9a8aeb72da49ea02"
     },
     {
       "path": "token.config.json",
@@ -289,6 +325,10 @@
     {
       "path": "vite.config.js",
       "sha256": "bd1bbfc6a9ac8c75065594dcc28c2c8a6ecffd526065d578963d85d0251bf9f4"
+    },
+    {
+      "path": "www/assets/ccip-BkCV813_.js",
+      "sha256": "b3375e13b1000c0a725a2b2a7fdeee04ce3c50417d23b8b0a7eb1c6b07df9bd4"
     },
     {
       "path": "www/assets/ccip-DBp_xI_7.js",
@@ -315,6 +355,14 @@
       "sha256": "fe0e6e2f975bb4c57a7f60a7d08da1f9b94051591343e1439be66f6f14c99832"
     },
     {
+      "path": "www/assets/dist-MUaTW-mm.js",
+      "sha256": "e3f2e5c69b2e65307c649b68247aa9f98b3a0a415d819efd1b861f9301612b03"
+    },
+    {
+      "path": "www/assets/dist-SGFQKX4p.js",
+      "sha256": "a301d73aa13ca26cb76990b75ad59baed0d0d2096a21370e4b24bc59f1fe2acf"
+    },
+    {
       "path": "www/assets/dist-sU6vUp4I.js",
       "sha256": "1bff63e942db7423dd548c00498371e5c35a2c4be8ad0be4c2057740008f10fa"
     },
@@ -325,6 +373,10 @@
     {
       "path": "www/assets/dist-XRimuAKp.js",
       "sha256": "7d14d2d9ec660937e66b1852ba4f19bbf249171e9a8e5499a322a4966ba834ee"
+    },
+    {
+      "path": "www/assets/index-58vF-QJQ.css",
+      "sha256": "310eab9da9d3731f54b754bf48159a8eb9877600c60344e2a316806f1da7f924"
     },
     {
       "path": "www/assets/index-9bP9rppZ.css",
@@ -359,6 +411,10 @@
       "sha256": "443f07f23ef0a32a4e2e99a0b330200a66168ec8aa0d133a93d54aba7cd569db"
     },
     {
+      "path": "www/assets/index-CQrx2GRN.js",
+      "sha256": "5c9f6ca21fa56b104a58d52af3491a4074e25f22c2fade90260cc251bbeb93e4"
+    },
+    {
       "path": "www/assets/index-DmWLyQQi.css",
       "sha256": "21c29ab8b3f9a90f87773ebdfcd4eeedefa1b460d4b1d9b5a4e32b1d432f6ee4"
     },
@@ -384,7 +440,7 @@
     },
     {
       "path": "www/index.html",
-      "sha256": "81fcaac7963afe323d9bfcb9949d94cdcc0b80b5bea0823d79192b33ab533672"
+      "sha256": "11dbfb6d255b0015eb547703c65b637626df37396e851c6c9f5bf7ec22b91277"
     },
     {
       "path": "www/registry/chains.json",

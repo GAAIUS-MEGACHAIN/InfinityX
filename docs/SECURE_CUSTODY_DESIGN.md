@@ -29,6 +29,11 @@ InfinityX is non-custodial. The backend never stores seed phrases, private keys,
 - Jupiter Solana swap transaction building, local signing, and broadcast.
 - LI.FI EVM bridge quote plus transaction-request signing and broadcast.
 - WalletConnect WalletKit initialization scaffold requiring a project ID.
+- Android BiometricPrompt signing gate.
+- Android Keystore hardware-backed gate key.
+- Solana native staking transaction signing.
+- Solana SPL token creation transaction signing.
+- WalletConnect session proposal approval and request rejection screens.
 
 ## Hard Rule
 

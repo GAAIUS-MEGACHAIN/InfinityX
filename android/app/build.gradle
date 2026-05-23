@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+def infinityXKeystoreProperties = new Properties()
+def infinityXKeystorePropertiesFile = new File(rootProject.projectDir.parentFile, 'secrets/keystore.properties')
+if (infinityXKeystorePropertiesFile.exists()) {
+    infinityXKeystoreProperties.load(new FileInputStream(infinityXKeystorePropertiesFile))
+}
+
 android {
     namespace = "com.infinityx.wallet"
     compileSdk = rootProject.ext.compileSdkVersion
@@ -16,10 +22,22 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        release {
+            storeFile infinityXKeystoreProperties['storeFile'] ? file(infinityXKeystoreProperties['storeFile']) : null
+            storePassword infinityXKeystoreProperties['storePassword']
+            keyAlias infinityXKeystoreProperties['keyAlias']
+            keyPassword infinityXKeystoreProperties['keyPassword']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (infinityXKeystoreProperties['storeFile']) {
+                signingConfig signingConfigs.release
+            }
         }
     }
 }
@@ -33,6 +51,7 @@ repositories {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.biometric:biometric:1.1.0"
     implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
     implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
     implementation project(':capacitor-android')

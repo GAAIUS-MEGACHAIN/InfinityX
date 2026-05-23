@@ -84,6 +84,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(tokens)
         if url.path == "/policy/fees":
             return self.reply(load_json(DATA / "fees.json"))
+        if url.path == "/policy/treasury":
+            return self.reply(load_json(DATA / "treasury.json"))
         if url.path == "/markets":
             return self.reply(load_json(DATA / "markets.json"))
         if url.path == "/dapps":
@@ -94,6 +96,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(load_json(DATA / "metaverse.json"))
         if url.path == "/policy/custody":
             return self.reply(load_json(DATA / "custody.json"))
+        if url.path == "/policy/recovery":
+            return self.reply(load_json(DATA / "recovery.json"))
         if url.path == "/notifications":
             return self.reply(load_json(DATA / "notifications.json"))
         if url.path == "/audit/latest":
@@ -112,6 +116,10 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(unsigned_intent("buy-ifx", body))
         if url.path == "/revenue/record":
             return self.reply(record_revenue(body))
+        if url.path == "/recovery/mpc-intent":
+            return self.reply(unsigned_intent("mpc-recovery", body))
+        if url.path == "/recovery/social-intent":
+            return self.reply(unsigned_intent("social-recovery", body))
         return self.reply({"error": "not found"}, status=404)
 
     def reply(self, payload, status=200):
