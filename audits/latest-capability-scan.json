@@ -1,0 +1,1423 @@
+{
+  "generatedAt": "2026-05-23T21:01:31.903Z",
+  "summary": {
+    "listedChains": 133,
+    "liveTransactionChains": 87,
+    "blockedNativeChains": 45,
+    "bundledAssets": 3000,
+    "assetsWithLiveSendReceivePath": 2419,
+    "assetsStillRegistryOnly": 581
+  },
+  "supportByKind": {
+    "InfinityX routing": 1,
+    "SVM": 1,
+    "EVM": 71,
+    "UTXO": 10,
+    "Account": 20,
+    "Move": 2,
+    "Cosmos": 10,
+    "Cosmos/EVM": 1,
+    "Substrate": 5,
+    "Canister": 1,
+    "Privacy": 1,
+    "Bitcoin L2": 7,
+    "DAG": 2,
+    "UTXO/EVM": 1
+  },
+  "liveChains": [
+    {
+      "name": "Solana",
+      "kind": "SVM",
+      "adapter": "solana",
+      "assets": "native+spl"
+    },
+    {
+      "name": "Ethereum",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Polygon",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "BNB Chain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Base",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Arbitrum",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Optimism",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Avalanche",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Fantom",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Bitcoin",
+      "kind": "UTXO",
+      "adapter": "utxo",
+      "assets": "native"
+    },
+    {
+      "name": "Linea",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Scroll",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "zkSync Era",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Mantle",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Blast",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Mode",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Manta Pacific",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Metis",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Gnosis",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Celo",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Moonbeam",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Moonriver",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Cronos",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Kava",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Klaytn",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Kaia",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Harmony",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Aurora",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Boba",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Rootstock",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "opBNB",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Zora",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "World Chain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Taiko",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Sonic",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Berachain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Sei EVM",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Injective EVM",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Cosmos Hub",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Osmosis",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Celestia",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Stargaze",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Juno",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Akash",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Kujira",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Secret Network",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Stride",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Evmos",
+      "kind": "Cosmos/EVM",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Coreum",
+      "kind": "Cosmos",
+      "adapter": "cosmos",
+      "assets": "native"
+    },
+    {
+      "name": "Litecoin",
+      "kind": "UTXO",
+      "adapter": "utxo",
+      "assets": "native"
+    },
+    {
+      "name": "Dogecoin",
+      "kind": "UTXO",
+      "adapter": "utxo",
+      "assets": "native"
+    },
+    {
+      "name": "Dash",
+      "kind": "UTXO",
+      "adapter": "utxo",
+      "assets": "native"
+    },
+    {
+      "name": "Ronin",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Immutable zkEVM",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Xai",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Lisk",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Fraxtal",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "ApeChain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Abstract",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Sanko",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Redstone",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Cyber",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Degen Chain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Shibarium",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "PulseChain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Chiliz",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "OKX Chain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "HECO",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "BitTorrent Chain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "WEMIX",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Oasis Sapphire",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Flare",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Songbird",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Energy Web",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Fuse",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Telos EVM",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Meter",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Callisto",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Syscoin NEVM",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Elastos",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Godwoken",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "PlatON",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "REI Network",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "Ubiq",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "TomoChain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "KardiaChain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    },
+    {
+      "name": "ZetaChain",
+      "kind": "EVM",
+      "adapter": "evm",
+      "assets": "native+erc20"
+    }
+  ],
+  "blockedByKind": {
+    "UTXO": [
+      "Cardano",
+      "Kaspa",
+      "Bitcoin Cash",
+      "Zcash",
+      "Nervos",
+      "Ergo"
+    ],
+    "Account": [
+      "XRP Ledger",
+      "Tron",
+      "Ton",
+      "Near",
+      "Filecoin",
+      "Algorand",
+      "Stellar",
+      "Hedera",
+      "Tezos",
+      "EOS",
+      "WAX",
+      "Flow",
+      "VeChain",
+      "Theta",
+      "MultiversX",
+      "Waves",
+      "Neo",
+      "Ontology",
+      "Conflux",
+      "Oasis"
+    ],
+    "Move": [
+      "Sui",
+      "Aptos"
+    ],
+    "Substrate": [
+      "Polkadot",
+      "Kusama",
+      "Acala",
+      "Astar",
+      "Bittensor"
+    ],
+    "Canister": [
+      "Internet Computer"
+    ],
+    "Privacy": [
+      "Monero"
+    ],
+    "Bitcoin L2": [
+      "Stacks",
+      "Merlin",
+      "B² Network",
+      "BOB",
+      "Mezo",
+      "Fractal Bitcoin",
+      "BEVM"
+    ],
+    "DAG": [
+      "IOTA",
+      "Nano"
+    ],
+    "UTXO/EVM": [
+      "Qtum"
+    ]
+  },
+  "topBlockedAssets": [
+    {
+      "rank": 5,
+      "symbol": "XRP",
+      "name": "XRP",
+      "chains": [
+        "XRP Ledger"
+      ]
+    },
+    {
+      "rank": 8,
+      "symbol": "TRX",
+      "name": "TRON",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 9,
+      "symbol": "FIGR_HELOC",
+      "name": "Figure Heloc",
+      "chains": [
+        "provenance"
+      ]
+    },
+    {
+      "rank": 10,
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 11,
+      "symbol": "HYPE",
+      "name": "Hyperliquid",
+      "chains": [
+        "hyperliquid"
+      ]
+    },
+    {
+      "rank": 13,
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "chains": [
+        "near-protocol"
+      ]
+    },
+    {
+      "rank": 15,
+      "symbol": "ADA",
+      "name": "Cardano",
+      "chains": [
+        "Cardano"
+      ]
+    },
+    {
+      "rank": 17,
+      "symbol": "BCH",
+      "name": "Bitcoin Cash",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 16,
+      "symbol": "XMR",
+      "name": "Monero",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 20,
+      "symbol": "CC",
+      "name": "Canton",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 23,
+      "symbol": "XLM",
+      "name": "Stellar",
+      "chains": [
+        "stellar"
+      ]
+    },
+    {
+      "rank": 26,
+      "symbol": "SUI",
+      "name": "Sui",
+      "chains": [
+        "sui"
+      ]
+    },
+    {
+      "rank": 27,
+      "symbol": "LTC",
+      "name": "Litecoin",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 29,
+      "symbol": "HBAR",
+      "name": "Hedera",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 37,
+      "symbol": "NEAR",
+      "name": "NEAR Protocol",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 40,
+      "symbol": "TAO",
+      "name": "Bittensor",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 54,
+      "symbol": "PI",
+      "name": "Pi Network",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 59,
+      "symbol": "ETC",
+      "name": "Ethereum Classic",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 60,
+      "symbol": "BFUSD",
+      "name": "BFUSD",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 66,
+      "symbol": "KCS",
+      "name": "KuCoin",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 69,
+      "symbol": "ALGO",
+      "name": "Algorand",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 76,
+      "symbol": "KAS",
+      "name": "Kaspa",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 80,
+      "symbol": "JST",
+      "name": "JUST",
+      "chains": [
+        "tron"
+      ]
+    },
+    {
+      "rank": 82,
+      "symbol": "APT",
+      "name": "Aptos",
+      "chains": [
+        "aptos"
+      ]
+    },
+    {
+      "rank": 84,
+      "symbol": "FIL",
+      "name": "Filecoin",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 85,
+      "symbol": "FLR",
+      "name": "Flare",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 89,
+      "symbol": "HASH",
+      "name": "Provenance Blockchain",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 90,
+      "symbol": "XDC",
+      "name": "XDC Network",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 96,
+      "symbol": "VET",
+      "name": "VeChain",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 97,
+      "symbol": "DASH",
+      "name": "Dash",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 102,
+      "symbol": "YLDS",
+      "name": "YLDS",
+      "chains": [
+        "provenance"
+      ]
+    },
+    {
+      "rank": 112,
+      "symbol": "LUNC",
+      "name": "Terra Luna Classic",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 114,
+      "symbol": "STX",
+      "name": "Stacks",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 120,
+      "symbol": "SEI",
+      "name": "Sei",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 123,
+      "symbol": "SUN",
+      "name": "Sun Token",
+      "chains": [
+        "tron"
+      ]
+    },
+    {
+      "rank": 128,
+      "symbol": "TIA",
+      "name": "Celestia",
+      "chains": [
+        "secret",
+        "cosmos",
+        "osmosis"
+      ]
+    },
+    {
+      "rank": 130,
+      "symbol": "XTZ",
+      "name": "Tezos",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 144,
+      "symbol": "KAIA",
+      "name": "Kaia",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 148,
+      "symbol": "BSV",
+      "name": "Bitcoin SV",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 150,
+      "symbol": "MON",
+      "name": "Monad",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 151,
+      "symbol": "CFX",
+      "name": "Conflux",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 154,
+      "symbol": "DCR",
+      "name": "Decred",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 170,
+      "symbol": "IOTA",
+      "name": "IOTA",
+      "chains": [
+        "iota"
+      ]
+    },
+    {
+      "rank": 186,
+      "symbol": "XPL",
+      "name": "Plasma",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 189,
+      "symbol": "NEO",
+      "name": "NEO",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 194,
+      "symbol": "THETA",
+      "name": "Theta Network",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 206,
+      "symbol": "ZANO",
+      "name": "Zano",
+      "chains": [
+        "zano"
+      ]
+    },
+    {
+      "rank": 207,
+      "symbol": "S",
+      "name": "Sonic",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 208,
+      "symbol": "IP",
+      "name": "Story",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 220,
+      "symbol": "RUNE",
+      "name": "THORChain",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 221,
+      "symbol": "GUSD",
+      "name": "GUSD",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 227,
+      "symbol": "WAL",
+      "name": "Walrus",
+      "chains": [
+        "sui"
+      ]
+    },
+    {
+      "rank": 231,
+      "symbol": "XEC",
+      "name": "eCash",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 239,
+      "symbol": "XP",
+      "name": "Xphere",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 246,
+      "symbol": "AR",
+      "name": "Arweave",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 248,
+      "symbol": "WEMIX",
+      "name": "WEMIX",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 250,
+      "symbol": "A",
+      "name": "Vaulta",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 254,
+      "symbol": "OZO",
+      "name": "Ozone Chain",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 257,
+      "symbol": "DYDX",
+      "name": "dYdX",
+      "chains": [
+        "cosmos",
+        "osmosis"
+      ]
+    },
+    {
+      "rank": 264,
+      "symbol": "EGLD",
+      "name": "MultiversX",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 291,
+      "symbol": "GAS",
+      "name": "Gas",
+      "chains": [
+        "neo"
+      ]
+    },
+    {
+      "rank": 293,
+      "symbol": "NXPC",
+      "name": "Nexpace",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 297,
+      "symbol": "BERA",
+      "name": "Berachain",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 298,
+      "symbol": "QTUM",
+      "name": "Qtum",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 308,
+      "symbol": "SN64",
+      "name": "Chutes",
+      "chains": [
+        "bittensor"
+      ]
+    },
+    {
+      "rank": 309,
+      "symbol": "QRL",
+      "name": "Quantum Resistant Ledger",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 316,
+      "symbol": "GRX",
+      "name": "GRX Chain",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 317,
+      "symbol": "KSM",
+      "name": "Kusama",
+      "chains": [
+        "hydration"
+      ]
+    },
+    {
+      "rank": 318,
+      "symbol": "MEGA",
+      "name": "MegaETH",
+      "chains": [
+        "megaeth"
+      ]
+    },
+    {
+      "rank": 319,
+      "symbol": "RVN",
+      "name": "Ravencoin",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 323,
+      "symbol": "PROS",
+      "name": "Pharos",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 344,
+      "symbol": "XDAI",
+      "name": "XDAI",
+      "chains": [
+        "xdai"
+      ]
+    },
+    {
+      "rank": 346,
+      "symbol": "MUST",
+      "name": "Mustang",
+      "chains": [
+        "saga"
+      ]
+    },
+    {
+      "rank": 348,
+      "symbol": "TFUEL",
+      "name": "Theta Fuel",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 350,
+      "symbol": "DEEP",
+      "name": "DeepBook",
+      "chains": [
+        "sui"
+      ]
+    },
+    {
+      "rank": 359,
+      "symbol": "FEUSD",
+      "name": "Felix feUSD",
+      "chains": [
+        "hyperevm",
+        "hyperliquid"
+      ]
+    },
+    {
+      "rank": 364,
+      "symbol": "BCE",
+      "name": "bitcastle Token",
+      "chains": [
+        "sui"
+      ]
+    },
+    {
+      "rank": 369,
+      "symbol": "USDX",
+      "name": "USDX",
+      "chains": [
+        "osmosis"
+      ]
+    },
+    {
+      "rank": 373,
+      "symbol": "MINA",
+      "name": "Mina Protocol",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 384,
+      "symbol": "QUBIC",
+      "name": "Qubic",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 390,
+      "symbol": "SN4",
+      "name": "Targon",
+      "chains": [
+        "bittensor"
+      ]
+    },
+    {
+      "rank": 391,
+      "symbol": "RON",
+      "name": "Ronin",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 397,
+      "symbol": "POLYX",
+      "name": "Polymesh",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 401,
+      "symbol": "CKB",
+      "name": "Nervos Network",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 407,
+      "symbol": "DGB",
+      "name": "DigiByte",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 409,
+      "symbol": "PEAQ",
+      "name": "peaq",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 413,
+      "symbol": "MWC",
+      "name": "MimbleWimbleCoin",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 414,
+      "symbol": "ARRR",
+      "name": "Pirate Chain",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 424,
+      "symbol": "TBK",
+      "name": "TronBank",
+      "chains": [
+        "tron"
+      ]
+    },
+    {
+      "rank": 426,
+      "symbol": "QFI",
+      "name": "Quantix Finance",
+      "chains": [
+        "tron"
+      ]
+    },
+    {
+      "rank": 429,
+      "symbol": "CCD",
+      "name": "Concordium",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 430,
+      "symbol": "PURR",
+      "name": "Purr",
+      "chains": [
+        "hyperliquid",
+        "hyperevm"
+      ]
+    },
+    {
+      "rank": 440,
+      "symbol": "FOGO",
+      "name": "Fogo",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 444,
+      "symbol": "ONT",
+      "name": "Ontology",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 447,
+      "symbol": "KUB",
+      "name": "KUB Coin",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 448,
+      "symbol": "XNO",
+      "name": "Nano",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 449,
+      "symbol": "BTY",
+      "name": "Bityuan",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 453,
+      "symbol": "FLOW",
+      "name": "Flow",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 455,
+      "symbol": "XCH",
+      "name": "Chia",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 456,
+      "symbol": "SN44",
+      "name": "Score",
+      "chains": [
+        "bittensor"
+      ]
+    }
+  ]
+}

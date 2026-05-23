@@ -69,6 +69,13 @@ def audit_pack() -> dict:
 
 
 class Handler(BaseHTTPRequestHandler):
+    def do_OPTIONS(self):
+        self.send_response(204)
+        self.send_header("access-control-allow-origin", "*")
+        self.send_header("access-control-allow-methods", "GET, POST, OPTIONS")
+        self.send_header("access-control-allow-headers", "content-type")
+        self.end_headers()
+
     def do_GET(self):
         url = urlparse(self.path)
         if url.path == "/health":
@@ -116,6 +123,8 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(unsigned_intent("buy-ifx", body))
         if url.path == "/revenue/record":
             return self.reply(record_revenue(body))
+        if url.path == "/auth/session":
+            return self.reply(record_auth_session(body))
         if url.path == "/recovery/mpc-intent":
             return self.reply(unsigned_intent("mpc-recovery", body))
         if url.path == "/recovery/social-intent":
@@ -126,6 +135,7 @@ class Handler(BaseHTTPRequestHandler):
         data = json.dumps(payload).encode("utf-8")
         self.send_response(status)
         self.send_header("content-type", "application/json")
+        self.send_header("access-control-allow-origin", "*")
         self.send_header("content-length", str(len(data)))
         self.end_headers()
         self.wfile.write(data)
@@ -157,6 +167,22 @@ def record_revenue(body: dict) -> dict:
     }
     entries.append(entry)
     write_json(ledger, entries)
+    return entry
+
+
+def record_auth_session(body: dict) -> dict:
+    ledger = DATA / "auth-sessions.json"
+    entries = load_json(ledger) if ledger.exists() else []
+    entry = {
+        "time": now_iso(),
+        "mode": body.get("mode"),
+        "address": body.get("address"),
+        "nonCustodial": True,
+        "secretsReceived": False,
+        "status": "public-session-metadata-recorded",
+    }
+    entries.append(entry)
+    write_json(ledger, entries[-500:])
     return entry
 
 

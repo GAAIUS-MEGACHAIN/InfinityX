@@ -13,6 +13,7 @@
     "preview": "vite preview --host 127.0.0.1",
     "backend": "python backend/infinityx_backend.py",
     "audit": "node scripts/audit-pack.mjs",
+    "capability:scan": "node scripts/capability-scan.mjs",
     "registry:top3000": "node scripts/generate-top3000-registry.mjs",
     "registry:chains": "node scripts/sync-chain-registry.mjs",
     "update-packs": "node scripts/build-update-pack.mjs",
