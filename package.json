@@ -1,0 +1,72 @@
+{
+  "name": "infinityx",
+  "version": "0.1.0",
+  "description": "InfinityX token launch and wallet workspace.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "desktop": "electron .",
+    "exe:unpacked": "npm run build && electron-builder --win dir --x64",
+    "exe": "npm run build && electron-builder --win nsis --x64",
+    "android:add": "npx cap add android",
+    "android:sync": "npm run build && npx cap sync android",
+    "apk": "npm run android:sync && cd android && .\\gradlew.bat assembleDebug",
+    "preview": "vite preview --host 127.0.0.1",
+    "token:wallet": "node scripts/generate-solana-wallet.js",
+    "token:airdrop:devnet": "node scripts/airdrop-devnet-sol.js",
+    "token:create:devnet": "node scripts/create-infinityx-token.js --network devnet",
+    "token:create:mainnet": "node scripts/create-infinityx-token.js --network mainnet-beta",
+    "token:create:spl:devnet": "node scripts/create-infinityx-classic-spl-token.js --network devnet",
+    "token:create:spl:mainnet": "node scripts/create-infinityx-classic-spl-token.js --network mainnet-beta",
+    "token:balance:devnet": "node scripts/check-solana-wallet.js --network devnet",
+    "token:balance:mainnet": "node scripts/check-solana-wallet.js --network mainnet-beta"
+  },
+  "keywords": [
+    "infinityx",
+    "solana",
+    "wallet"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "main": "electron/main.cjs",
+  "build": {
+    "appId": "com.infinityx.wallet",
+    "productName": "InfinityX Wallet",
+    "executableName": "InfinityX Wallet",
+    "npmRebuild": false,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@metaplex-foundation/mpl-token-metadata": "^3.4.0",
+    "@metaplex-foundation/umi": "^1.5.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^1.5.1",
+    "@metaplex-foundation/umi-web3js-adapters": "^1.5.1",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/spl-token-metadata": "^0.1.6",
+    "@solana/web3.js": "^1.98.4",
+    "@vitejs/plugin-react": "^6.0.2",
+    "bs58": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
+    "lucide-react": "^1.16.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "vite": "^8.0.14"
+  }
+}
