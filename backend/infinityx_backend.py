@@ -12,15 +12,17 @@ import gzip
 import hashlib
 import json
 import os
+import sys
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "backend" / "data"
-AUDITS = ROOT / "audits"
-PUBLIC = ROOT / "public"
+FROZEN = getattr(sys, "frozen", False)
+ROOT = Path(sys.executable).resolve().parent if FROZEN else Path(__file__).resolve().parents[1]
+DATA = Path(os.environ.get("INFINITYX_DATA_DIR", ROOT / ("data" if FROZEN else "backend/data")))
+AUDITS = Path(os.environ.get("INFINITYX_AUDIT_DIR", ROOT / "audits"))
+PUBLIC = Path(os.environ.get("INFINITYX_PUBLIC_DIR", ROOT / "public"))
 
 REVENUE_DESTINATION_SOLANA = "NHMs85t1zJDKU8ThrxEz6xC4S1R2XANadmk7K55tG3Q"
 IFX_MINT = "4s9Bbk3AB223bbqAHhiCcqVg14C6m46ioixJFXMcunm1"
@@ -85,9 +87,15 @@ class Handler(BaseHTTPRequestHandler):
         if url.path == "/registry/tokens":
             query = parse_qs(url.query)
             network = query.get("network", ["main"])[0].lower()
-            tokens = load_json(DATA / "tokens.top.json")
+            payload = load_json(DATA / "tokens.top3000.json") if (DATA / "tokens.top3000.json").exists() else load_json(DATA / "tokens.top.json")
+            tokens = payload.get("assets", payload) if isinstance(payload, dict) else payload
             if network != "main":
-                tokens = [token for token in tokens if token.get("network", "").lower() == network]
+                tokens = [token for token in tokens if token.get("network", "").lower() == network or network in [str(item).lower() for item in token.get("chains", [])]]
+            if isinstance(payload, dict):
+                payload = dict(payload)
+                payload["assets"] = tokens
+                payload["count"] = len(tokens)
+                return self.reply(payload)
             return self.reply(tokens)
         if url.path == "/policy/fees":
             return self.reply(load_json(DATA / "fees.json"))
