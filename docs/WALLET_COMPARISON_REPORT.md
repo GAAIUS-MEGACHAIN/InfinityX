@@ -19,18 +19,22 @@ Generated May 23, 2026.
 | Token registry | 3000 local hardcoded token/coin records | Less runtime API dependence for discovery and add-token flow |
 | IFX utility | Fixed supply IFX plus service-fee discount policy | Gives the token product utility beyond speculation |
 | Audit artifacts | Compressed audit pack committed to GitHub | Useful internal integrity trail |
-| Backend policy | Non-custodial intent backend | Avoids backend seed/private-key custody |
+| Backend policy | Non-custodial intent backend plus local signing engine | Avoids backend seed/private-key custody |
+| Live send foundation | Solana SOL/SPL and supported EVM native/ERC-20 send modules | Real user-owned transactions can be signed from the encrypted vault |
+| DEX execution | Jupiter quote and signed swap adapter | Moves beyond quote-only DEX UI on Solana |
+| Bridge execution | LI.FI bridge quotes and EVM transaction-request signing | Adds a real cross-chain route path for supported EVM networks |
+| WalletConnect | WalletKit initializer and pairing field | Ready for project ID plus request approval screens |
 | Desktop and APK | Both generated from shared UI | Multi-platform from the start |
 
 ## Where Competitors Are Ahead
 
 | Area | MetaMask | Phantom | Trust Wallet | Coinbase Wallet | WalletConnect | InfinityX Gap |
 | --- | --- | --- | --- | --- | --- | --- |
-| Production wallet signing | Mature | Mature | Mature | Mature | Protocol only | Needs audited signing/broadcast flows |
-| dApp connection network | Strong EVM | Strong Solana/multi-chain | Strong mobile/browser | Strong developer ecosystem | Core strength | Needs WalletConnect WalletKit integration |
+| Production wallet signing | Mature | Mature | Mature | Mature | Protocol only | InfinityX now has live signing modules, but still needs professional audit and hardware/biometric gates |
+| dApp connection network | Strong EVM | Strong Solana/multi-chain | Strong mobile/browser | Strong developer ecosystem | Core strength | WalletKit initializer exists; session proposal/approval UI still needed |
 | NFT support | ERC-721/ERC-1155 ecosystem | Strong Solana/NFT UX | Broad NFT storage | NFT gallery/transfers | Enables dApp connection | Needs real NFT indexers |
-| Swaps/bridges | Portfolio buy/swap/bridge/stake | Cross-chain swap UX | Swaps/staking/buy | dApp/wallet integrations | Connection layer | Needs provider execution and risk engine |
-| Security maturity | Established | Scam detection/transaction previews | Established | Transaction previews | Session security | Needs audits, transaction simulation, phishing engine |
+| Swaps/bridges | Portfolio buy/swap/bridge/stake | Cross-chain swap UX | Swaps/staking/buy | dApp/wallet integrations | Connection layer | Solana Jupiter execution and LI.FI EVM bridge execution exist; more providers and guardrails needed |
+| Security maturity | Established | Scam detection/transaction previews | Established | Transaction previews | Session security | Basic risk checks/simulation exist; needs phishing feeds, contract decoding, and audit |
 | App store readiness | Production | Production | Production | Production | SDK/protocol | Needs signed release builds and policies |
 
 ## Source Notes
@@ -43,25 +47,21 @@ Generated May 23, 2026.
 
 ## What InfinityX Needs Before Real Users With Funds
 
-1. Solana local signing and broadcast from encrypted vault.
-2. EVM signing and chain switching.
-3. WalletConnect WalletKit integration.
-4. Transaction simulation and approval risk warnings.
-5. NFT indexer integrations or self-hosted indexers.
-6. Swap execution adapters with signed user approval.
-7. Bridge provider adapters with signed user approval.
-8. Production Play Store signing key and release pipeline.
-9. External security audit.
-10. Legal review for swap fees, sales, and token listings.
+1. Professional external audit of vault, signing, swap, and contract code.
+2. Android biometric/passkey native gate before every live signing action.
+3. WalletConnect session proposal and request approval screens.
+4. NFT indexer integrations or self-hosted indexers.
+5. More bridge provider adapters plus slippage/route risk scoring.
+6. Production Play Store signing key and release pipeline.
+7. Treasury multisig and deployed fee/liquidity contracts.
+8. Legal review for swap fees, sales, and token listings.
 
 ## Enhancement Roadmap
 
-- Add WalletConnect WalletKit.
-- Add Solana send/receive first.
-- Add EVM account derivation and send/receive.
+- Complete WalletConnect request approvals.
 - Add NFT gallery with spam filtering.
 - Add dApp browser/session permissions.
-- Add signed swap execution.
+- Add additional bridge providers beyond LI.FI.
 - Add compressed registry update packs through GitHub Releases.
 - Add real backend indexing jobs.
 - Add treasury multisig for fees.

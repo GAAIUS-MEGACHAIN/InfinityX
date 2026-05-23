@@ -54,7 +54,12 @@
   },
   "dependencies": {
     "@noble/hashes": "^2.2.0",
+    "@reown/walletkit": "^1.5.5",
     "@scure/bip32": "^2.2.0",
-    "@scure/bip39": "^2.2.0"
+    "@scure/bip39": "^2.2.0",
+    "@walletconnect/core": "^2.23.9",
+    "@walletconnect/utils": "^2.23.9",
+    "buffer": "^6.0.3",
+    "viem": "^2.50.4"
   }
 }

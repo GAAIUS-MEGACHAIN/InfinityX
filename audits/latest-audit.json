@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-23T12:19:07.958Z",
+  "generatedAt": "2026-05-23T12:48:56.941Z",
   "scope": "static source integrity, policy checks, forbidden secret path checks",
   "checks": {
     "nonCustodialBackend": true,
@@ -24,11 +24,11 @@
     },
     {
       "path": "audits/latest-audit.json",
-      "sha256": "ce79ab20eee112b90153a72076e8e0ca39fd0469c8a9638daba154b602a66e4a"
+      "sha256": "79d9acbcbaf1224304bd073a9487ff9de4399b9b3e18d874ca006462d99ae38f"
     },
     {
       "path": "audits/latest-audit.json.gz",
-      "sha256": "ca5ded37dd29b56237bff1532980173f3725d383cec2c2b8d904f6bd6bc72103"
+      "sha256": "4cb95053566cb51e076a33cf4c694f6ee03eae280deefb548466de7672aadd53"
     },
     {
       "path": "backend/data/chains.json",
@@ -100,15 +100,15 @@
     },
     {
       "path": "docs/PHASES.md",
-      "sha256": "806c548c8a547ab84ba00f654bb58c0175ad5a078b962d6de95ee43242ce8352"
+      "sha256": "111be2cf23dde8497c96d2ca62d7bcd388fc070301bab13091c7ffce70b02ce1"
     },
     {
       "path": "docs/SECURE_CUSTODY_DESIGN.md",
-      "sha256": "40ce368df60fac95ddc7eaefb8430028ba5828d9ad643599f3dfdfa2b35500ec"
+      "sha256": "e091bd7c16f9cabfcb2d26cd9a11d7995094cfa60194911f6984151032ea96a4"
     },
     {
       "path": "docs/WALLET_COMPARISON_REPORT.md",
-      "sha256": "fab687dd9ee2968c99da885593d7568ff1e95413b556b378eb217c9dd97039b6"
+      "sha256": "6ba3e142942a510a59297a38753db28c9499dc46e0b6979ddefcd95c287e7bbd"
     },
     {
       "path": "index.html",
@@ -120,11 +120,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "3ea7b66d87b672145a36ea86bf57703fd1e25a3462408253b2692fa19e9629fa"
+      "sha256": "99fda162f1b59bbaaa751628fa408dd7deb3664539bf6c28418f4ee8f1159854"
     },
     {
       "path": "package.json",
-      "sha256": "d896813d9237f54a03befae99bbd8a281051883ec97c8392422afe05a3cf64f0"
+      "sha256": "deea3b2338590935dd0a2b0b4149eca84d1dd87c2604ce28c80245a3f78aaa3b"
     },
     {
       "path": "public/registry/chains.json",
@@ -239,20 +239,48 @@
       "sha256": "e989f73f2f5d66172e1a79d571b25b7dc7667ca5aee4dd1d37a2ee1a21f9c049"
     },
     {
+      "path": "src/lib/bridge.js",
+      "sha256": "9f799ed2e3baf5d4cbdb726b953f0fca293db9e129d506b2d9a6720117e4d74a"
+    },
+    {
+      "path": "src/lib/evmWallet.js",
+      "sha256": "b42c503925e38a41db01a4162967b92e69dcdcb5b942ae8f065ebda700e71770"
+    },
+    {
       "path": "src/lib/googleAuth.js",
       "sha256": "2525eea17a548114ce565d906654eb43db8f92917f6eeb1f49db716722dab50a"
     },
     {
+      "path": "src/lib/jupiter.js",
+      "sha256": "48cd5a1403b6ba3c5fc512ffcd7abe3594d7342e87743c5db0751acf0d236c4b"
+    },
+    {
+      "path": "src/lib/security.js",
+      "sha256": "d37d0a7bed4617a2d5c813008e7fce729c2b6f1eaa7bcce0ab8a0fcdea44e741"
+    },
+    {
+      "path": "src/lib/solanaWallet.js",
+      "sha256": "9c9af9ad359f618abcfb4e148835aa39a9f630ced20b61647da85583ed4a66a6"
+    },
+    {
       "path": "src/lib/vault.js",
-      "sha256": "3748a5fc39903736be9e074917bf5535c037870692b53ede5506eb481304224e"
+      "sha256": "d7e54b515b8efef773369d0c592e86a0e591d5402683d08db1b95f01c42c7b3d"
+    },
+    {
+      "path": "src/lib/walletConnect.js",
+      "sha256": "d0c4fec0b703b68fcbdf358fe64d047d31b077de506bc13fe1702b9df61bd2c4"
     },
     {
       "path": "src/main.jsx",
-      "sha256": "7f6c9060a553b7ffd74a9da791ebef1ff80d8bc0b65cadb613a80d85a0b1542c"
+      "sha256": "450bb0d2872e641363e704cbc938d2368ee640665f8a0e90e4f0c33946e4bb94"
+    },
+    {
+      "path": "src/polyfills.js",
+      "sha256": "165d8a5bfa63cb7dbb78de063d90417a065fc9bc2f9f23dd71c5da879de1238e"
     },
     {
       "path": "src/styles.css",
-      "sha256": "92ed9987263f252c81a8ad05cdb3818b0a5d5e3dc3a31214765ea301c5c3cd05"
+      "sha256": "73b35eab9bf6312e2cd86e368bd62813b44b043daca8e1ca5fe871eb2a7df42f"
     },
     {
       "path": "token.config.json",
@@ -261,6 +289,42 @@
     {
       "path": "vite.config.js",
       "sha256": "bd1bbfc6a9ac8c75065594dcc28c2c8a6ecffd526065d578963d85d0251bf9f4"
+    },
+    {
+      "path": "www/assets/ccip-DBp_xI_7.js",
+      "sha256": "8aa455ace3e70d70aa2d4b1988bff857f92098a7abc348db53a0d895c3d0c048"
+    },
+    {
+      "path": "www/assets/ccip-ecAgFHlM.js",
+      "sha256": "20a2c42bb131f0fc2d31dfdeb62cbad1f54cfe4f6a133694f896db04505c9f7e"
+    },
+    {
+      "path": "www/assets/ccip-Kt_58ved.js",
+      "sha256": "4dde5b5b67799cec7eeb5131515c12b76073f111bc03bb425fac4fe12c591c91"
+    },
+    {
+      "path": "www/assets/dist-Bdfs6XC2.js",
+      "sha256": "6a482bab0cc5d18898f27616f0d0f473db1c629a996fcd471744d298812a57b4"
+    },
+    {
+      "path": "www/assets/dist-BMD2r-Br.js",
+      "sha256": "0f1068d72dd65ae73b623ceacc121d8f8c22bc304250707a4d44964186ca99e8"
+    },
+    {
+      "path": "www/assets/dist-DM3XrP5S.js",
+      "sha256": "fe0e6e2f975bb4c57a7f60a7d08da1f9b94051591343e1439be66f6f14c99832"
+    },
+    {
+      "path": "www/assets/dist-sU6vUp4I.js",
+      "sha256": "1bff63e942db7423dd548c00498371e5c35a2c4be8ad0be4c2057740008f10fa"
+    },
+    {
+      "path": "www/assets/dist-vtQ444vQ.js",
+      "sha256": "9bdc93d369f31ce7c6233e51835874910959439a4776ce042ec5be7cba4b4b61"
+    },
+    {
+      "path": "www/assets/dist-XRimuAKp.js",
+      "sha256": "7d14d2d9ec660937e66b1852ba4f19bbf249171e9a8e5499a322a4966ba834ee"
     },
     {
       "path": "www/assets/index-9bP9rppZ.css",
@@ -275,6 +339,14 @@
       "sha256": "babca57519ec10b6e6420241bf03b59787bb74d7c5b4d03c396c95c6ecc17b54"
     },
     {
+      "path": "www/assets/index-BtW607_I.js",
+      "sha256": "8c4b08926ea6d5c3fe07f7d197b7d0d6dba507414e3941b9019a2cf03e3c2f86"
+    },
+    {
+      "path": "www/assets/index-CA5wAzmZ.js",
+      "sha256": "96cb349e856f8ff02269db89ba6cea559acdcf6d51988ed96ac717c9d77300fa"
+    },
+    {
       "path": "www/assets/index-CBEZAI7X.js",
       "sha256": "e05ac36001a17ef7489810785fd140a6c26ccb38f58793af8590453ce317cd21"
     },
@@ -283,8 +355,16 @@
       "sha256": "6ad94269b5a75d45f5f51cdd7ffc79cd69c04403a5600cf66923e6923a1771b0"
     },
     {
+      "path": "www/assets/index-CMSa1uUh.css",
+      "sha256": "443f07f23ef0a32a4e2e99a0b330200a66168ec8aa0d133a93d54aba7cd569db"
+    },
+    {
       "path": "www/assets/index-DmWLyQQi.css",
       "sha256": "21c29ab8b3f9a90f87773ebdfcd4eeedefa1b460d4b1d9b5a4e32b1d432f6ee4"
+    },
+    {
+      "path": "www/assets/index-DUDqV6o2.js",
+      "sha256": "fa27ca8dbbd322b54ae369db2c2e8b79a9d1d691679b39ca53d8c1f4bedeea94"
     },
     {
       "path": "www/assets/index-DXiThRg2.css",
@@ -304,7 +384,7 @@
     },
     {
       "path": "www/index.html",
-      "sha256": "dfdbfd8c909e6c199b2cfd693f8f55f24ab2009037c83d2b37509ba182290b69"
+      "sha256": "81fcaac7963afe323d9bfcb9949d94cdcc0b80b5bea0823d79192b33ab533672"
     },
     {
       "path": "www/registry/chains.json",
@@ -352,7 +432,7 @@
     },
     {
       "path": "www/update-packs/manifest.json",
-      "sha256": "6a8576afb78ae43a6d25080dc1f8f3e2efb07400a24c298b4956d6414049f157"
+      "sha256": "8a164ee4fe3c4a7f6793543b5ecc3795c4161b1fe19f1eda921547113b7efffd"
     },
     {
       "path": "www/update-packs/markets.json.gz",
