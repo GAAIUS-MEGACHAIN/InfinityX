@@ -32,6 +32,14 @@ const supportedUtxo = new Set(["Bitcoin", "Litecoin", "Dogecoin", "Dash"]);
 const supportedCosmos = new Set(["Cosmos Hub", "Osmosis", "Celestia", "Stargaze", "Juno", "Akash", "Kujira", "Secret Network", "Stride", "Evmos", "Coreum"]);
 const supportedTron = new Set(["Tron"]);
 const supportedXrp = new Set(["XRP Ledger"]);
+const supportedMove = new Set(["Sui", "Aptos"]);
+const supportedTon = new Set(["Ton"]);
+const supportedAlgorand = new Set(["Algorand"]);
+const supportedStellar = new Set(["Stellar"]);
+const supportedSubstrate = new Set(["Polkadot", "Kusama", "Bittensor"]);
+const supportedStacks = new Set(["Stacks"]);
+const supportedMultiversX = new Set(["MultiversX"]);
+const supportedNeo = new Set(["Neo"]);
 const aliases = new Map();
 
 for (const chain of chains) {
@@ -48,8 +56,11 @@ for (const [slug, name] of Object.entries({
   binancecoin: "BNB Chain",
   bsc: "BNB Chain",
   acala: "Acala",
+  algorand: "Algorand",
+  aptos: "Aptos",
   astar: "Astar",
   bevm: "BEVM",
+  bittensor: "Bittensor",
   "bsquared-network": "B² Network",
   "bob-network": "BOB",
   celo: "Celo",
@@ -75,14 +86,18 @@ for (const [slug, name] of Object.entries({
   "klay-token": "Kaia",
   kcc: "KCC Mainnet",
   "kcc-mainnet": "KCC Mainnet",
+  kusama: "Kusama",
   "kucoin-community-chain": "KCC Mainnet",
   megaeth: "MegaETH Mainnet",
   "metal-l2": "Metal L2",
   "merlin-chain": "Merlin",
   monad: "Monad",
+  multiversx: "MultiversX",
   near: "Near",
+  neo: "Neo",
   "near-protocol": "Near",
   "oasis-network": "Oasis",
+  polkadot: "Polkadot",
   "optimistic-ethereum": "Optimism",
   optimism: "Optimism",
   polygon: "Polygon",
@@ -91,6 +106,11 @@ for (const [slug, name] of Object.entries({
   shido: "Shido Network",
   solana: "Solana",
   soneium: "Soneium",
+  stacks: "Stacks",
+  stellar: "Stellar",
+  sui: "Sui",
+  "the-open-network": "Ton",
+  ton: "Ton",
   vechain: "VeChain",
   tron: "Tron",
   "tron-network": "Tron",
@@ -124,6 +144,14 @@ function supportForChain(chain) {
   if ((chain.kind === "Cosmos" || chain.kind === "Cosmos/EVM") && supportedCosmos.has(chain.name)) return { status: "live", live: true, adapter: "cosmos", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 2 };
   if (supportedTron.has(chain.name)) return { status: "live", live: true, adapter: "tron", assets: "native+trc20", send: true, receive: true, staking: false, fallbackPaths: 1 };
   if (supportedXrp.has(chain.name)) return { status: "live", live: true, adapter: "xrpl", assets: "native+issued", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedMove.has(chain.name)) return { status: "live", live: true, adapter: chain.name === "Sui" ? "sui" : "aptos", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedTon.has(chain.name)) return { status: "live", live: true, adapter: "ton", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedAlgorand.has(chain.name)) return { status: "live", live: true, adapter: "algorand", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedStellar.has(chain.name)) return { status: "live", live: true, adapter: "stellar", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedSubstrate.has(chain.name)) return { status: "live", live: true, adapter: "substrate", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedStacks.has(chain.name)) return { status: "live", live: true, adapter: "stacks", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedMultiversX.has(chain.name)) return { status: "live", live: true, adapter: "multiversx", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedNeo.has(chain.name)) return { status: "live", live: true, adapter: "neo", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
   return { status: "blocked", live: false, reason: "Listed in registry, but no production signer/RPC/indexer adapter is wired yet." };
 }
 
@@ -187,6 +215,7 @@ function tokenTypeForAdapter(adapter) {
   if (adapter === "cosmos") return "cosmos-denom";
   if (adapter === "tron") return "trc20";
   if (adapter === "xrpl") return "xrpl-issued";
+  if (["sui", "aptos", "ton", "algorand", "stellar", "substrate", "stacks", "multiversx", "neo"].includes(adapter)) return "native";
   return "token";
 }
 
@@ -299,7 +328,10 @@ function vmNote(kind, live) {
   if (kind === "SVM") return "Solana native SOL and SPL token send/receive are wired.";
   if (kind === "Cosmos" || kind === "Cosmos/EVM") return "Cosmos native send/receive is wired for selected chains; IBC/token modules are not.";
   if (kind === "UTXO") return live ? "Native UTXO send/receive is wired for selected chains only." : "Native UTXO adapter is still missing for these chains.";
-  if (kind === "Account" && live) return "TRON and XRP Ledger send/receive are wired; other account-model chains still need adapters.";
+  if (kind === "Move") return live ? "Sui and Aptos native send/receive are wired through chain SDKs; Move token standards still need adapters." : "Move signer adapters are still missing.";
+  if (kind === "Substrate") return live ? "Polkadot, Kusama, and Bittensor native send/receive are wired through Substrate SDKs." : "Substrate signer adapters are still missing.";
+  if (kind === "Bitcoin L2") return live ? "Stacks native STX and selected EVM BTC L2 networks are wired; non-EVM Bitcoin L2s still need adapters." : "Bitcoin L2 signer adapters are still missing.";
+  if (kind === "Account" && live) return "TRON, XRP Ledger, TON, Algorand, Stellar, MultiversX, NEO, and selected EVM-account networks are wired; other account-model chains still need adapters.";
   if (["Move", "Substrate", "Account", "DAG", "Canister", "Privacy", "Bitcoin L2", "UTXO/EVM"].includes(kind)) return "Listed for discovery, but real transaction support needs a production signer/indexer adapter.";
   return "Discovery registry support only unless listed live.";
 }

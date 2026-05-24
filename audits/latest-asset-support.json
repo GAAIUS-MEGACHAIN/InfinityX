@@ -1800,8 +1800,18 @@
     "symbol": "TON",
     "name": "Toncoin",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
+      {
+        "chain": "Ton",
+        "adapter": "ton",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",
@@ -1837,13 +1847,24 @@
     "id": "stellar",
     "symbol": "XLM",
     "name": "Stellar",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "stellar"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 24,
@@ -2147,13 +2168,24 @@
     "id": "sui",
     "symbol": "SUI",
     "name": "Sui",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 27,
@@ -2648,13 +2680,24 @@
     "id": "bittensor",
     "symbol": "TAO",
     "name": "Bittensor",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Bittensor",
+        "adapter": "substrate",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 41,
@@ -2928,8 +2971,18 @@
     "symbol": "DOT",
     "name": "Polkadot",
     "status": "live",
-    "workingPathCount": 5,
+    "workingPathCount": 6,
     "workingPaths": [
+      {
+        "chain": "Polkadot",
+        "adapter": "substrate",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",
@@ -3996,13 +4049,24 @@
     "id": "algorand",
     "symbol": "ALGO",
     "name": "Algorand",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 70,
@@ -4582,13 +4646,24 @@
     "id": "aptos",
     "symbol": "APT",
     "name": "Aptos",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "aptos"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 83,
@@ -5978,13 +6053,24 @@
     "id": "blockstack",
     "symbol": "STX",
     "name": "Stacks",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Stacks",
+        "adapter": "stacks",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 115,
@@ -9104,13 +9190,24 @@
     "id": "neo",
     "symbol": "NEO",
     "name": "NEO",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Neo",
+        "adapter": "neo",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 191,
@@ -12181,13 +12278,24 @@
     "id": "elrond-erd-2",
     "symbol": "EGLD",
     "name": "MultiversX",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "MultiversX",
+        "adapter": "multiversx",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 266,
@@ -13824,13 +13932,24 @@
     "id": "kusama",
     "symbol": "KSM",
     "name": "Kusama",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Kusama",
+        "adapter": "substrate",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "hydration"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 318,
@@ -27965,8 +28084,18 @@
     "symbol": "TON",
     "name": "Tokamak Network",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Ton",
+        "adapter": "ton",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",
@@ -85448,8 +85577,18 @@
     "symbol": "TON",
     "name": "TON Community",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Ton",
+        "adapter": "ton",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",

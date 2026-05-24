@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-24T01:41:30.321Z",
+  "generatedAt": "2026-05-24T02:23:17.904Z",
   "summary": {
     "listedChains": 152,
-    "liveTransactionChains": 126,
-    "blockedNativeChains": 25,
+    "liveTransactionChains": 137,
+    "blockedNativeChains": 14,
     "bundledAssets": 3000,
-    "assetsWithLiveSendReceivePath": 2571,
-    "assetsStillRegistryOnly": 429
+    "assetsWithLiveSendReceivePath": 2580,
+    "assetsStillRegistryOnly": 420
   },
   "supportByKind": {
     "InfinityX routing": 1,
@@ -56,16 +56,16 @@
     {
       "kind": "Account",
       "listedChains": 10,
-      "liveChains": 2,
+      "liveChains": 7,
       "status": "partial",
-      "note": "TRON and XRP Ledger send/receive are wired; other account-model chains still need adapters."
+      "note": "TRON, XRP Ledger, TON, Algorand, Stellar, MultiversX, NEO, and selected EVM-account networks are wired; other account-model chains still need adapters."
     },
     {
       "kind": "Move",
       "listedChains": 2,
-      "liveChains": 0,
-      "status": "blocked",
-      "note": "Listed for discovery, but real transaction support needs a production signer/indexer adapter."
+      "liveChains": 2,
+      "status": "fully-live-for-listed-chains",
+      "note": "Sui and Aptos native send/receive are wired through chain SDKs; Move token standards still need adapters."
     },
     {
       "kind": "Cosmos",
@@ -84,9 +84,9 @@
     {
       "kind": "Substrate",
       "listedChains": 3,
-      "liveChains": 0,
-      "status": "blocked",
-      "note": "Listed for discovery, but real transaction support needs a production signer/indexer adapter."
+      "liveChains": 3,
+      "status": "fully-live-for-listed-chains",
+      "note": "Polkadot, Kusama, and Bittensor native send/receive are wired through Substrate SDKs."
     },
     {
       "kind": "Canister",
@@ -105,9 +105,9 @@
     {
       "kind": "Bitcoin L2",
       "listedChains": 2,
-      "liveChains": 0,
-      "status": "blocked",
-      "note": "Listed for discovery, but real transaction support needs a production signer/indexer adapter."
+      "liveChains": 1,
+      "status": "partial",
+      "note": "Stacks native STX and selected EVM BTC L2 networks are wired; non-EVM Bitcoin L2s still need adapters."
     },
     {
       "kind": "DAG",
@@ -1070,6 +1070,54 @@
       "reason": "Live adapter is wired."
     },
     {
+      "name": "Ton",
+      "native": "TON",
+      "kind": "Account",
+      "status": "live",
+      "adapter": "ton",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://toncenter.com/api/v2/jsonRPC",
+      "explorer": "https://tonscan.org",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Sui",
+      "native": "SUI",
+      "kind": "Move",
+      "status": "live",
+      "adapter": "sui",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://fullnode.mainnet.sui.io:443",
+      "explorer": "https://suiscan.xyz/mainnet",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Aptos",
+      "native": "APT",
+      "kind": "Move",
+      "status": "live",
+      "adapter": "aptos",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://fullnode.mainnet.aptoslabs.com/v1",
+      "explorer": "https://aptoscan.com",
+      "reason": "Live adapter is wired."
+    },
+    {
       "name": "Near",
       "native": "NEAR",
       "kind": "EVM",
@@ -1262,6 +1310,38 @@
       "reason": "Live adapter is wired."
     },
     {
+      "name": "Polkadot",
+      "native": "DOT",
+      "kind": "Substrate",
+      "status": "live",
+      "adapter": "substrate",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "wss://rpc.polkadot.io",
+      "explorer": "https://polkadot.subscan.io",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Kusama",
+      "native": "KSM",
+      "kind": "Substrate",
+      "status": "live",
+      "adapter": "substrate",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "wss://kusama-rpc.polkadot.io",
+      "explorer": "https://kusama.subscan.io",
+      "reason": "Live adapter is wired."
+    },
+    {
       "name": "Acala",
       "native": "ACA",
       "kind": "EVM",
@@ -1294,6 +1374,22 @@
       "reason": "Live adapter is wired."
     },
     {
+      "name": "Bittensor",
+      "native": "TAO",
+      "kind": "Substrate",
+      "status": "live",
+      "adapter": "substrate",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "wss://entrypoint-finney.opentensor.ai:443",
+      "explorer": "https://taostats.io",
+      "reason": "Live adapter is wired."
+    },
+    {
       "name": "Filecoin",
       "native": "FIL",
       "kind": "EVM",
@@ -1307,6 +1403,38 @@
       "fallbackPaths": 1,
       "rpc": "https://api.node.glif.io/rpc/v1",
       "explorer": "https://filfox.info/en",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Algorand",
+      "native": "ALGO",
+      "kind": "Account",
+      "status": "live",
+      "adapter": "algorand",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://mainnet-api.algonode.cloud",
+      "explorer": "https://allo.info",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Stellar",
+      "native": "XLM",
+      "kind": "Account",
+      "status": "live",
+      "adapter": "stellar",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://horizon.stellar.org",
+      "explorer": "https://stellar.expert/explorer/public",
       "reason": "Live adapter is wired."
     },
     {
@@ -1422,6 +1550,22 @@
       "reason": "Live adapter is wired."
     },
     {
+      "name": "Stacks",
+      "native": "STX",
+      "kind": "Bitcoin L2",
+      "status": "live",
+      "adapter": "stacks",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://api.mainnet.hiro.so",
+      "explorer": "https://explorer.hiro.so",
+      "reason": "Live adapter is wired."
+    },
+    {
       "name": "VeChain",
       "native": "VET",
       "kind": "EVM",
@@ -1467,6 +1611,38 @@
       "fallbackPaths": 1,
       "rpc": "https://json-rpc.evm.iotaledger.net",
       "explorer": "https://explorer.evm.iota.org",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "MultiversX",
+      "native": "EGLD",
+      "kind": "Account",
+      "status": "live",
+      "adapter": "multiversx",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://api.multiversx.com",
+      "explorer": "https://explorer.multiversx.com",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Neo",
+      "native": "NEO",
+      "kind": "Account",
+      "status": "live",
+      "adapter": "neo",
+      "assets": "native",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://mainnet1.neo.coz.io:443",
+      "explorer": "https://dora.coz.io",
       "reason": "Live adapter is wired."
     },
     {
@@ -2152,23 +2328,9 @@
       "Ergo"
     ],
     "Account": [
-      "Ton",
-      "Algorand",
-      "Stellar",
       "WAX",
-      "MultiversX",
       "Waves",
-      "Neo",
       "Ontology"
-    ],
-    "Move": [
-      "Sui",
-      "Aptos"
-    ],
-    "Substrate": [
-      "Polkadot",
-      "Kusama",
-      "Bittensor"
     ],
     "Canister": [
       "Internet Computer"
@@ -2176,15 +2338,14 @@
     "Privacy": [
       "Monero"
     ],
-    "Bitcoin L2": [
-      "Stacks",
-      "Fractal Bitcoin"
-    ],
     "DAG": [
       "Nano"
     ],
     "UTXO/EVM": [
       "Qtum"
+    ],
+    "Bitcoin L2": [
+      "Fractal Bitcoin"
     ]
   },
   "topBlockedAssets": [
@@ -2237,30 +2398,6 @@
       ]
     },
     {
-      "rank": 23,
-      "symbol": "XLM",
-      "name": "Stellar",
-      "chains": [
-        "stellar"
-      ]
-    },
-    {
-      "rank": 26,
-      "symbol": "SUI",
-      "name": "Sui",
-      "chains": [
-        "sui"
-      ]
-    },
-    {
-      "rank": 40,
-      "symbol": "TAO",
-      "name": "Bittensor",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
       "rank": 54,
       "symbol": "PI",
       "name": "Pi Network",
@@ -2277,27 +2414,11 @@
       ]
     },
     {
-      "rank": 69,
-      "symbol": "ALGO",
-      "name": "Algorand",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
       "rank": 76,
       "symbol": "KAS",
       "name": "Kaspa",
       "chains": [
         "Main"
-      ]
-    },
-    {
-      "rank": 82,
-      "symbol": "APT",
-      "name": "Aptos",
-      "chains": [
-        "aptos"
       ]
     },
     {
@@ -2325,14 +2446,6 @@
       ]
     },
     {
-      "rank": 114,
-      "symbol": "STX",
-      "name": "Stacks",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
       "rank": 148,
       "symbol": "BSV",
       "name": "Bitcoin SV",
@@ -2344,14 +2457,6 @@
       "rank": 154,
       "symbol": "DCR",
       "name": "Decred",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
-      "rank": 189,
-      "symbol": "NEO",
-      "name": "NEO",
       "chains": [
         "Main"
       ]
@@ -2437,14 +2542,6 @@
       ]
     },
     {
-      "rank": 264,
-      "symbol": "EGLD",
-      "name": "MultiversX",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
       "rank": 291,
       "symbol": "GAS",
       "name": "Gas",
@@ -2490,14 +2587,6 @@
       "name": "GRX Chain",
       "chains": [
         "Main"
-      ]
-    },
-    {
-      "rank": 317,
-      "symbol": "KSM",
-      "name": "Kusama",
-      "chains": [
-        "hydration"
       ]
     },
     {
@@ -2986,6 +3075,78 @@
       "name": "Hydration",
       "chains": [
         "Main"
+      ]
+    },
+    {
+      "rank": 755,
+      "symbol": "SOMI",
+      "name": "Somnia",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 758,
+      "symbol": "STRAX",
+      "name": "Xertra",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 759,
+      "symbol": "DOGS",
+      "name": "Dogs",
+      "chains": [
+        "the-open-network"
+      ]
+    },
+    {
+      "rank": 763,
+      "symbol": "SATS",
+      "name": "SATS (Ordinals)",
+      "chains": [
+        "ordinals"
+      ]
+    },
+    {
+      "rank": 765,
+      "symbol": "BUCK",
+      "name": "Bucket Protocol BUCK Stablecoin",
+      "chains": [
+        "sui"
+      ]
+    },
+    {
+      "rank": 779,
+      "symbol": "MMT",
+      "name": "Momentum",
+      "chains": [
+        "sui"
+      ]
+    },
+    {
+      "rank": 787,
+      "symbol": "SN56",
+      "name": "Gradients",
+      "chains": [
+        "bittensor"
+      ]
+    },
+    {
+      "rank": 794,
+      "symbol": "SN75",
+      "name": "Hippius",
+      "chains": [
+        "bittensor"
+      ]
+    },
+    {
+      "rank": 795,
+      "symbol": "STON",
+      "name": "STON",
+      "chains": [
+        "the-open-network"
       ]
     }
   ]
