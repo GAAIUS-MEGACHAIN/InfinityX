@@ -1,23 +1,23 @@
 # InfinityX Capability Scan
 
-Generated: 2026-05-23T22:27:20.723Z
+Generated: 2026-05-24T00:51:51.865Z
 
 ## Summary
 
-- Listed chains: 133
-- Live transaction chains: 87
-- Blocked native chains: 45
+- Listed chains: 152
+- Live transaction chains: 109
+- Blocked native chains: 42
 - Bundled top assets: 3000
-- Assets with at least one live send/receive path: 2419
-- Registry-only assets: 581
+- Assets with at least one live send/receive path: 2562
+- Registry-only assets: 438
 
 ## VM Coverage
 
 - InfinityX routing: 0/1 live (blocked)
 - SVM: 1/1 live (fully-live-for-listed-chains)
-- EVM: 71/71 live (fully-live-for-listed-chains)
+- EVM: 91/91 live (fully-live-for-listed-chains)
 - UTXO: 4/10 live (partial)
-- Account: 0/20 live (blocked)
+- Account: 2/19 live (partial)
 - Move: 0/2 live (blocked)
 - Cosmos: 10/10 live (fully-live-for-listed-chains)
 - Cosmos/EVM: 1/1 live (fully-live-for-listed-chains)
@@ -31,7 +31,7 @@ Generated: 2026-05-23T22:27:20.723Z
 ## Blocked Chain Families
 
 - UTXO: Cardano, Kaspa, Bitcoin Cash, Zcash, Nervos, Ergo
-- Account: XRP Ledger, Tron, Ton, Near, Filecoin, Algorand, Stellar, Hedera, Tezos, EOS, WAX, Flow, VeChain, Theta, MultiversX, Waves, Neo, Ontology, Conflux, Oasis
+- Account: Ton, Near, Filecoin, Algorand, Stellar, Hedera, Tezos, EOS, WAX, Flow, VeChain, Theta, MultiversX, Waves, Neo, Ontology, Oasis
 - Move: Sui, Aptos
 - Substrate: Polkadot, Kusama, Acala, Astar, Bittensor
 - Canister: Internet Computer

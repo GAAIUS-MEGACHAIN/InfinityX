@@ -8,7 +8,7 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
     "android:add": "npx cap add android",
-    "android:sync": "npm.cmd run build && npx.cmd cap sync android",
+    "android:sync": "npm.cmd run build && .\\node_modules\\.bin\\cap.cmd sync android",
     "apk": "npm.cmd run android:sync && cd android && .\\gradlew.bat assembleDebug",
     "preview": "vite preview --host 127.0.0.1",
     "backend": "python backend/infinityx_backend.py",
@@ -68,6 +68,8 @@
     "bitcoinjs-lib": "^7.0.1",
     "buffer": "^6.0.3",
     "ecpair": "^3.0.1",
-    "viem": "^2.50.4"
+    "tronweb": "^6.3.0",
+    "viem": "^2.50.4",
+    "xrpl": "^4.6.0"
   }
 }

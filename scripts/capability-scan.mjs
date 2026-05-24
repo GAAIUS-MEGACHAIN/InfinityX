@@ -29,6 +29,8 @@ const baseChains = [
 const chains = [...baseChains, ...extraChains];
 const supportedUtxo = new Set(["Bitcoin", "Litecoin", "Dogecoin", "Dash"]);
 const supportedCosmos = new Set(["Cosmos Hub", "Osmosis", "Celestia", "Stargaze", "Juno", "Akash", "Kujira", "Secret Network", "Stride", "Evmos", "Coreum"]);
+const supportedTron = new Set(["Tron"]);
+const supportedXrp = new Set(["XRP Ledger"]);
 const aliases = new Map();
 
 for (const chain of chains) {
@@ -42,15 +44,46 @@ for (const [slug, name] of Object.entries({
   avalanche: "Avalanche",
   base: "Base",
   "binance-smart-chain": "BNB Chain",
+  binancecoin: "BNB Chain",
   bsc: "BNB Chain",
   celo: "Celo",
+  core: "Coreum",
+  "cronos-zkevm": "Cronos zkEVM",
+  eos: "EOS EVM",
+  "eos-evm": "EOS EVM",
   ethereum: "Ethereum",
+  "ethereum-classic": "Ethereum Classic",
+  etherlink: "Etherlink Mainnet",
+  evmos: "Evmos",
+  "flare-network": "Flare",
+  "harmony-shard-0": "Harmony",
+  hyperliquid: "HyperEVM",
+  hyperevm: "HyperEVM",
+  "klay-token": "Kaia",
+  kcc: "KCC Mainnet",
+  "kcc-mainnet": "KCC Mainnet",
+  "kucoin-community-chain": "KCC Mainnet",
+  megaeth: "MegaETH Mainnet",
+  "metal-l2": "Metal L2",
+  monad: "Monad",
   "optimistic-ethereum": "Optimism",
   optimism: "Optimism",
   polygon: "Polygon",
   "polygon-pos": "Polygon",
+  "sei-v2": "Sei EVM",
+  shido: "Shido Network",
   solana: "Solana",
+  soneium: "Soneium",
+  tron: "Tron",
+  "tron-network": "Tron",
+  "wemix-network": "WEMIX",
   "world-chain": "World Chain",
+  "xdc-network": "XDC Network",
+  xdai: "Gnosis",
+  xrp: "XRP Ledger",
+  xrpl: "XRP Ledger",
+  "xrp-ledger": "XRP Ledger",
+  "x-layer": "X Layer Mainnet",
   zksync: "zkSync Era"
 })) {
   const chain = chains.find((item) => item.name === name);
@@ -71,6 +104,8 @@ function supportForChain(chain) {
   if (chain.kind === "EVM" && isSupportedEvmChain(chain)) return { status: "live", live: true, adapter: "evm", assets: "native+erc20", send: true, receive: true, staking: false, fallbackPaths: fallbackPathCount(chain) };
   if ((chain.kind === "UTXO" || chain.kind === "UTXO/EVM") && supportedUtxo.has(chain.name)) return { status: "live", live: true, adapter: "utxo", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
   if ((chain.kind === "Cosmos" || chain.kind === "Cosmos/EVM") && supportedCosmos.has(chain.name)) return { status: "live", live: true, adapter: "cosmos", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 2 };
+  if (supportedTron.has(chain.name)) return { status: "live", live: true, adapter: "tron", assets: "native+trc20", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedXrp.has(chain.name)) return { status: "live", live: true, adapter: "xrpl", assets: "native+issued", send: true, receive: true, staking: false, fallbackPaths: 1 };
   return { status: "blocked", live: false, reason: "Listed in registry, but no production signer/RPC/indexer adapter is wired yet." };
 }
 
@@ -79,6 +114,15 @@ const liveChains = chainSupport.filter((chain) => chain.support.live);
 const blockedChains = chainSupport.filter((chain) => chain.support.status === "blocked");
 const registry = JSON.parse(fs.readFileSync(REGISTRY_PATH, "utf8"));
 const assets = registry.assets ?? [];
+const nativeChainsBySymbol = new Map();
+for (const chain of chains) {
+  if (chain.name === "Main") continue;
+  for (const symbol of [chain.native, chain.symbol]) {
+    const key = String(symbol ?? "").toUpperCase();
+    if (!key) continue;
+    nativeChainsBySymbol.set(key, [...(nativeChainsBySymbol.get(key) ?? []), chain]);
+  }
+}
 
 function workingPathsForAsset(asset) {
   const symbol = String(asset.symbol ?? "").toUpperCase();
@@ -90,6 +134,12 @@ function workingPathsForAsset(asset) {
   if (symbol === "IFX") {
     paths.push({ chain: "Solana", adapter: "solana", assetType: "spl", send: true, receive: true, balance: true, staking: false, fallbackPaths: 3 });
   }
+  for (const chain of nativeChainsBySymbol.get(symbol) ?? []) {
+    const support = supportForChain(chain);
+    if (support.live) {
+      paths.push({ chain: chain.name, adapter: support.adapter, assetType: "native", send: support.send, receive: support.receive, balance: true, staking: support.staking, fallbackPaths: support.fallbackPaths });
+    }
+  }
   for (const ref of refs) {
     const chain = aliases.get(normalize(ref.chain));
     if (!chain) continue;
@@ -100,8 +150,8 @@ function workingPathsForAsset(asset) {
       paths.push({ chain: chain.name, adapter: support.adapter, assetType: "native", send: support.send, receive: support.receive, balance: true, staking: support.staking, fallbackPaths: support.fallbackPaths });
       continue;
     }
-    if ((support.adapter === "solana" || support.adapter === "evm") && ref.address) {
-      paths.push({ chain: chain.name, adapter: support.adapter, assetType: support.adapter === "solana" ? "spl" : "erc20", contract: ref.address, send: true, receive: true, balance: true, staking: false, fallbackPaths: support.fallbackPaths });
+    if ((support.adapter === "solana" || support.adapter === "evm" || support.adapter === "cosmos" || support.adapter === "tron" || support.adapter === "xrpl") && ref.address) {
+      paths.push({ chain: chain.name, adapter: support.adapter, assetType: tokenTypeForAdapter(support.adapter), contract: ref.address, send: true, receive: true, balance: true, staking: false, fallbackPaths: support.fallbackPaths });
     }
   }
   const seen = new Set();
@@ -111,6 +161,15 @@ function workingPathsForAsset(asset) {
     seen.add(key);
     return true;
   });
+}
+
+function tokenTypeForAdapter(adapter) {
+  if (adapter === "solana") return "spl";
+  if (adapter === "evm") return "erc20";
+  if (adapter === "cosmos") return "cosmos-denom";
+  if (adapter === "tron") return "trc20";
+  if (adapter === "xrpl") return "xrpl-issued";
+  return "token";
 }
 
 function assetCanUseLiveAdapter(asset) {
@@ -216,6 +275,7 @@ function vmNote(kind, live) {
   if (kind === "SVM") return "Solana native SOL and SPL token send/receive are wired.";
   if (kind === "Cosmos" || kind === "Cosmos/EVM") return "Cosmos native send/receive is wired for selected chains; IBC/token modules are not.";
   if (kind === "UTXO") return live ? "Native UTXO send/receive is wired for selected chains only." : "Native UTXO adapter is still missing for these chains.";
+  if (kind === "Account" && live) return "TRON and XRP Ledger send/receive are wired; other account-model chains still need adapters.";
   if (["Move", "Substrate", "Account", "DAG", "Canister", "Privacy", "Bitcoin L2", "UTXO/EVM"].includes(kind)) return "Listed for discovery, but real transaction support needs a production signer/indexer adapter.";
   return "Discovery registry support only unless listed live.";
 }
