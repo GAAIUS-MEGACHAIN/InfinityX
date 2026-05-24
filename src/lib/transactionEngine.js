@@ -1,5 +1,6 @@
 import { deriveEvmAddress, getErc20TokenBalance, getEvmWalletState, isSupportedEvmChain, sendErc20Token, sendEvmNative } from "./evmWallet.js";
 import { getSolanaWalletState, getSplTokenBalance, IFX_MINT, sendSol, sendSplToken } from "./solanaWallet.js";
+import { isAddress } from "viem";
 
 const SUPPORTED_UTXO_CHAINS = new Set(["Bitcoin", "Litecoin", "Dogecoin", "Dash"]);
 const SUPPORTED_COSMOS_CHAINS = new Set(["Cosmos Hub", "Osmosis", "Celestia", "Stargaze", "Juno", "Akash", "Kujira", "Secret Network", "Stride", "Evmos", "Coreum"]);
@@ -7,6 +8,12 @@ const SUPPORTED_TRON_CHAINS = new Set(["Tron"]);
 const SUPPORTED_XRP_CHAINS = new Set(["XRP Ledger"]);
 const CHAIN_ALIASES = {
   binancecoin: "bnbchain",
+  acala: "acala",
+  astar: "astar",
+  b2network: "bnetwork",
+  bsquarednetwork: "bnetwork",
+  bevm: "bevm",
+  bobnetwork: "bob",
   core: "coreum",
   cronozkevm: "cronoszkevm",
   cronoszkevm: "cronoszkevm",
@@ -15,7 +22,14 @@ const CHAIN_ALIASES = {
   ethereumclassic: "ethereumclassic",
   etherlink: "etherlinkmainnet",
   evmos: "evmos",
+  filecoin: "filecoin",
+  filecoinmainnet: "filecoin",
   flarenetwork: "flare",
+  flow: "flow",
+  flowevm: "flow",
+  flowmainnet: "flow",
+  hedera: "hedera",
+  hederahashgraph: "hedera",
   harmonyshard0: "harmony",
   hyperliquid: "hyperevm",
   hyperevm: "hyperevm",
@@ -25,7 +39,11 @@ const CHAIN_ALIASES = {
   kucoincommunitychain: "kccmainnet",
   megaeth: "megaethmainnet",
   metall2: "metall2",
+  merlinchain: "merlin",
   monad: "monad",
+  near: "near",
+  nearprotocol: "near",
+  oasisnetwork: "oasis",
   tron: "tron",
   tronnetwork: "tron",
   sei2: "seievm",
@@ -33,6 +51,7 @@ const CHAIN_ALIASES = {
   shido: "shidonetwork",
   soneium: "soneium",
   wemixnetwork: "wemix",
+  vechain: "vechain",
   xdcnetwork: "xdcnetwork",
   xrp: "xrpledger",
   xrpl: "xrpledger",
@@ -113,17 +132,21 @@ export function getAssetCapability({ chain, token }) {
     };
   }
   if (chain.kind === "EVM" && isSupportedEvmChain(chain)) {
-    const canUse = native || Boolean(contract);
+    const evmContract = contract && isAddress(contract) ? contract : "";
+    const hasUnsupportedContractId = Boolean(contract && !evmContract);
+    const canUse = native || Boolean(evmContract);
     return {
       adapter: "evm",
       native,
-      contract,
+      contract: evmContract,
       canReceive: true,
       canBalance: canUse,
       canSend: canUse,
       canStake: false,
       reason: canUse
         ? "Live EVM native/ERC-20 send, receive, and balance are enabled for this network."
+        : hasUnsupportedContractId
+          ? `${token.symbol} has a ${chain.name} registry id, but it is not a 0x ERC-20 contract that the EVM signer can send. Import the EVM ERC-20 contract to send it.`
         : `${token.symbol} has no ${chain.name} contract in the bundled registry. Import the contract to send it.`
     };
   }

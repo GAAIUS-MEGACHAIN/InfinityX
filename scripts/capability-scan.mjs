@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { isAddress } from "viem";
 import { extraChains } from "../src/data/extraChains.js";
 import { evmRpcUrlsForChain, isSupportedEvmChain } from "../src/lib/evmWallet.js";
 
@@ -46,6 +47,11 @@ for (const [slug, name] of Object.entries({
   "binance-smart-chain": "BNB Chain",
   binancecoin: "BNB Chain",
   bsc: "BNB Chain",
+  acala: "Acala",
+  astar: "Astar",
+  bevm: "BEVM",
+  "bsquared-network": "B² Network",
+  "bob-network": "BOB",
   celo: "Celo",
   core: "Coreum",
   "cronos-zkevm": "Cronos zkEVM",
@@ -55,8 +61,15 @@ for (const [slug, name] of Object.entries({
   "ethereum-classic": "Ethereum Classic",
   etherlink: "Etherlink Mainnet",
   evmos: "Evmos",
+  filecoin: "Filecoin",
+  "filecoin-mainnet": "Filecoin",
   "flare-network": "Flare",
+  flow: "Flow",
+  "flow-evm": "Flow",
+  "flow-mainnet": "Flow",
   "harmony-shard-0": "Harmony",
+  hedera: "Hedera",
+  "hedera-hashgraph": "Hedera",
   hyperliquid: "HyperEVM",
   hyperevm: "HyperEVM",
   "klay-token": "Kaia",
@@ -65,7 +78,11 @@ for (const [slug, name] of Object.entries({
   "kucoin-community-chain": "KCC Mainnet",
   megaeth: "MegaETH Mainnet",
   "metal-l2": "Metal L2",
+  "merlin-chain": "Merlin",
   monad: "Monad",
+  near: "Near",
+  "near-protocol": "Near",
+  "oasis-network": "Oasis",
   "optimistic-ethereum": "Optimism",
   optimism: "Optimism",
   polygon: "Polygon",
@@ -74,6 +91,7 @@ for (const [slug, name] of Object.entries({
   shido: "Shido Network",
   solana: "Solana",
   soneium: "Soneium",
+  vechain: "VeChain",
   tron: "Tron",
   "tron-network": "Tron",
   "wemix-network": "WEMIX",
@@ -150,7 +168,7 @@ function workingPathsForAsset(asset) {
       paths.push({ chain: chain.name, adapter: support.adapter, assetType: "native", send: support.send, receive: support.receive, balance: true, staking: support.staking, fallbackPaths: support.fallbackPaths });
       continue;
     }
-    if ((support.adapter === "solana" || support.adapter === "evm" || support.adapter === "cosmos" || support.adapter === "tron" || support.adapter === "xrpl") && ref.address) {
+    if (isLiveTokenContract(support.adapter, ref.address)) {
       paths.push({ chain: chain.name, adapter: support.adapter, assetType: tokenTypeForAdapter(support.adapter), contract: ref.address, send: true, receive: true, balance: true, staking: false, fallbackPaths: support.fallbackPaths });
     }
   }
@@ -170,6 +188,12 @@ function tokenTypeForAdapter(adapter) {
   if (adapter === "tron") return "trc20";
   if (adapter === "xrpl") return "xrpl-issued";
   return "token";
+}
+
+function isLiveTokenContract(adapter, address) {
+  if (!address) return false;
+  if (adapter === "evm") return isAddress(address);
+  return adapter === "solana" || adapter === "cosmos" || adapter === "tron" || adapter === "xrpl";
 }
 
 function assetCanUseLiveAdapter(asset) {

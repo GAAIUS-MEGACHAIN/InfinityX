@@ -100,7 +100,13 @@ const services = [
 ];
 
 const CHAIN_ALIASES = {
+  acala: "acala",
+  astar: "astar",
+  bevm: "bevm",
   binancecoin: "bnbchain",
+  b2network: "bnetwork",
+  bsquarednetwork: "bnetwork",
+  bobnetwork: "bob",
   core: "coreum",
   cronozkevm: "cronoszkevm",
   eos: "eosevm",
@@ -108,8 +114,15 @@ const CHAIN_ALIASES = {
   ethereumclassic: "ethereumclassic",
   etherlink: "etherlinkmainnet",
   evmos: "evmos",
+  filecoin: "filecoin",
+  filecoinmainnet: "filecoin",
   flarenetwork: "flare",
+  flow: "flow",
+  flowevm: "flow",
+  flowmainnet: "flow",
   harmonyshard0: "harmony",
+  hedera: "hedera",
+  hederahashgraph: "hedera",
   hyperliquid: "hyperevm",
   hyperevm: "hyperevm",
   klaytoken: "kaia",
@@ -118,13 +131,18 @@ const CHAIN_ALIASES = {
   kucoincommunitychain: "kccmainnet",
   megaeth: "megaethmainnet",
   metall2: "metall2",
+  merlinchain: "merlin",
   monad: "monad",
+  near: "near",
+  nearprotocol: "near",
+  oasisnetwork: "oasis",
   tron: "tron",
   tronnetwork: "tron",
   sei2: "seievm",
   seiv2: "seievm",
   shido: "shidonetwork",
   soneium: "soneium",
+  vechain: "vechain",
   wemixnetwork: "wemix",
   xdcnetwork: "xdcnetwork",
   xrp: "xrpledger",
@@ -1529,6 +1547,7 @@ function canonicalChainName(value) {
 }
 
 function evmChainId(chain) {
+  if (chain?.chainId) return chain.chainId;
   const ids = {
     Ethereum: 1,
     Polygon: 137,

@@ -5,11 +5,51 @@
     "symbol": "BTC",
     "name": "Bitcoin",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 5,
     "workingPaths": [
       {
         "chain": "Bitcoin",
         "adapter": "utxo",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Merlin",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "B² Network",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 2
+      },
+      {
+        "chain": "Mezo",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "BEVM",
+        "adapter": "evm",
         "assetType": "native",
         "send": true,
         "receive": true,
@@ -29,7 +69,7 @@
     "symbol": "ETH",
     "name": "Ethereum",
     "status": "live",
-    "workingPathCount": 22,
+    "workingPathCount": 23,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -243,6 +283,16 @@
       },
       {
         "chain": "Cyber",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "BOB",
         "adapter": "evm",
         "assetType": "native",
         "send": true,
@@ -923,7 +973,7 @@
     "symbol": "LINK",
     "name": "Chainlink",
     "status": "live",
-    "workingPathCount": 49,
+    "workingPathCount": 54,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -985,6 +1035,17 @@
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x587d19ddf735d6b536aadb1a2a92938eb23b8d5c",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Merlin",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f",
         "send": true,
         "receive": true,
         "balance": true,
@@ -1201,6 +1262,17 @@
         "fallbackPaths": 2
       },
       {
+        "chain": "Astar",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x31efb841d5e0b4082f7e1267dab8de1b853f2a9d",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
         "chain": "Lisk",
         "adapter": "evm",
         "assetType": "erc20",
@@ -1221,6 +1293,28 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 1
+      },
+      {
+        "chain": "BOB",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x5ab885cda7216b163fb6f813dec1e1532516c833",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "B² Network",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x709229d9587886a1edfee6b5ce636e1d70d1ce39",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 2
       },
       {
         "chain": "Celo",
@@ -1293,6 +1387,17 @@
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x61170ca9fb9cf98d4c7d684e07be6d969d59667e",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Hedera",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x7ce6bb2cc2d3fd45a974da6a0f29236cb9513a98",
         "send": true,
         "receive": true,
         "balance": true,
@@ -1746,7 +1851,7 @@
     "symbol": "USDE",
     "name": "Ethena USDe",
     "status": "live",
-    "workingPathCount": 22,
+    "workingPathCount": 21,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -1879,17 +1984,6 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x2e6d84f2d7ca82e6581e03523e4389f7",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
       },
       {
         "chain": "Solana",
@@ -2114,13 +2208,24 @@
     "id": "hedera-hashgraph",
     "symbol": "HBAR",
     "name": "Hedera",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Hedera",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 30,
@@ -2396,13 +2501,24 @@
     "id": "near",
     "symbol": "NEAR",
     "name": "NEAR Protocol",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Near",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 38,
@@ -4504,13 +4620,24 @@
     "id": "filecoin",
     "symbol": "FIL",
     "name": "Filecoin",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Filecoin",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 85,
@@ -4961,13 +5088,24 @@
     "id": "vechain",
     "symbol": "VET",
     "name": "VeChain",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "VeChain",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 97,
@@ -5323,7 +5461,7 @@
     "symbol": "TUSD",
     "name": "TrueUSD",
     "status": "live",
-    "workingPathCount": 5,
+    "workingPathCount": 4,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -5346,17 +5484,6 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 1
-      },
-      {
-        "chain": "BNB Chain",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "TUSDB-888",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 2
       },
       {
         "chain": "BNB Chain",
@@ -6385,10 +6512,20 @@
     "symbol": "XTZ",
     "name": "Tezos",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
       {
         "chain": "Etherlink Mainnet",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Tezos",
         "adapter": "evm",
         "assetType": "native",
         "send": true,
@@ -8229,13 +8366,24 @@
     "id": "iota",
     "symbol": "IOTA",
     "name": "IOTA",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "IOTA",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "iota"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 171,
@@ -9293,24 +9441,13 @@
     "symbol": "TWT",
     "name": "Trust Wallet",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "BNB Chain",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x4b0f1812e5df2a09796481ff14017e6005508003",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 2
-      },
-      {
-        "chain": "BNB Chain",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "TWT-8C2",
         "send": true,
         "receive": true,
         "balance": true,
@@ -9964,8 +10101,19 @@
     "symbol": "SATUSD",
     "name": "Satoshi Stablecoin",
     "status": "live",
-    "workingPathCount": 6,
+    "workingPathCount": 9,
     "workingPaths": [
+      {
+        "chain": "BOB",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0xecf21b335b41f9d5a89f6186a99c19a3c467871f",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Sonic",
         "adapter": "evm",
@@ -9976,6 +10124,28 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "B² Network",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x8dd8b12d55c73c08294664a5915475ed1c8b1f6f",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 2
+      },
+      {
+        "chain": "BEVM",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x2031c8848775a5efb7cff2a4edbe3f04c50a1478",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Hemi",
@@ -14737,13 +14907,24 @@
     "id": "theta-fuel",
     "symbol": "TFUEL",
     "name": "Theta Fuel",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Theta",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 350,
@@ -14976,24 +15157,13 @@
     "symbol": "FEUSD",
     "name": "Felix feUSD",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "HyperEVM",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x02c6a2fa58cc01a18b8d9e00ea48d65e4df26c70",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x88102bea0bbad5f301f6e9e4dacdf979",
         "send": true,
         "receive": true,
         "balance": true,
@@ -15362,10 +15532,20 @@
     "symbol": "ROSE",
     "name": "Oasis",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
       {
         "chain": "Oasis Sapphire",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Oasis",
         "adapter": "evm",
         "assetType": "native",
         "send": true,
@@ -16747,8 +16927,18 @@
     "symbol": "ASTR",
     "name": "Astar",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Astar",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",
@@ -17366,7 +17556,7 @@
     "symbol": "MOVE",
     "name": "Movement",
     "status": "live",
-    "workingPathCount": 4,
+    "workingPathCount": 3,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -17395,17 +17585,6 @@
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x3073f7aaa4db83f95e9fff17424f71d4751a3073",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xedfb8d993ee8cb935338601d8673dfcf",
         "send": true,
         "receive": true,
         "balance": true,
@@ -17491,19 +17670,8 @@
     "symbol": "PURR",
     "name": "Purr",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xc1fb593aeffbeb02f85e0308e9956a90",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
       {
         "chain": "HyperEVM",
         "adapter": "evm",
@@ -18237,13 +18405,24 @@
     "id": "flow",
     "symbol": "FLOW",
     "name": "Flow",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Flow",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Main"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 454,
@@ -18959,24 +19138,13 @@
     "symbol": "UPUMP",
     "name": "Unit Pump",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "HyperEVM",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x27ec642013bcb3d80ca3706599d3cda04f6f4452",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x544e60f98a36d7b22c0fb5824b84f795",
         "send": true,
         "receive": true,
         "balance": true,
@@ -23866,24 +24034,13 @@
     "symbol": "NOW",
     "name": "ChangeNOW",
     "status": "live",
-    "workingPathCount": 3,
+    "workingPathCount": 2,
     "workingPaths": [
       {
         "chain": "Ethereum",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0xe9a95d175a5f4c9369f3b74222402eb1b837693b",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 2
-      },
-      {
-        "chain": "BNB Chain",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "NOW-E68",
         "send": true,
         "receive": true,
         "balance": true,
@@ -24326,25 +24483,13 @@
     "id": "storx",
     "symbol": "SRX",
     "name": "StorX",
-    "status": "live",
-    "workingPathCount": 1,
-    "workingPaths": [
-      {
-        "chain": "XDC Network",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "xdc5d5f074837f5d4618b3916ba74de1bf9662a3fed",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 3
-      }
-    ],
+    "status": "registry-only",
+    "workingPathCount": 0,
+    "workingPaths": [],
     "listedChains": [
       "xdc-network"
     ],
-    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
+    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
   },
   {
     "rank": 624,
@@ -25236,8 +25381,19 @@
     "symbol": "MERL",
     "name": "Merlin Chain",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
+      {
+        "chain": "Merlin",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x5c46bff4b38dc1eae09c5bac65872a1d8bc87378",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",
@@ -26744,8 +26900,19 @@
     "symbol": "MUSD",
     "name": "Mezo USD",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
+      {
+        "chain": "Mezo",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0xdd468a1ddc392dcdbef6db6e34e89aa338f9f186",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",
@@ -27772,24 +27939,13 @@
     "symbol": "UXPL",
     "name": "Unit Plasma",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "HyperEVM",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x33af3c2540ba72054e044efe504867b39ae421f5",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x2c54c60600e1d786b2dfc139a38a5a99",
         "send": true,
         "receive": true,
         "balance": true,
@@ -28144,7 +28300,7 @@
     "symbol": "EUL",
     "name": "Euler",
     "status": "live",
-    "workingPathCount": 8,
+    "workingPathCount": 9,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -28222,6 +28378,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "BOB",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0xde1763afa5eb658cffffd16835afeb47e7ac0b8d",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Avalanche",
@@ -30444,7 +30611,7 @@
     "symbol": "BOB",
     "name": "BOB (Build on Bitcoin)",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -30467,6 +30634,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "BOB",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0xb0bd54846a92b214c04a63b26ad7dc5e19a60808",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -32678,24 +32856,13 @@
     "symbol": "USDH",
     "name": "USDH",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "HyperEVM",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x111111a1a0667d36bd57c0a9f569b98057111111",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x54e00a5988577cb0b0c9ab0cb6ef7f4b",
         "send": true,
         "receive": true,
         "balance": true,
@@ -35111,7 +35278,7 @@
     "symbol": "JPYC",
     "name": "JPY Coin",
     "status": "live",
-    "workingPathCount": 4,
+    "workingPathCount": 5,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -35134,6 +35301,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Astar",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x431d5dff03120afa4bdf332c61a6e1766ef37bdb",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Polygon",
@@ -35875,8 +36053,19 @@
     "symbol": "SAUCE",
     "name": "SaucerSwap",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Hedera",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x00000000000000000000000000000000000b2ad5",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Base",
         "adapter": "evm",
@@ -37022,7 +37211,7 @@
     "symbol": "BASED",
     "name": "Based",
     "status": "live",
-    "workingPathCount": 4,
+    "workingPathCount": 3,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -37045,17 +37234,6 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xbe946bd7862245615d6729ec5b67cc7e",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
       },
       {
         "chain": "HyperEVM",
@@ -38170,8 +38348,19 @@
     "symbol": "MEZO",
     "name": "MEZO",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
+      {
+        "chain": "Mezo",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x7b7c000000000000000000000000000000000001",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Base",
         "adapter": "evm",
@@ -38422,7 +38611,7 @@
     "symbol": "XSGD",
     "name": "XSGD",
     "status": "live",
-    "workingPathCount": 7,
+    "workingPathCount": 8,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -38434,6 +38623,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Hedera",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x00000000000000000000000000000000001e4d82",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Solana",
@@ -39879,24 +40079,13 @@
     "symbol": "UFART",
     "name": "Unit Fartcoin",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "HyperEVM",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x3b4575e689ded21caad31d64c4df1f10f3b2cedf",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x7650808198966e4285687d3deb556ccc",
         "send": true,
         "receive": true,
         "balance": true,
@@ -43060,19 +43249,8 @@
     "symbol": "WRX",
     "name": "WazirX",
     "status": "live",
-    "workingPathCount": 3,
+    "workingPathCount": 2,
     "workingPaths": [
-      {
-        "chain": "BNB Chain",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "WRX-ED1",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 2
-      },
       {
         "chain": "Polygon",
         "adapter": "evm",
@@ -44391,19 +44569,8 @@
     "symbol": "HFUN",
     "name": "Hypurr Fun",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xbaf265ef389da684513d98d68edf4eae",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
       {
         "chain": "HyperEVM",
         "adapter": "evm",
@@ -44805,7 +44972,7 @@
     "symbol": "AVL",
     "name": "Avalon",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -44828,6 +44995,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Merlin",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x916addd975718d307868b814e0a9bbbedbd7ab17",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -47440,7 +47618,7 @@
     "symbol": "APU",
     "name": "Apu Apustaja",
     "status": "live",
-    "workingPathCount": 5,
+    "workingPathCount": 4,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -47463,17 +47641,6 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xf20a5f3285ec49d45360fa28d95d6ba3",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
       },
       {
         "chain": "Base",
@@ -49585,7 +49752,7 @@
     "symbol": "ANON",
     "name": "Hey Anon",
     "status": "live",
-    "workingPathCount": 10,
+    "workingPathCount": 9,
     "workingPaths": [
       {
         "chain": "Sonic",
@@ -49630,17 +49797,6 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x5b56ac883c628df1fe24d463b3ac82ac",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
       },
       {
         "chain": "BNB Chain",
@@ -51694,25 +51850,13 @@
     "id": "contentos",
     "symbol": "COS",
     "name": "Contentos",
-    "status": "live",
-    "workingPathCount": 1,
-    "workingPaths": [
-      {
-        "chain": "BNB Chain",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "COS-2E4",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 2
-      }
-    ],
+    "status": "registry-only",
+    "workingPathCount": 0,
+    "workingPaths": [],
     "listedChains": [
       "binancecoin"
     ],
-    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
+    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
   },
   {
     "rank": 1411,
@@ -53291,13 +53435,25 @@
     "id": "thetadrop",
     "symbol": "TDROP",
     "name": "ThetaDrop",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Theta",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x1336739b05c7ab8a526d40dcc0d04a826b5f8b03",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "theta"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1466,
@@ -56533,7 +56689,7 @@
     "symbol": "AUDD",
     "name": "Australian Digital Dollar",
     "status": "live",
-    "workingPathCount": 5,
+    "workingPathCount": 6,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -56556,6 +56712,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Hedera",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x39ceba2b467fa987546000eb5d1373acf1f3a2e1",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "XDC Network",
@@ -57504,25 +57671,13 @@
     "id": "comtech-gold",
     "symbol": "CGO",
     "name": "Comtech Gold",
-    "status": "live",
-    "workingPathCount": 1,
-    "workingPaths": [
-      {
-        "chain": "XDC Network",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "xdc8f9920283470f52128bf11b0c14e798be704fd15",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 3
-      }
-    ],
+    "status": "registry-only",
+    "workingPathCount": 0,
+    "workingPaths": [],
     "listedChains": [
       "xdc-network"
     ],
-    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
+    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
   },
   {
     "rank": 1606,
@@ -58875,13 +59030,25 @@
     "id": "vebetterdao",
     "symbol": "B3TR",
     "name": "VeBetterDAO",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "VeChain",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x5ef79995fe8a89e0812330e4378eb2660cede699",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "vechain"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1637,
@@ -61195,13 +61362,25 @@
     "id": "_",
     "symbol": "GIB",
     "name": "༼ つ ◕_◕ ༽つ",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Hedera",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x00000000000000000000000000000000007872cb",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "hedera-hashgraph"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1715,
@@ -61525,19 +61704,8 @@
     "symbol": "HPL",
     "name": "HyperLend",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x5e887f0c6c3deec190c36186bf23369f",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
       {
         "chain": "HyperEVM",
         "adapter": "evm",
@@ -65011,19 +65179,8 @@
     "symbol": "JEFF",
     "name": "Jeff",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xfcf28885456bf7e7cbe5b7a25407c5bc",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
       {
         "chain": "HyperEVM",
         "adapter": "evm",
@@ -65807,13 +65964,25 @@
     "id": "bonzo-finance",
     "symbol": "BONZO",
     "name": "Bonzo Finance",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Hedera",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x00000000000000000000000000000000007e545e",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "hedera-hashgraph"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1875,
@@ -69308,24 +69477,13 @@
     "symbol": "USDXL",
     "name": "Last USD",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "HyperEVM",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0xca79db4b49f608ef54a5cb813fbed3a6387bc645",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xf448c3cad413cdf0feb1746d7b057967",
         "send": true,
         "receive": true,
         "balance": true,
@@ -72048,19 +72206,8 @@
     "symbol": "PIP",
     "name": "PiP",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xe85f43e1f91e3c8cdf3acbd7e0855b8e",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
       {
         "chain": "HyperEVM",
         "adapter": "evm",
@@ -74403,19 +74550,8 @@
     "symbol": "LIQD",
     "name": "LiquidLaunch",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xa043053570d42d6f553896820dfd42b6",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
       {
         "chain": "HyperEVM",
         "adapter": "evm",
@@ -77190,7 +77326,7 @@
     "symbol": "SOVRN",
     "name": "Sovrun",
     "status": "live",
-    "workingPathCount": 3,
+    "workingPathCount": 2,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -77213,17 +77349,6 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xc6aef97252f0081eb8246e24f24c5fe7",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -79831,7 +79956,7 @@
     "symbol": "USDGLO",
     "name": "Glo Dollar",
     "status": "live",
-    "workingPathCount": 6,
+    "workingPathCount": 7,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -79843,6 +79968,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "VeChain",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0x29c630cce4ddb23900f5fe66ab55e488c15b9f5e",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Celo",
@@ -83088,7 +83224,7 @@
     "symbol": "HAI",
     "name": "Hacken",
     "status": "live",
-    "workingPathCount": 3,
+    "workingPathCount": 4,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -83122,6 +83258,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "VeChain",
+        "adapter": "evm",
+        "assetType": "erc20",
+        "contract": "0xacc280010b2ee0efc770bce34774376656d8ce14",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -88468,24 +88615,13 @@
     "symbol": "BRIDGE",
     "name": "HyBridge",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "HyperEVM",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x29dbf86a8c48ea4331e28b3c1eae824a2a45996a",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0xc196d2b7598991bd0425fc959bc1a40f",
         "send": true,
         "receive": true,
         "balance": true,
@@ -92644,24 +92780,13 @@
     "symbol": "BUDDY",
     "name": "alright buddy",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 1,
     "workingPaths": [
       {
         "chain": "HyperEVM",
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x47bb061c0204af921f43dc73c7d7768d2672ddee",
-        "send": true,
-        "receive": true,
-        "balance": true,
-        "staking": false,
-        "fallbackPaths": 1
-      },
-      {
-        "chain": "HyperEVM",
-        "adapter": "evm",
-        "assetType": "erc20",
-        "contract": "0x84ecb2340931f6b153ff10bcfafb6726",
         "send": true,
         "receive": true,
         "balance": true,
@@ -99414,13 +99539,24 @@
     "id": "flow-lending",
     "symbol": "FLOW",
     "name": "Flow Lending",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Flow",
+        "adapter": "evm",
+        "assetType": "native",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "Cardano"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2967,

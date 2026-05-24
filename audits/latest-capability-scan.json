@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-05-24T00:51:51.865Z",
+  "generatedAt": "2026-05-24T01:41:30.321Z",
   "summary": {
     "listedChains": 152,
-    "liveTransactionChains": 109,
-    "blockedNativeChains": 42,
+    "liveTransactionChains": 126,
+    "blockedNativeChains": 25,
     "bundledAssets": 3000,
-    "assetsWithLiveSendReceivePath": 2562,
-    "assetsStillRegistryOnly": 438
+    "assetsWithLiveSendReceivePath": 2571,
+    "assetsStillRegistryOnly": 429
   },
   "supportByKind": {
     "InfinityX routing": 1,
     "SVM": 1,
-    "EVM": 91,
+    "EVM": 108,
     "UTXO": 10,
-    "Account": 19,
+    "Account": 10,
     "Move": 2,
     "Cosmos": 10,
     "Cosmos/EVM": 1,
-    "Substrate": 5,
+    "Substrate": 3,
     "Canister": 1,
     "Privacy": 1,
-    "Bitcoin L2": 7,
-    "DAG": 2,
+    "Bitcoin L2": 2,
+    "DAG": 1,
     "UTXO/EVM": 1
   },
   "vmCoverage": [
@@ -41,8 +41,8 @@
     },
     {
       "kind": "EVM",
-      "listedChains": 91,
-      "liveChains": 91,
+      "listedChains": 108,
+      "liveChains": 108,
       "status": "fully-live-for-listed-chains",
       "note": "EVM native coin and ERC-20 send/receive are wired."
     },
@@ -55,7 +55,7 @@
     },
     {
       "kind": "Account",
-      "listedChains": 19,
+      "listedChains": 10,
       "liveChains": 2,
       "status": "partial",
       "note": "TRON and XRP Ledger send/receive are wired; other account-model chains still need adapters."
@@ -83,7 +83,7 @@
     },
     {
       "kind": "Substrate",
-      "listedChains": 5,
+      "listedChains": 3,
       "liveChains": 0,
       "status": "blocked",
       "note": "Listed for discovery, but real transaction support needs a production signer/indexer adapter."
@@ -104,14 +104,14 @@
     },
     {
       "kind": "Bitcoin L2",
-      "listedChains": 7,
+      "listedChains": 2,
       "liveChains": 0,
       "status": "blocked",
       "note": "Listed for discovery, but real transaction support needs a production signer/indexer adapter."
     },
     {
       "kind": "DAG",
-      "listedChains": 2,
+      "listedChains": 1,
       "liveChains": 0,
       "status": "blocked",
       "note": "Listed for discovery, but real transaction support needs a production signer/indexer adapter."
@@ -1070,6 +1070,22 @@
       "reason": "Live adapter is wired."
     },
     {
+      "name": "Near",
+      "native": "NEAR",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://eth-rpc.mainnet.near.org",
+      "explorer": "https://eth-explorer.near.org",
+      "reason": "Live adapter is wired."
+    },
+    {
       "name": "Cosmos Hub",
       "native": "ATOM",
       "kind": "Cosmos",
@@ -1246,6 +1262,118 @@
       "reason": "Live adapter is wired."
     },
     {
+      "name": "Acala",
+      "native": "ACA",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://eth-rpc-acala.aca-api.network",
+      "explorer": "https://blockscout.acala.network",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Astar",
+      "native": "ASTR",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://astar.api.onfinality.io/public",
+      "explorer": "https://astar.subscan.io",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Filecoin",
+      "native": "FIL",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://api.node.glif.io/rpc/v1",
+      "explorer": "https://filfox.info/en",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Hedera",
+      "native": "HBAR",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://mainnet.hashio.io/api",
+      "explorer": "https://hashscan.io/mainnet",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Tezos",
+      "native": "XTZ",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://node.mainnet.etherlink.com",
+      "explorer": "https://explorer.etherlink.com",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "EOS",
+      "native": "EOS",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://api.evm.eosnetwork.com",
+      "explorer": "https://explorer.evm.eosnetwork.com",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Flow",
+      "native": "FLOW",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://mainnet.evm.nodes.onflow.org",
+      "explorer": "https://evm.flowscan.io",
+      "reason": "Live adapter is wired."
+    },
+    {
       "name": "Litecoin",
       "native": "LTC",
       "kind": "UTXO",
@@ -1291,6 +1419,54 @@
       "fallbackPaths": 1,
       "rpc": "https://api.blockcypher.com/v1/dash/main",
       "explorer": "https://live.blockcypher.com/dash",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "VeChain",
+      "native": "VET",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://mainnet.vechain.org",
+      "explorer": "https://explore.vechain.org",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Theta",
+      "native": "TFUEL",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://eth-rpc-api.thetatoken.org/rpc",
+      "explorer": "https://explorer.thetatoken.org",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "IOTA",
+      "native": "IOTA",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://json-rpc.evm.iotaledger.net",
+      "explorer": "https://explorer.evm.iota.org",
       "reason": "Live adapter is wired."
     },
     {
@@ -1614,6 +1790,22 @@
       "reason": "Live adapter is wired."
     },
     {
+      "name": "Oasis",
+      "native": "ROSE",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://sapphire.oasis.io",
+      "explorer": "https://explorer.oasis.io/mainnet/sapphire",
+      "reason": "Live adapter is wired."
+    },
+    {
       "name": "Flare",
       "native": "FLR",
       "kind": "EVM",
@@ -1868,6 +2060,86 @@
       "rpc": "https://zetachain-evm.blockpi.network/v1/rpc/public",
       "explorer": "https://zetascan.com",
       "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Merlin",
+      "native": "BTC",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://rpc.merlinchain.io",
+      "explorer": "https://scan.merlinchain.io",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "B² Network",
+      "native": "BTC",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 2,
+      "rpc": "https://rpc.bsquared.network",
+      "explorer": "https://explorer.bsquared.network",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "BOB",
+      "native": "ETH",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://rpc.gobob.xyz",
+      "explorer": "https://explorer.gobob.xyz",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "Mezo",
+      "native": "BTC",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://rpc.mezo.org",
+      "explorer": "https://explorer.mezo.org",
+      "reason": "Live adapter is wired."
+    },
+    {
+      "name": "BEVM",
+      "native": "BTC",
+      "kind": "EVM",
+      "status": "live",
+      "adapter": "evm",
+      "assets": "native+erc20",
+      "send": true,
+      "receive": true,
+      "balance": true,
+      "staking": false,
+      "fallbackPaths": 1,
+      "rpc": "https://rpc-mainnet-1.bevm.io",
+      "explorer": "https://scan-mainnet.bevm.io",
+      "reason": "Live adapter is wired."
     }
   ],
   "blockedByKind": {
@@ -1881,22 +2153,13 @@
     ],
     "Account": [
       "Ton",
-      "Near",
-      "Filecoin",
       "Algorand",
       "Stellar",
-      "Hedera",
-      "Tezos",
-      "EOS",
       "WAX",
-      "Flow",
-      "VeChain",
-      "Theta",
       "MultiversX",
       "Waves",
       "Neo",
-      "Ontology",
-      "Oasis"
+      "Ontology"
     ],
     "Move": [
       "Sui",
@@ -1905,8 +2168,6 @@
     "Substrate": [
       "Polkadot",
       "Kusama",
-      "Acala",
-      "Astar",
       "Bittensor"
     ],
     "Canister": [
@@ -1917,15 +2178,9 @@
     ],
     "Bitcoin L2": [
       "Stacks",
-      "Merlin",
-      "B² Network",
-      "BOB",
-      "Mezo",
-      "Fractal Bitcoin",
-      "BEVM"
+      "Fractal Bitcoin"
     ],
     "DAG": [
-      "IOTA",
       "Nano"
     ],
     "UTXO/EVM": [
@@ -1998,22 +2253,6 @@
       ]
     },
     {
-      "rank": 29,
-      "symbol": "HBAR",
-      "name": "Hedera",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
-      "rank": 37,
-      "symbol": "NEAR",
-      "name": "NEAR Protocol",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
       "rank": 40,
       "symbol": "TAO",
       "name": "Bittensor",
@@ -2062,25 +2301,9 @@
       ]
     },
     {
-      "rank": 84,
-      "symbol": "FIL",
-      "name": "Filecoin",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
       "rank": 89,
       "symbol": "HASH",
       "name": "Provenance Blockchain",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
-      "rank": 96,
-      "symbol": "VET",
-      "name": "VeChain",
       "chains": [
         "Main"
       ]
@@ -2123,14 +2346,6 @@
       "name": "Decred",
       "chains": [
         "Main"
-      ]
-    },
-    {
-      "rank": 170,
-      "symbol": "IOTA",
-      "name": "IOTA",
-      "chains": [
-        "iota"
       ]
     },
     {
@@ -2310,14 +2525,6 @@
       ]
     },
     {
-      "rank": 348,
-      "symbol": "TFUEL",
-      "name": "Theta Fuel",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
       "rank": 350,
       "symbol": "DEEP",
       "name": "DeepBook",
@@ -2441,14 +2648,6 @@
       "rank": 449,
       "symbol": "BTY",
       "name": "Bityuan",
-      "chains": [
-        "Main"
-      ]
-    },
-    {
-      "rank": 453,
-      "symbol": "FLOW",
-      "name": "Flow",
       "chains": [
         "Main"
       ]
@@ -2654,6 +2853,14 @@
       ]
     },
     {
+      "rank": 623,
+      "symbol": "SRX",
+      "name": "StorX",
+      "chains": [
+        "xdc-network"
+      ]
+    },
+    {
       "rank": 647,
       "symbol": "SN3",
       "name": "τemplar",
@@ -2731,6 +2938,54 @@
       "name": "NOVA",
       "chains": [
         "bittensor"
+      ]
+    },
+    {
+      "rank": 711,
+      "symbol": "STEEM",
+      "name": "Steem",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 713,
+      "symbol": "ETHW",
+      "name": "EthereumPoW",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 721,
+      "symbol": "SN9",
+      "name": "iota",
+      "chains": [
+        "bittensor"
+      ]
+    },
+    {
+      "rank": 723,
+      "symbol": "UTYA",
+      "name": "Utya",
+      "chains": [
+        "the-open-network"
+      ]
+    },
+    {
+      "rank": 745,
+      "symbol": "FLUX",
+      "name": "Flux",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 747,
+      "symbol": "HDX",
+      "name": "Hydration",
+      "chains": [
+        "Main"
       ]
     }
   ]
