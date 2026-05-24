@@ -1,6 +1,6 @@
 # InfinityX Capability Scan
 
-Generated: 2026-05-24T02:23:17.904Z
+Generated: 2026-05-24T12:34:47.554Z
 
 ## Summary
 
@@ -8,8 +8,8 @@ Generated: 2026-05-24T02:23:17.904Z
 - Live transaction chains: 137
 - Blocked native chains: 14
 - Bundled top assets: 3000
-- Assets with at least one live send/receive path: 2580
-- Registry-only assets: 420
+- Assets with at least one live send/receive path: 2617
+- Registry-only assets: 383
 
 ## VM Coverage
 

@@ -20,6 +20,20 @@ export async function getSuiWalletState({ password, chain, accountIndex = 0 }) {
   };
 }
 
+export async function getSuiTokenBalance({ password, chain, coinType, decimals = SUI_DECIMALS, symbol = "SUI", accountIndex = 0 }) {
+  assertSuiCoinType(coinType);
+  const { address } = await deriveSuiAccount({ password, accountIndex });
+  const client = suiClient(chain);
+  const balance = await client.getBalance({ owner: address, coinType });
+  return {
+    address,
+    balance: formatUnits(balance.totalBalance ?? 0, decimals),
+    raw: String(balance.totalBalance ?? 0),
+    symbol,
+    coinType
+  };
+}
+
 export async function sendSuiNative({ password, chain, to, amount, accountIndex = 0 }) {
   assertSuiAddress(to);
   const { keypair } = await deriveSuiAccount({ password, accountIndex });
@@ -27,6 +41,32 @@ export async function sendSuiNative({ password, chain, to, amount, accountIndex 
   const tx = new Transaction();
   const amountMist = parseUnits(amount, SUI_DECIMALS);
   tx.transferObjects([tx.splitCoins(tx.gas, [amountMist])], to.trim());
+  const result = await client.signAndExecuteTransaction({
+    signer: keypair,
+    transaction: tx,
+    options: { showEffects: true }
+  });
+  return {
+    hash: result.digest,
+    explorer: explorerTxUrl(chain, result.digest),
+    status: result.effects?.status?.status ?? "submitted"
+  };
+}
+
+export async function sendSuiToken({ password, chain, to, amount, coinType, decimals = SUI_DECIMALS, accountIndex = 0 }) {
+  assertSuiAddress(to);
+  assertSuiCoinType(coinType);
+  const { keypair, address } = await deriveSuiAccount({ password, accountIndex });
+  const client = suiClient(chain);
+  const amountRaw = parseUnits(amount, decimals);
+  const coins = await collectSuiCoins({ client, owner: address, coinType, amountRaw });
+  const tx = new Transaction();
+  const primary = tx.object(coins[0].coinObjectId);
+  if (coins.length > 1) {
+    tx.mergeCoins(primary, coins.slice(1).map((coin) => tx.object(coin.coinObjectId)));
+  }
+  const [payment] = tx.splitCoins(primary, [amountRaw]);
+  tx.transferObjects([payment], to.trim());
   const result = await client.signAndExecuteTransaction({
     signer: keypair,
     transaction: tx,
@@ -51,6 +91,20 @@ export async function getAptosWalletState({ password, accountIndex = 0 }) {
   };
 }
 
+export async function getAptosTokenBalance({ password, asset, decimals = APT_DECIMALS, symbol = "APT", accountIndex = 0 }) {
+  assertAptosAsset(asset);
+  const account = await deriveAptosAccount({ password, accountIndex });
+  const aptos = aptosClient();
+  const raw = await aptos.getBalance({ accountAddress: account.accountAddress, asset });
+  return {
+    address: account.accountAddress.toString(),
+    balance: formatUnits(raw, decimals),
+    raw: String(raw),
+    symbol,
+    asset
+  };
+}
+
 export async function sendAptosNative({ password, to, amount, accountIndex = 0 }) {
   const account = await deriveAptosAccount({ password, accountIndex });
   const aptos = aptosClient();
@@ -59,6 +113,25 @@ export async function sendAptosNative({ password, to, amount, accountIndex = 0 }
     sender: account.accountAddress,
     recipient: to.trim(),
     amount: amountOctas
+  });
+  const pending = await aptos.signAndSubmitTransaction({ signer: account, transaction });
+  return {
+    hash: pending.hash,
+    explorer: `https://aptoscan.com/transaction/${pending.hash}`,
+    status: pending.type ?? "pending"
+  };
+}
+
+export async function sendAptosToken({ password, to, amount, asset, decimals = APT_DECIMALS, accountIndex = 0 }) {
+  assertAptosAsset(asset);
+  const account = await deriveAptosAccount({ password, accountIndex });
+  const aptos = aptosClient();
+  const amountRaw = parseUnits(amount, decimals);
+  const transaction = await aptos.transferFungibleAsset({
+    sender: account,
+    fungibleAssetMetadataAddress: asset,
+    recipient: to.trim(),
+    amount: amountRaw
   });
   const pending = await aptos.signAndSubmitTransaction({ signer: account, transaction });
   return {
@@ -110,6 +183,35 @@ function assertSuiAddress(value) {
   if (!/^0x[a-fA-F0-9]{64}$/.test(String(value ?? "").trim())) {
     throw new Error("Invalid Sui recipient address.");
   }
+}
+
+function assertSuiCoinType(value) {
+  if (!/^0x[a-fA-F0-9]+::[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*$/.test(String(value ?? "").trim())) {
+    throw new Error("Invalid Sui coin type.");
+  }
+}
+
+function assertAptosAsset(value) {
+  const text = String(value ?? "").trim();
+  const metadata = /^0x[a-fA-F0-9]+$/.test(text);
+  const coinType = /^0x[a-fA-F0-9]+::[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*$/.test(text);
+  if (!metadata && !coinType) throw new Error("Invalid Aptos fungible asset id.");
+}
+
+async function collectSuiCoins({ client, owner, coinType, amountRaw }) {
+  const selected = [];
+  let cursor = null;
+  let total = 0n;
+  do {
+    const page = await client.getCoins({ owner, coinType, cursor, limit: 50 });
+    for (const coin of page.data ?? []) {
+      selected.push(coin);
+      total += BigInt(coin.balance ?? 0);
+      if (total >= amountRaw) return selected;
+    }
+    cursor = page.hasNextPage ? page.nextCursor : null;
+  } while (cursor);
+  throw new Error("Insufficient Sui token balance.");
 }
 
 function parseUnits(value, decimals) {

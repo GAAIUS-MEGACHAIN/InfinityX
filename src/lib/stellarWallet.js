@@ -24,6 +24,30 @@ export async function getStellarWalletState({ password, chain, accountIndex = 0 
   };
 }
 
+export async function getStellarAssetBalance({ password, chain, issuer, code, accountIndex = 0 }) {
+  const asset = parseStellarAsset({ issuer, code });
+  const keypair = await deriveStellarKeypair({ password, accountIndex });
+  const server = horizon(chain);
+  let balance = "0";
+  try {
+    const account = await server.loadAccount(keypair.publicKey());
+    balance = account.balances.find((item) =>
+      item.asset_type !== "native" &&
+      item.asset_code === asset.getCode() &&
+      item.asset_issuer === asset.getIssuer()
+    )?.balance ?? "0";
+  } catch (error) {
+    if (error?.response?.status !== 404) throw error;
+  }
+  return {
+    address: keypair.publicKey(),
+    balance,
+    raw: parseUnits(balance, DECIMALS).toString(),
+    symbol: asset.getCode(),
+    issuer: asset.getIssuer()
+  };
+}
+
 export async function sendStellarNative({ password, chain, to, amount, accountIndex = 0 }) {
   if (!StellarSdk.StrKey.isValidEd25519PublicKey(to.trim())) throw new Error("Invalid Stellar recipient address.");
   const keypair = await deriveStellarKeypair({ password, accountIndex });
@@ -48,6 +72,31 @@ export async function sendStellarNative({ password, chain, to, amount, accountIn
   return { hash: result.hash, explorer: `https://stellar.expert/explorer/public/tx/${result.hash}` };
 }
 
+export async function sendStellarAsset({ password, chain, to, amount, issuer, code, accountIndex = 0 }) {
+  if (!StellarSdk.StrKey.isValidEd25519PublicKey(to.trim())) throw new Error("Invalid Stellar recipient address.");
+  const asset = parseStellarAsset({ issuer, code });
+  const keypair = await deriveStellarKeypair({ password, accountIndex });
+  const server = horizon(chain);
+  const [source, fee] = await Promise.all([
+    server.loadAccount(keypair.publicKey()),
+    server.fetchBaseFee()
+  ]);
+  const tx = new StellarSdk.TransactionBuilder(source, {
+    fee: String(fee),
+    networkPassphrase: StellarSdk.Networks.PUBLIC
+  })
+    .addOperation(StellarSdk.Operation.payment({
+      destination: to.trim(),
+      asset,
+      amount: String(amount)
+    }))
+    .setTimeout(60)
+    .build();
+  tx.sign(keypair);
+  const result = await server.submitTransaction(tx);
+  return { hash: result.hash, explorer: `https://stellar.expert/explorer/public/tx/${result.hash}` };
+}
+
 export async function deriveStellarAddress({ password, accountIndex = 0 }) {
   const keypair = await deriveStellarKeypair({ password, accountIndex });
   return keypair.publicKey();
@@ -63,6 +112,16 @@ async function deriveStellarKeypair({ password, accountIndex }) {
 
 function horizon(chain) {
   return new StellarSdk.Horizon.Server(chain?.rpc?.startsWith("http") ? chain.rpc : DEFAULT_HORIZON);
+}
+
+function parseStellarAsset({ issuer, code }) {
+  const rawIssuer = String(issuer ?? "").trim();
+  const [maybeCode, maybeIssuer] = rawIssuer.includes("-") ? rawIssuer.split("-", 2) : ["", rawIssuer];
+  const assetCode = String(code || maybeCode).trim().toUpperCase();
+  const assetIssuer = String(maybeIssuer).trim();
+  if (!/^[A-Z0-9]{1,12}$/.test(assetCode)) throw new Error("Invalid Stellar asset code.");
+  if (!StellarSdk.StrKey.isValidEd25519PublicKey(assetIssuer)) throw new Error("Invalid Stellar asset issuer.");
+  return new StellarSdk.Asset(assetCode, assetIssuer);
 }
 
 function parseUnits(value, decimals) {

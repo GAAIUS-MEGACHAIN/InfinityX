@@ -313,7 +313,7 @@
     "symbol": "USDT",
     "name": "Tether",
     "status": "live",
-    "workingPathCount": 7,
+    "workingPathCount": 8,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -380,6 +380,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Avalanche",
@@ -483,7 +494,7 @@
     "symbol": "USDC",
     "name": "USDC",
     "status": "live",
-    "workingPathCount": 18,
+    "workingPathCount": 21,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -512,6 +523,17 @@
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0xffffffff7d2b0b761af01ca8e25242976ac0ad7d",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
         "send": true,
         "receive": true,
         "balance": true,
@@ -596,6 +618,17 @@
         "fallbackPaths": 2
       },
       {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "asa",
+        "contract": "31566704",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
         "chain": "Tron",
         "adapter": "tron",
         "assetType": "trc20",
@@ -671,6 +704,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Avalanche",
@@ -1712,7 +1756,7 @@
     "symbol": "USD1",
     "name": "USD1",
     "status": "live",
-    "workingPathCount": 6,
+    "workingPathCount": 7,
     "workingPaths": [
       {
         "chain": "BNB Chain",
@@ -1779,6 +1823,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x05fabd1b12e39967a3c24e91b7b8f67719a6dacee74f3c8b9fb7d93e855437d2",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -1872,7 +1927,7 @@
     "symbol": "USDE",
     "name": "Ethena USDe",
     "status": "live",
-    "workingPathCount": 21,
+    "workingPathCount": 22,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -2005,6 +2060,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xf37a8864fe737eb8ec2c2931047047cbaed1beed3fb0e5b7c5526dafd3b9c2e9",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Solana",
@@ -2583,7 +2649,7 @@
     "symbol": "BUIDL",
     "name": "BlackRock USD Institutional Digital Liquidity Fund",
     "status": "live",
-    "workingPathCount": 7,
+    "workingPathCount": 8,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -2652,6 +2718,17 @@
         "fallbackPaths": 2
       },
       {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x50038be55be5b964cfa32cf128b5cf05f123959f286b4cc02b86cafd48945f89",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
         "chain": "Polygon",
         "adapter": "evm",
         "assetType": "erc20",
@@ -2705,7 +2782,7 @@
     "symbol": "USDY",
     "name": "Ondo US Dollar Yield",
     "status": "live",
-    "workingPathCount": 6,
+    "workingPathCount": 9,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -2717,6 +2794,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x960b531667636f39e85867775f52f6b1f220a058c4de786905bdf761e06a56bb::usdy::USDY",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Osmosis",
@@ -2752,6 +2840,17 @@
         "fallbackPaths": 3
       },
       {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "USDY-GAJMPX5NBOG6TQFPQGRABJEEB2YE7RFRLUKJDZAZGAD5GFX4J7TADAZ6",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
         "chain": "Arbitrum",
         "adapter": "evm",
         "assetType": "erc20",
@@ -2767,6 +2866,17 @@
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0x54cd901491aef397084453f4372b93c33260e2a6",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xcfea864b32833f157f042618bd845145256b1bf4c0da34a7013b76e42daa53cc",
         "send": true,
         "receive": true,
         "balance": true,
@@ -5348,7 +5458,7 @@
     "symbol": "BONK",
     "name": "Bonk",
     "status": "live",
-    "workingPathCount": 5,
+    "workingPathCount": 6,
     "workingPaths": [
       {
         "chain": "Solana",
@@ -5404,6 +5514,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x2a90fae71afc7460ee42b20ee49a9c9b29272905ad71fef92fbd8b3905a24b56",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -5721,7 +5842,7 @@
     "symbol": "CAKE",
     "name": "PancakeSwap",
     "status": "live",
-    "workingPathCount": 8,
+    "workingPathCount": 9,
     "workingPaths": [
       {
         "chain": "BNB Chain",
@@ -5810,6 +5931,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x159df6b7689437016108a019fd5bef736bac692b6d4a1f10c941f6fbb9a74ca6::oft::CakeOFT",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -5832,7 +5964,7 @@
     "symbol": "EURC",
     "name": "EURC",
     "status": "live",
-    "workingPathCount": 6,
+    "workingPathCount": 7,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -5877,6 +6009,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "EURC-GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Optimism",
@@ -6448,7 +6591,7 @@
     "symbol": "FDUSD",
     "name": "First Digital USD",
     "status": "live",
-    "workingPathCount": 4,
+    "workingPathCount": 5,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -6460,6 +6603,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xf16e6b723f242ec745dfd7634ad072c42d5c1d9ac9d62a39c381303eaa57693a::fdusd::FDUSD",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Solana",
@@ -10557,13 +10711,25 @@
     "id": "walrus-2",
     "symbol": "WAL",
     "name": "Walrus",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 228,
@@ -11238,7 +11404,7 @@
     "symbol": "FRXUSD",
     "name": "Frax USD",
     "status": "live",
-    "workingPathCount": 20,
+    "workingPathCount": 21,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -11439,6 +11605,17 @@
         "fallbackPaths": 2
       },
       {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xe067037681385b86d8344e6b7746023604c6ac90ddc997ba3c58396c258ad17b",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
         "chain": "zkSync Era",
         "adapter": "evm",
         "assetType": "erc20",
@@ -11511,7 +11688,7 @@
     "symbol": "AUSD",
     "name": "AUSD",
     "status": "live",
-    "workingPathCount": 11,
+    "workingPathCount": 12,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -11523,6 +11700,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x2053d08c1e2bd02791056171aab0fd12bd7cd7efad2ab8f6b9c8902f14df2ff2::ausd::AUSD",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Polygon",
@@ -12328,7 +12516,7 @@
     "symbol": "ACRED",
     "name": "Apollo Diversified Credit Securitize Fund",
     "status": "live",
-    "workingPathCount": 4,
+    "workingPathCount": 5,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -12362,6 +12550,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xe528f4df568eb9fff6398adc514bc9585fab397f478972bcbebf1e75dee40a88",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Avalanche",
@@ -14195,7 +14394,7 @@
     "symbol": "EXOD",
     "name": "EXOD",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
       {
         "chain": "Arbitrum",
@@ -14207,6 +14406,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "asa",
+        "contract": "213345970",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -15050,13 +15260,25 @@
     "id": "deep",
     "symbol": "DEEP",
     "name": "DeepBook",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xdeeb7a4662eec9f2f3def03fb937a663dddaa2e215b8078a284d026b7946c270::deep::DEEP",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 351,
@@ -15401,8 +15623,19 @@
     "symbol": "SHX",
     "name": "Stronghold",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "SHX-GDSTRSHXHGJ7ZIVRBXEYE5Q74XUVCUSEKEBR7UCHEUUEK72N7I7KJ6JH",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",
@@ -15426,13 +15659,25 @@
     "id": "bitcastle-token",
     "symbol": "BCE",
     "name": "bitcastle Token",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x34d12f761847a05dfa33a1692440588f4b5f7f24be619334e29d74e083f5e64e::bce::BCE",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 365,
@@ -15784,7 +16029,7 @@
     "symbol": "XAUM",
     "name": "Matrixdock Gold",
     "status": "live",
-    "workingPathCount": 5,
+    "workingPathCount": 6,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -15796,6 +16041,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x9d297676e7a4b771ab023291377b2adfaa4938fb9080b8d12430e4b108b836a9::xaum::XAUM",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Solana",
@@ -17378,8 +17634,19 @@
     "symbol": "VELO",
     "name": "Velo",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "VELO-GDM4RQUQQUVSKQA7S6EM7XBZP3FCGH4Q7CL6TABQ7B2BEJ5ERARM2M5M",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "BNB Chain",
         "adapter": "evm",
@@ -19109,7 +19376,7 @@
     "symbol": "BRZ",
     "name": "Brazilian Digital",
     "status": "live",
-    "workingPathCount": 6,
+    "workingPathCount": 8,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -19121,6 +19388,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "asa",
+        "contract": "112866019",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Rootstock",
@@ -19143,6 +19421,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 3
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "BRZ-GABMA6FPH3OJXNTGWO7PROF7I5WPQUZOB4BLTBTP4FK6QV7HWISLIEO2",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Polygon",
@@ -21769,13 +22058,25 @@
     "id": "magma-finance",
     "symbol": "MAGMA",
     "name": "Magma Finance",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x9f854b3ad20f8161ec0886f15f4a1752bf75d22261556f14cc8d3a1c5d50e529::magma::MAGMA",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 542,
@@ -23717,8 +24018,19 @@
     "symbol": "KGEN",
     "name": "KGeN",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x2a8227993a4e38537a57caefe5e7e9a51327bf6cd732c1f56648f26f68304ebc",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "BNB Chain",
         "adapter": "evm",
@@ -29739,13 +30051,25 @@
     "id": "bucket-protocol-buck-stablecoin",
     "symbol": "BUCK",
     "name": "Bucket Protocol BUCK Stablecoin",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xce7ff77a83ea0cb6fd39bd8748e2ec89a3f41e8efdc3f4eb123e0ca37b184db2::buck::BUCK",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 766,
@@ -30186,13 +30510,25 @@
     "id": "momentum-3",
     "symbol": "MMT",
     "name": "Momentum",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x35169bc93e1fddfcf3a82a9eae726d349689ed59e4b065369af8789fe59f8608::mmt::MMT",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 780,
@@ -31148,26 +31484,50 @@
     "id": "swarm-network",
     "symbol": "TRUTH",
     "name": "Swarm Network",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x0a48f85a3905cfa49a652bdb074d9e9fabad27892d54afaa5c9e0adeb7ac3cdf::swarm_network_token::SWARM_NETWORK_TOKEN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 806,
     "id": "cetus-protocol",
     "symbol": "CETUS",
     "name": "Cetus Protocol",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x06864a6f921804860930db6ddbe2e16acdf8504495ea7481637a1c8b9a8fe54b::cetus::CETUS",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 805,
@@ -31500,7 +31860,7 @@
     "symbol": "FOLKS",
     "name": "FOLKS",
     "status": "live",
-    "workingPathCount": 8,
+    "workingPathCount": 9,
     "workingPaths": [
       {
         "chain": "Avalanche",
@@ -31545,6 +31905,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "asa",
+        "contract": "3203964481",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Sei EVM",
@@ -39893,13 +40264,25 @@
     "id": "esui-dollar",
     "symbol": "SUIUSDE",
     "name": "eSui Dollar",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x41d587e5336f1c86cad50d38a7136db99333bb9bda91cea4ba69115defeb1402::sui_usde::SUI_USDE",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1053,
@@ -42126,7 +42509,7 @@
     "symbol": "BLUAI",
     "name": "Bluwhale",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
       {
         "chain": "BNB Chain",
@@ -42138,6 +42521,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xf8bfaf1cfefdc539a00e0bc37213c8f339cb411a6b0c4c023ed92f36c68d0fb6::bluwhale_ai::BLUWHALE_AI",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -43441,13 +43835,25 @@
     "id": "aquarius",
     "symbol": "AQUA",
     "name": "Aquarius",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "AQUA-GBNZILSTVQZ4R7IKQDGHYGY2QXL5QOFJYQMXPKWRRM5PAV7Y4M67AQUA",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "stellar"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1160,
@@ -44138,7 +44544,7 @@
     "symbol": "MBX",
     "name": "MARBLEX",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
       {
         "chain": "BNB Chain",
@@ -44156,6 +44562,17 @@
         "adapter": "evm",
         "assetType": "erc20",
         "contract": "0xd068c52d81f4409b9502da926ace3301cc41f623",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x665d06fcd9c94430099f82973f2a5e5f13142e42fa172e72ce14f51a64bd8ad9::coin_mbx::MBX",
         "send": true,
         "receive": true,
         "balance": true,
@@ -44300,13 +44717,25 @@
     "id": "ember-third-eye",
     "symbol": "ETHIRD",
     "name": "Ember Third Eye",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x89b0d4407f17cc1b1294464f28e176e29816a40612f7a553313ea0a797a5f803::ethird::ETHIRD",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1188,
@@ -44314,7 +44743,7 @@
     "symbol": "SWEAT",
     "name": "SWEAT",
     "status": "live",
-    "workingPathCount": 9,
+    "workingPathCount": 11,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -44348,6 +44777,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xf0b202ef3e107ff4fc0142bbb9a607bf73b8f6460c5026d5c21c6f2e0a9a1083::coin::COIN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Polygon",
@@ -44414,6 +44854,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x9aa4c03344444b53f4d9b1bca229ed2ac47504e3ea6cd0683ebdc0c5ecefd693::coin::T",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -47139,13 +47590,25 @@
     "id": "ika",
     "symbol": "IKA",
     "name": "Ika",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x7262fb2f7a3a14c888c438a3cd9b912469a58cf60f367352c46584262e8299aa::ika::IKA",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1268,
@@ -47498,13 +47961,25 @@
     "id": "alpha-fi",
     "symbol": "ALPHA",
     "name": "Alpha Fi",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xfe3afec26c59e874f3c1d60b8203cb3852d2bb2aa415df9548b8d688e6683f93::alpha::ALPHA",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1281,
@@ -49155,13 +49630,25 @@
     "id": "talus",
     "symbol": "US",
     "name": "Talus",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xee962a61432231c2ede6946515beb02290cb516ad087bb06a731e922b2a5f57a::us::US",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1333,
@@ -50067,13 +50554,25 @@
     "id": "navi",
     "symbol": "NAVX",
     "name": "NAVI Protocol",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xa99b8952d4f7d947ea77fe0ecdcc9e5fc0bcab2841d6e2a5aa00c3044e5544b5::navx::NAVX",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1352,
@@ -50168,13 +50667,25 @@
     "id": "bluefin",
     "symbol": "BLUE",
     "name": "Bluefin",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xe1b45a0e641b9955a20aa0ad1c1f4ad86aad8afb07296d4085e349a50e90bdca::blue::BLUE",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1357,
@@ -51075,7 +51586,7 @@
     "symbol": "RIO",
     "name": "Realio Network Token",
     "status": "live",
-    "workingPathCount": 5,
+    "workingPathCount": 7,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -51100,6 +51611,17 @@
         "fallbackPaths": 2
       },
       {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "asa",
+        "contract": "2751733",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
         "chain": "Solana",
         "adapter": "solana",
         "assetType": "spl",
@@ -51109,6 +51631,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 3
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "RIO-GBNLJIYH34UWO5YZFA3A3HD3N76R6DOI33N4JONUOHEEYZYCAYTEJ5AK",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "BNB Chain",
@@ -54573,7 +55106,7 @@
     "symbol": "GYEN",
     "name": "GYEN",
     "status": "live",
-    "workingPathCount": 3,
+    "workingPathCount": 4,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -54596,6 +55129,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 3
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "GYEN-GDF6VOEGRWLOZ64PQQGKD2IYWA22RLT37GJKS2EJXZHT2VLAGWLC5TOB",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Arbitrum",
@@ -55660,8 +56204,19 @@
     "symbol": "TAKE",
     "name": "OVERTAKE",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x76a49ebaf991fa2d4cb6a352af14425d453fe2ba6802b5ed2361b227150b6689::take::TAKE",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "BNB Chain",
         "adapter": "evm",
@@ -56343,8 +56898,19 @@
     "symbol": "AIA",
     "name": "DeAgentAI",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x99cc0e7834326ec6ac571421e9b8e042e9eb63062771c77ac592bd194180b5da::deagent_token::DEAGENT_TOKEN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "BNB Chain",
         "adapter": "evm",
@@ -56691,7 +57257,7 @@
     "symbol": "USDQ",
     "name": "Quantoz USDQ",
     "status": "live",
-    "workingPathCount": 3,
+    "workingPathCount": 4,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -56709,6 +57275,17 @@
         "adapter": "xrpl",
         "assetType": "xrpl-issued",
         "contract": "USDQ.rDk1xiArDMjDqnrR2yWypwQAKg4mKnQYvs",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "asa",
+        "contract": "2768603795",
         "send": true,
         "receive": true,
         "balance": true,
@@ -56818,7 +57395,7 @@
     "symbol": "AUDD",
     "name": "Australian Digital Dollar",
     "status": "live",
-    "workingPathCount": 6,
+    "workingPathCount": 7,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -56880,6 +57457,17 @@
         "adapter": "xrpl",
         "assetType": "xrpl-issued",
         "contract": "4155444400000000000000000000000000000000.rUN5Zxt3K1AnMRJgEWywDJT8QDMMeLH5ok",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "AUDD-GDC7X2MXTYSAKUUGAIQ7J7RPEIM7GXSAIWFYWWH4GLNFECQVJJLB2EEU",
         "send": true,
         "receive": true,
         "balance": true,
@@ -57762,13 +58350,25 @@
     "id": "afreum",
     "symbol": "AFR",
     "name": "Afreum",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "AFR-GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "stellar"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1591,
@@ -58085,7 +58685,7 @@
     "symbol": "WXT",
     "name": "WXT Token",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -58097,6 +58697,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "WXT-GASBLVHS5FOABSDNW5SPPH3QRJYXY5JHA2AOA2QHH2FJLZBRXSG4SWXT",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Avalanche",
@@ -58821,8 +59432,19 @@
     "symbol": "HAEDAL",
     "name": "Haedal Protocol",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x3a304c7feba2d819ea57c3542d68439ca2c386ba02159c740f7b406e592c62ea::haedal::HAEDAL",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "BNB Chain",
         "adapter": "evm",
@@ -58921,7 +59543,7 @@
     "symbol": "EURQ",
     "name": "Quantoz EURQ",
     "status": "live",
-    "workingPathCount": 3,
+    "workingPathCount": 4,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -58955,6 +59577,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 1
+      },
+      {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "asa",
+        "contract": "2768422954",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -58971,8 +59604,19 @@
     "symbol": "BUY",
     "name": "Buying.com",
     "status": "live",
-    "workingPathCount": 2,
+    "workingPathCount": 3,
     "workingPaths": [
+      {
+        "chain": "Algorand",
+        "adapter": "algorand",
+        "assetType": "asa",
+        "contract": "137020565",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Ethereum",
         "adapter": "evm",
@@ -59597,7 +60241,7 @@
     "symbol": "VCHF",
     "name": "VNX Swiss Franc",
     "status": "live",
-    "workingPathCount": 9,
+    "workingPathCount": 10,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -59664,6 +60308,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 3
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "VCHF-GDXLSLCOPPHTWOQXLLKSVN4VN3G67WD2ENU7UMVAROEYVJLSPSEWXIZN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Polygon",
@@ -60631,13 +61286,25 @@
     "id": "suilend",
     "symbol": "SEND",
     "name": "Suilend",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xb45fcfcc2cc07ce0702cc2d229621e046c906ef14d9b25e8e4d25f6e8763fef7::send::SEND",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1686,
@@ -61858,13 +62525,25 @@
     "id": "suins-token",
     "symbol": "NS",
     "name": "SuiNS Token",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x5145494a5f5100e645e4b0aa950fa6b68f614e8c59e17bc5ded3495123a79178::ns::NS",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1729,
@@ -63321,13 +64000,25 @@
     "id": "lofi-2",
     "symbol": "LOFI",
     "name": "LOFI",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xf22da9a24ad027cccb5f2d496cbe91de953d363513db08a3a734d361c7c17503::LOFI::LOFI",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1774,
@@ -63974,8 +64665,19 @@
     "symbol": "DMC",
     "name": "DeLorean",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x4c981f3ff786cdb9e514da897ab8a953647dae2ace9679e8358eec1e3e8871ac::dmc::DMC",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Solana",
         "adapter": "solana",
@@ -66304,7 +67006,7 @@
     "symbol": "XAGM",
     "name": "Matrixdock Silver",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -66316,6 +67018,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x64bddec0f898ccaa022b8a6e0a5f75d80f53177b87a9795dd15aefe9ac12ee6c::xagm::XAGM",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -67812,8 +68525,19 @@
     "symbol": "RION",
     "name": "Hyperion",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x435ad41e7b383cef98899c4e5a22c8dc88ab67b22f95e5663d6c6649298c3a9d",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "BNB Chain",
         "adapter": "evm",
@@ -69008,7 +69732,7 @@
     "symbol": "VEUR",
     "name": "VNX EURO",
     "status": "live",
-    "workingPathCount": 8,
+    "workingPathCount": 9,
     "workingPaths": [
       {
         "chain": "XRP Ledger",
@@ -69064,6 +69788,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 3
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "VEUR-GDXLSLCOPPHTWOQXLLKSVN4VN3G67WD2ENU7UMVAROEYVJLSPSEWXIZN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Polygon",
@@ -69367,13 +70102,25 @@
     "id": "echelon-token",
     "symbol": "ELON",
     "name": "Echelon Token",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xfc087a394c203d62c43eecfeba79db01441d39dd9d234131b78415626a26750e",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "aptos"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 1984,
@@ -70575,13 +71322,25 @@
     "id": "xmoney-2",
     "symbol": "XMN",
     "name": "xMoney",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x97c7571f4406cdd7a95f3027075ab80d3e9c937c2a567690d31e14ab1872ccee::xmn::XMN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2022,
@@ -70727,13 +71486,25 @@
     "id": "scallop-2",
     "symbol": "SCA",
     "name": "Scallop",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x7016aae72cfc67f2fadf55769c0a7dd54291a583b63051a5ed71081cce836ac6::sca::SCA",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2029,
@@ -71136,13 +71907,25 @@
     "id": "onbuff",
     "symbol": "LWA",
     "name": "LumiWave",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x3332b178c1513f32bca9cf711b0318c2bca4cb06f1a74211bac97a1eeb7f7259::LWA::LWA",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2040,
@@ -72534,13 +73317,25 @@
     "id": "miu-2",
     "symbol": "MIU",
     "name": "MIU",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x32a976482bf4154961bf20bfa3567a80122fdf8e8f8b28d752b609d8640f7846::miu::MIU",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2090,
@@ -76370,8 +77165,19 @@
     "symbol": "PROPS",
     "name": "Propbase",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xe50684a338db732d8fb8a3ac71c4b8633878bd0193bca5de2ebc852a83b35099::propbase_coin::PROPS",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Base",
         "adapter": "evm",
@@ -76619,13 +77425,25 @@
     "id": "sudeng",
     "symbol": "HIPPO",
     "name": "sudeng",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x8993129d72e733985f7f1a00396cbd055bad6f817fee36576ce483c8bbb8b87b::sudeng::SUDENG",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2220,
@@ -77517,13 +78335,25 @@
     "id": "six-network",
     "symbol": "SIX",
     "name": "SIX Network",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "SIX-GDMS6EECOH6MBMCP3FYRYEVRBIV3TQGLOFQIPVAITBRJUMTI6V7A2X6Z",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "stellar"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2251,
@@ -79583,13 +80413,25 @@
     "id": "pact-2",
     "symbol": "PACT",
     "name": "PACT",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xc546cc2dd26d9e9a4516b4514288bedf1085259fcb106b84b6469337f527fb92",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "aptos"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2314,
@@ -80085,7 +80927,7 @@
     "symbol": "USDGLO",
     "name": "Glo Dollar",
     "status": "live",
-    "workingPathCount": 7,
+    "workingPathCount": 8,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -80119,6 +80961,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "USDGLO-GBBS25EGYQPGEZCGCFBKG4OAGFXU6DSOQBGTHELLJT3HZXZJ34HWS6XV",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       },
       {
         "chain": "Polygon",
@@ -82206,13 +83059,25 @@
     "id": "pandasui-coin",
     "symbol": "PANS",
     "name": "PandaSui Coin",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xc9523f683256502be15ec4979098d510f67b6d3f0df02eebf124515014433270::pans::PANS",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2400,
@@ -84398,13 +85263,25 @@
     "id": "blend",
     "symbol": "BLND",
     "name": "Blend",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "BLND-GDJEHTBE6ZHUXSWFI642DCGLUOECLHPF3KSXHPXTSTJ7E3JF6MQ5EZYY",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "stellar"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2476,
@@ -85363,13 +86240,25 @@
     "id": "blub",
     "symbol": "BLUB",
     "name": "BLUB",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0xfa7ac3951fdca92c5200d468d31a365eb03b2be9936fde615e69f0c1274ad3a0::BLUB::BLUB",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2505,
@@ -86380,13 +87269,25 @@
     "id": "pawtato",
     "symbol": "TATO",
     "name": "Pawtato",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x04deb377c33bfced1ab81cde96918e2538fe78735777150b0064ccf7df5e1c81::tato::TATO",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2540,
@@ -88319,13 +89220,25 @@
     "id": "memefi-2",
     "symbol": "MEMEFI",
     "name": "MemeFi",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x506a6fc25f1c7d52ceb06ea44a3114c9380f8e2029b4356019822f248b49e411::memefi::MEMEFI",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2600,
@@ -88952,13 +89865,25 @@
     "id": "ami",
     "symbol": "AMI",
     "name": "Amnis Finance",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xb36527754eb54d7ff55daf13bcb54b42b88ec484bd6f0e3b2e0d1db169de6451",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "aptos"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2618,
@@ -89625,8 +90550,19 @@
     "symbol": "SSLX",
     "name": "StarSlax",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Stellar",
+        "adapter": "stellar",
+        "assetType": "stellar-asset",
+        "contract": "SSLX-GBHFGY3ZNEJWLNO4LBUKLYOCEK4V7ENEBJGPRHHX7JU47GWHBREH37UR",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "BNB Chain",
         "adapter": "evm",
@@ -93580,13 +94516,25 @@
     "id": "ember-earn",
     "symbol": "EEARN",
     "name": "Ember Earn",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x34469c8accdd673df02600265cbbad3688577f0e716866e257f88d448d463492::eearn::EEARN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2775,
@@ -94973,7 +95921,7 @@
     "symbol": "FIABTC",
     "name": "Fiamma BTC",
     "status": "live",
-    "workingPathCount": 4,
+    "workingPathCount": 5,
     "workingPaths": [
       {
         "chain": "Ethereum",
@@ -95018,6 +95966,17 @@
         "balance": true,
         "staking": false,
         "fallbackPaths": 2
+      },
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0x75de592a7e62e6224d13763c392190fda8635ebb79c798a5e9dd0840102f3f93",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
       }
     ],
     "listedChains": [
@@ -98167,13 +99126,25 @@
     "id": "warped-games",
     "symbol": "WARPED",
     "name": "Warped",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x50c9c77f29de11a2abdbe60e0869a026dc47c94bfc4e7d461c80313b079d44d2::warped::WARPED",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2921,
@@ -98268,13 +99239,25 @@
     "id": "attention",
     "symbol": "ATTN",
     "name": "Attention",
-    "status": "registry-only",
-    "workingPathCount": 0,
-    "workingPaths": [],
+    "status": "live",
+    "workingPathCount": 1,
+    "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x0ef38abcdaaafedd1e2d88929068a3f65b59bf7ee07d7e8f573c71df02d27522::attn::ATTN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      }
+    ],
     "listedChains": [
       "sui"
     ],
-    "reason": "No listed chain for this asset is wired to a live InfinityX signer/indexer adapter yet."
+    "reason": "At least one listed chain has a live InfinityX send/receive adapter for this asset."
   },
   {
     "rank": 2925,
@@ -100238,8 +101221,19 @@
     "symbol": "BALN",
     "name": "Balanced",
     "status": "live",
-    "workingPathCount": 6,
+    "workingPathCount": 7,
     "workingPaths": [
+      {
+        "chain": "Sui",
+        "adapter": "sui",
+        "assetType": "sui-coin",
+        "contract": "0x3ae6be8e58c0e0715764971b750709e67c6de33e38bbecafe25b5f3dd5080a39::balanced_token::BALANCED_TOKEN",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "Base",
         "adapter": "evm",
@@ -100625,8 +101619,19 @@
     "symbol": "ECHO",
     "name": "Echo Protocol",
     "status": "live",
-    "workingPathCount": 1,
+    "workingPathCount": 2,
     "workingPaths": [
+      {
+        "chain": "Aptos",
+        "adapter": "aptos",
+        "assetType": "aptos-fa",
+        "contract": "0xb2c7780f0a255a6137e5b39733f5a4c85fe093c549de5c359c1232deef57d1b7",
+        "send": true,
+        "receive": true,
+        "balance": true,
+        "staking": false,
+        "fallbackPaths": 1
+      },
       {
         "chain": "BNB Chain",
         "adapter": "evm",

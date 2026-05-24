@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-24T02:23:17.904Z",
+  "generatedAt": "2026-05-24T12:34:47.554Z",
   "summary": {
     "listedChains": 152,
     "liveTransactionChains": 137,
     "blockedNativeChains": 14,
     "bundledAssets": 3000,
-    "assetsWithLiveSendReceivePath": 2580,
-    "assetsStillRegistryOnly": 420
+    "assetsWithLiveSendReceivePath": 2617,
+    "assetsStillRegistryOnly": 383
   },
   "supportByKind": {
     "InfinityX routing": 1,
@@ -1091,7 +1091,7 @@
       "kind": "Move",
       "status": "live",
       "adapter": "sui",
-      "assets": "native",
+      "assets": "native+sui-coin",
       "send": true,
       "receive": true,
       "balance": true,
@@ -1107,7 +1107,7 @@
       "kind": "Move",
       "status": "live",
       "adapter": "aptos",
-      "assets": "native",
+      "assets": "native+aptos-fa",
       "send": true,
       "receive": true,
       "balance": true,
@@ -1411,7 +1411,7 @@
       "kind": "Account",
       "status": "live",
       "adapter": "algorand",
-      "assets": "native",
+      "assets": "native+asa",
       "send": true,
       "receive": true,
       "balance": true,
@@ -1427,7 +1427,7 @@
       "kind": "Account",
       "status": "live",
       "adapter": "stellar",
-      "assets": "native",
+      "assets": "native+stellar-asset",
       "send": true,
       "receive": true,
       "balance": true,
@@ -2494,14 +2494,6 @@
       ]
     },
     {
-      "rank": 227,
-      "symbol": "WAL",
-      "name": "Walrus",
-      "chains": [
-        "sui"
-      ]
-    },
-    {
       "rank": 231,
       "symbol": "XEC",
       "name": "eCash",
@@ -2611,22 +2603,6 @@
       "name": "Mustang",
       "chains": [
         "saga"
-      ]
-    },
-    {
-      "rank": 350,
-      "symbol": "DEEP",
-      "name": "DeepBook",
-      "chains": [
-        "sui"
-      ]
-    },
-    {
-      "rank": 364,
-      "symbol": "BCE",
-      "name": "bitcastle Token",
-      "chains": [
-        "sui"
       ]
     },
     {
@@ -2886,14 +2862,6 @@
       ]
     },
     {
-      "rank": 541,
-      "symbol": "MAGMA",
-      "name": "Magma Finance",
-      "chains": [
-        "sui"
-      ]
-    },
-    {
       "rank": 554,
       "symbol": "DESO",
       "name": "Decentralized Social",
@@ -3110,22 +3078,6 @@
       ]
     },
     {
-      "rank": 765,
-      "symbol": "BUCK",
-      "name": "Bucket Protocol BUCK Stablecoin",
-      "chains": [
-        "sui"
-      ]
-    },
-    {
-      "rank": 779,
-      "symbol": "MMT",
-      "name": "Momentum",
-      "chains": [
-        "sui"
-      ]
-    },
-    {
       "rank": 787,
       "symbol": "SN56",
       "name": "Gradients",
@@ -3147,6 +3099,54 @@
       "name": "STON",
       "chains": [
         "the-open-network"
+      ]
+    },
+    {
+      "rank": 803,
+      "symbol": "QUAI",
+      "name": "Quai Network",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 828,
+      "symbol": "ERG",
+      "name": "Ergo",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 831,
+      "symbol": "CATI",
+      "name": "Catizen",
+      "chains": [
+        "the-open-network"
+      ]
+    },
+    {
+      "rank": 833,
+      "symbol": "GXC",
+      "name": "GXChain",
+      "chains": [
+        "Main"
+      ]
+    },
+    {
+      "rank": 851,
+      "symbol": "MPC",
+      "name": "My Paqman Coin",
+      "chains": [
+        "polkadot"
+      ]
+    },
+    {
+      "rank": 855,
+      "symbol": "SN5",
+      "name": "OpenKaito",
+      "chains": [
+        "bittensor"
       ]
     }
   ]

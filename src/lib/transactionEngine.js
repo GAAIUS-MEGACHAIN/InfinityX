@@ -233,16 +233,52 @@ export function getAssetCapability({ chain, token }) {
   }
   if (SUPPORTED_MOVE_CHAINS.has(chain.name)) {
     const adapter = chain.name === "Sui" ? "sui" : "aptos";
-    return nativeCapability({ adapter, native, contract, chain, token, reason: `Live ${chain.name} native send, receive, and balance are enabled through the ${chain.name} SDK.` });
+    const canUse = native || (adapter === "sui" ? isSuiCoinType(contract) : isAptosAssetId(contract));
+    return {
+      adapter,
+      native,
+      contract,
+      canReceive: canUse,
+      canBalance: canUse,
+      canSend: canUse,
+      canStake: false,
+      reason: canUse
+        ? `Live ${chain.name} native and token send, receive, and balance are enabled through the ${chain.name} SDK.`
+        : `${token.symbol} has no ${chain.name} token id in the bundled registry. Import the token id to send it.`
+    };
   }
   if (SUPPORTED_TON_CHAINS.has(chain.name)) {
     return nativeCapability({ adapter: "ton", native, contract, chain, token, reason: "Live TON native send, receive, and balance are enabled through the TON SDK." });
   }
   if (SUPPORTED_ALGORAND_CHAINS.has(chain.name)) {
-    return nativeCapability({ adapter: "algorand", native, contract, chain, token, reason: "Live ALGO native send, receive, and balance are enabled through Algorand SDK." });
+    const canUse = native || isAlgorandAssetId(contract);
+    return {
+      adapter: "algorand",
+      native,
+      contract,
+      canReceive: canUse,
+      canBalance: canUse,
+      canSend: canUse,
+      canStake: false,
+      reason: canUse
+        ? "Live ALGO native and ASA send, receive, and balance are enabled through Algorand SDK."
+        : `${token.symbol} has no Algorand ASA id in the bundled registry. Import the ASA id to send it.`
+    };
   }
   if (SUPPORTED_STELLAR_CHAINS.has(chain.name)) {
-    return nativeCapability({ adapter: "stellar", native, contract, chain, token, reason: "Live XLM native send, receive, and balance are enabled through Stellar Horizon." });
+    const canUse = native || isStellarClassicAssetId(contract);
+    return {
+      adapter: "stellar",
+      native,
+      contract,
+      canReceive: canUse,
+      canBalance: canUse,
+      canSend: canUse,
+      canStake: false,
+      reason: canUse
+        ? "Live XLM native and Stellar asset send, receive, and balance are enabled through Stellar Horizon."
+        : `${token.symbol} has no Stellar issuer in the bundled registry. Import asset code/issuer to send it.`
+    };
   }
   if (SUPPORTED_SUBSTRATE_CHAINS.has(chain.name)) {
     return nativeCapability({ adapter: "substrate", native, contract, chain, token, reason: `Live ${chain.name} native send, receive, and balance are enabled through the Substrate SDK.` });
@@ -279,6 +315,22 @@ function nativeCapability({ adapter, native, contract, chain, token, reason }) {
     canStake: false,
     reason: native ? reason : `${chain.name} SDK support is enabled for the native coin only. ${token?.symbol ?? "This token"} transfers need a token-standard adapter before they can be sent.`
   };
+}
+
+function isSuiCoinType(value) {
+  return /^0x[a-fA-F0-9]+::[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*$/.test(String(value ?? "").trim());
+}
+
+function isAptosAssetId(value) {
+  return /^0x[a-fA-F0-9]+(::[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*)?$/.test(String(value ?? "").trim());
+}
+
+function isAlgorandAssetId(value) {
+  return /^\d+$/.test(String(value ?? "").trim());
+}
+
+function isStellarClassicAssetId(value) {
+  return /^([A-Z0-9]{1,12}-)?G[A-Z2-7]{55}$/.test(String(value ?? "").trim());
 }
 
 export async function getAssetReceiveState({ password, chain, token }) {
@@ -417,14 +469,24 @@ export async function getAssetReceiveState({ password, chain, token }) {
     };
   }
   if (capability.adapter === "sui") {
-    const { getSuiWalletState } = await import("./moveWallet.js");
-    const state = await getSuiWalletState({ password, chain });
-    return nativeReceiveState(capability.adapter, state, chain, "Live Sui native balance loaded.");
+    const { getSuiWalletState, getSuiTokenBalance } = await import("./moveWallet.js");
+    const state = capability.native
+      ? await getSuiWalletState({ password, chain })
+      : await getSuiTokenBalance({ password, chain, coinType: capability.contract, decimals: token.decimals, symbol: token.symbol });
+    return {
+      ...nativeReceiveState(capability.adapter, state, chain, capability.native ? "Live Sui native balance loaded." : "Live Sui token balance loaded."),
+      contract: capability.native ? "" : capability.contract
+    };
   }
   if (capability.adapter === "aptos") {
-    const { getAptosWalletState } = await import("./moveWallet.js");
-    const state = await getAptosWalletState({ password, chain });
-    return nativeReceiveState(capability.adapter, state, chain, "Live Aptos native balance loaded.");
+    const { getAptosWalletState, getAptosTokenBalance } = await import("./moveWallet.js");
+    const state = capability.native
+      ? await getAptosWalletState({ password, chain })
+      : await getAptosTokenBalance({ password, asset: capability.contract, decimals: token.decimals, symbol: token.symbol });
+    return {
+      ...nativeReceiveState(capability.adapter, state, chain, capability.native ? "Live Aptos native balance loaded." : "Live Aptos fungible asset balance loaded."),
+      contract: capability.native ? "" : capability.contract
+    };
   }
   if (capability.adapter === "ton") {
     const { getTonWalletState } = await import("./tonWallet.js");
@@ -432,14 +494,24 @@ export async function getAssetReceiveState({ password, chain, token }) {
     return nativeReceiveState(capability.adapter, state, chain, "Live TON native balance loaded.");
   }
   if (capability.adapter === "algorand") {
-    const { getAlgorandWalletState } = await import("./algorandWallet.js");
-    const state = await getAlgorandWalletState({ password, chain });
-    return nativeReceiveState(capability.adapter, state, chain, "Live Algorand native balance loaded.");
+    const { getAlgorandWalletState, getAlgorandAssetBalance } = await import("./algorandWallet.js");
+    const state = capability.native
+      ? await getAlgorandWalletState({ password, chain })
+      : await getAlgorandAssetBalance({ password, chain, assetId: capability.contract, decimals: token.decimals, symbol: token.symbol });
+    return {
+      ...nativeReceiveState(capability.adapter, state, chain, capability.native ? "Live Algorand native balance loaded." : "Live Algorand ASA balance loaded."),
+      contract: capability.native ? "" : capability.contract
+    };
   }
   if (capability.adapter === "stellar") {
-    const { getStellarWalletState } = await import("./stellarWallet.js");
-    const state = await getStellarWalletState({ password, chain });
-    return nativeReceiveState(capability.adapter, state, chain, "Live Stellar native balance loaded.");
+    const { getStellarWalletState, getStellarAssetBalance } = await import("./stellarWallet.js");
+    const state = capability.native
+      ? await getStellarWalletState({ password, chain })
+      : await getStellarAssetBalance({ password, chain, issuer: capability.contract, code: token.symbol });
+    return {
+      ...nativeReceiveState(capability.adapter, state, chain, capability.native ? "Live Stellar native balance loaded." : "Live Stellar asset balance loaded."),
+      contract: capability.native ? "" : capability.contract
+    };
   }
   if (capability.adapter === "substrate") {
     const { getSubstrateWalletState } = await import("./substrateWallet.js");
@@ -588,13 +660,17 @@ export async function sendUniversalAsset({ password, chain, token, recipient, am
     return { ...result, network: chain.name, adapter: capability.adapter };
   }
   if (capability.adapter === "sui") {
-    const { sendSuiNative } = await import("./moveWallet.js");
-    const result = await sendSuiNative({ password, chain, to: recipient, amount });
+    const { sendSuiNative, sendSuiToken } = await import("./moveWallet.js");
+    const result = capability.native
+      ? await sendSuiNative({ password, chain, to: recipient, amount })
+      : await sendSuiToken({ password, chain, to: recipient, amount, coinType: capability.contract, decimals: token.decimals });
     return { ...result, network: chain.name, adapter: capability.adapter };
   }
   if (capability.adapter === "aptos") {
-    const { sendAptosNative } = await import("./moveWallet.js");
-    const result = await sendAptosNative({ password, chain, to: recipient, amount });
+    const { sendAptosNative, sendAptosToken } = await import("./moveWallet.js");
+    const result = capability.native
+      ? await sendAptosNative({ password, chain, to: recipient, amount })
+      : await sendAptosToken({ password, chain, to: recipient, amount, asset: capability.contract, decimals: token.decimals });
     return { ...result, network: chain.name, adapter: capability.adapter };
   }
   if (capability.adapter === "ton") {
@@ -603,13 +679,17 @@ export async function sendUniversalAsset({ password, chain, token, recipient, am
     return { ...result, network: chain.name, adapter: capability.adapter };
   }
   if (capability.adapter === "algorand") {
-    const { sendAlgorandNative } = await import("./algorandWallet.js");
-    const result = await sendAlgorandNative({ password, chain, to: recipient, amount });
+    const { sendAlgorandNative, sendAlgorandAsset } = await import("./algorandWallet.js");
+    const result = capability.native
+      ? await sendAlgorandNative({ password, chain, to: recipient, amount })
+      : await sendAlgorandAsset({ password, chain, to: recipient, amount, assetId: capability.contract, decimals: token.decimals });
     return { ...result, network: chain.name, adapter: capability.adapter };
   }
   if (capability.adapter === "stellar") {
-    const { sendStellarNative } = await import("./stellarWallet.js");
-    const result = await sendStellarNative({ password, chain, to: recipient, amount });
+    const { sendStellarNative, sendStellarAsset } = await import("./stellarWallet.js");
+    const result = capability.native
+      ? await sendStellarNative({ password, chain, to: recipient, amount })
+      : await sendStellarAsset({ password, chain, to: recipient, amount, issuer: capability.contract, code: token.symbol });
     return { ...result, network: chain.name, adapter: capability.adapter };
   }
   if (capability.adapter === "substrate") {

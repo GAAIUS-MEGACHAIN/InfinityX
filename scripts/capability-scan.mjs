@@ -144,10 +144,10 @@ function supportForChain(chain) {
   if ((chain.kind === "Cosmos" || chain.kind === "Cosmos/EVM") && supportedCosmos.has(chain.name)) return { status: "live", live: true, adapter: "cosmos", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 2 };
   if (supportedTron.has(chain.name)) return { status: "live", live: true, adapter: "tron", assets: "native+trc20", send: true, receive: true, staking: false, fallbackPaths: 1 };
   if (supportedXrp.has(chain.name)) return { status: "live", live: true, adapter: "xrpl", assets: "native+issued", send: true, receive: true, staking: false, fallbackPaths: 1 };
-  if (supportedMove.has(chain.name)) return { status: "live", live: true, adapter: chain.name === "Sui" ? "sui" : "aptos", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedMove.has(chain.name)) return { status: "live", live: true, adapter: chain.name === "Sui" ? "sui" : "aptos", assets: chain.name === "Sui" ? "native+sui-coin" : "native+aptos-fa", send: true, receive: true, staking: false, fallbackPaths: 1 };
   if (supportedTon.has(chain.name)) return { status: "live", live: true, adapter: "ton", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
-  if (supportedAlgorand.has(chain.name)) return { status: "live", live: true, adapter: "algorand", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
-  if (supportedStellar.has(chain.name)) return { status: "live", live: true, adapter: "stellar", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedAlgorand.has(chain.name)) return { status: "live", live: true, adapter: "algorand", assets: "native+asa", send: true, receive: true, staking: false, fallbackPaths: 1 };
+  if (supportedStellar.has(chain.name)) return { status: "live", live: true, adapter: "stellar", assets: "native+stellar-asset", send: true, receive: true, staking: false, fallbackPaths: 1 };
   if (supportedSubstrate.has(chain.name)) return { status: "live", live: true, adapter: "substrate", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
   if (supportedStacks.has(chain.name)) return { status: "live", live: true, adapter: "stacks", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
   if (supportedMultiversX.has(chain.name)) return { status: "live", live: true, adapter: "multiversx", assets: "native", send: true, receive: true, staking: false, fallbackPaths: 1 };
@@ -215,14 +215,23 @@ function tokenTypeForAdapter(adapter) {
   if (adapter === "cosmos") return "cosmos-denom";
   if (adapter === "tron") return "trc20";
   if (adapter === "xrpl") return "xrpl-issued";
-  if (["sui", "aptos", "ton", "algorand", "stellar", "substrate", "stacks", "multiversx", "neo"].includes(adapter)) return "native";
+  if (adapter === "sui") return "sui-coin";
+  if (adapter === "aptos") return "aptos-fa";
+  if (adapter === "algorand") return "asa";
+  if (adapter === "stellar") return "stellar-asset";
+  if (["ton", "substrate", "stacks", "multiversx", "neo"].includes(adapter)) return "native";
   return "token";
 }
 
 function isLiveTokenContract(adapter, address) {
   if (!address) return false;
   if (adapter === "evm") return isAddress(address);
-  return adapter === "solana" || adapter === "cosmos" || adapter === "tron" || adapter === "xrpl";
+  if (adapter === "solana" || adapter === "cosmos" || adapter === "tron" || adapter === "xrpl") return true;
+  if (adapter === "sui") return /^0x[a-fA-F0-9]+::[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*$/.test(address);
+  if (adapter === "aptos") return /^0x[a-fA-F0-9]+(::[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*)?$/.test(address);
+  if (adapter === "algorand") return /^\d+$/.test(address);
+  if (adapter === "stellar") return /^([A-Z0-9]{1,12}-)?G[A-Z2-7]{55}$/.test(address);
+  return false;
 }
 
 function assetCanUseLiveAdapter(asset) {

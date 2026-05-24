@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "InfinityX Wallet",
+    "slug": "infinityx-wallet",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "infinityx",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.infinityx.wallet"
+    },
+    "android": {
+      "package": "com.infinityx.wallet",
+      "adaptiveIcon": {
+        "backgroundColor": "#101518"
+      },
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
